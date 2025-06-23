@@ -16,7 +16,7 @@
       content="IE=edge"
     />
     <meta name="x-apple-disable-message-reformatting" />
-    <title>Get Your First Booking Today</title>
+    <title>We miss you! Let's get you back on track</title>
     <link
       href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
       rel="stylesheet"
@@ -53,6 +53,15 @@
       .btn:hover {
         background-color: #006bb8;
       }
+      .btn-success {
+        background-color: #008c44;
+      }
+      .btn-success:hover {
+        background-color: #007038;
+      }
+      .content-section {
+        padding: 8px;
+      }
       @media only screen and (max-width: 600px) {
         .container {
           width: 100% !important;
@@ -73,7 +82,6 @@
       font-family: 'Poppins', sans-serif;
     "
   >
-    <!-- Preheader -->
     <div
       style="
         display: none;
@@ -84,10 +92,9 @@
         color: #f9fafb;
       "
     >
-      3 proven tactics to get your first booking today
+      We miss you! Come back and see what's new at Cal.id
     </div>
 
-    <!-- Main Container -->
     <table
       role="presentation"
       cellspacing="0"
@@ -98,7 +105,6 @@
     >
       <tr>
         <td style="padding: 32px 16px">
-          <!-- Email Container -->
           <table
             role="presentation"
             cellspacing="0"
@@ -117,7 +123,7 @@
             <tr>
               <td
                 style="
-                  background: linear-gradient(90deg, #007ee5 0%, #006bb8 100%);
+                  background: linear-gradient(90deg, #f1352c 0%, #d12e26 100%);
                   padding: 24px 32px;
                   border-radius: 12px 12px 0 0;
                 "
@@ -150,10 +156,14 @@
                                 justify-content: center;
                               "
                             >
-                              <img
-                                src="https://images.remotehub.com/c3ad06466a1b11edbf0d069a40d7f0fc/180x180/74a7cd9f.png?version=1669090303"
-                                width="30"
-                              />
+                              <span
+                                style="
+                                  color: #f1352c;
+                                  font-weight: bold;
+                                  font-size: 18px;
+                                "
+                                >C</span
+                              >
                             </div>
                           </td>
                           <td>
@@ -194,30 +204,32 @@
                         <h1
                           style="
                             margin: 0 0 16px 0;
-                            font-size: 22px;
+                            font-size: 28px;
                             font-weight: bold;
                             color: #111827;
                           "
                         >
-                          Get your first booking with these 3 quick wins
+                          We miss you, {{ customer.first_name | default: "there"
+                          }}! 😔
                         </h1>
                         <p
                           style="
                             margin: 0;
-                            font-size: 10px;
+                            font-size: 18px;
                             color: #6b7280;
                             line-height: 1.6;
                           "
                         >
-                          Great progress on your Cal.id setup! Let's get you
-                          your first booking today.
+                          It's been a while since you've used Cal.id. We'd love
+                          to help you get back on track with hassle-free
+                          scheduling.
                         </p>
                       </td>
                     </tr>
                   </table>
                 </div>
 
-                <!-- Tips Section -->
+                <!-- What You're Missing -->
                 <div class="content-section">
                   <table
                     role="presentation"
@@ -225,284 +237,207 @@
                     cellpadding="0"
                     border="0"
                     width="100%"
-                    style="margin-bottom: 32px"
-                  >
-                    <!-- Tip 1 -->
-                    <tr>
-                      <td style="padding-bottom: 24px">
-                        <table
-                          role="presentation"
-                          cellspacing="0"
-                          cellpadding="0"
-                          border="0"
-                          width="100%"
-                          style="
-                            border-left: 4px solid #007ee5;
-                            padding-left: 24px;
-                          "
-                        >
-                          <tr>
-                            <td style="padding: 0 16px">
-                              <table
-                                role="presentation"
-                                cellspacing="0"
-                                cellpadding="0"
-                                border="0"
-                                width="100%"
-                              >
-                                <tr>
-                                  <td style="width: 44px">
-                                    <div
-                                      style="
-                                        width: 24px;
-                                        height: 24px;
-                                        background-color: #007ee5;
-                                        color: #ffffff;
-                                        border-radius: 50%;
-                                        display: flex;
-                                        align-items: center;
-                                        justify-content: center;
-                                        font-weight: 600;
-                                        font-size: 14px;
-                                      "
-                                    >
-                                      1
-                                    </div>
-                                  </td>
-                                  <td style="flex: 1">
-                                    <h3
-                                      style="
-                                        margin: 0;
-                                        font-size: 18px;
-                                        font-weight: 600;
-                                        color: #111827;
-                                      "
-                                    >
-                                      Perfect Your Booking Page
-                                    </h3>
-                                  </td>
-                                </tr>
-                              </table>
-                              <p
-                                style="
-                                  margin: 8px 0 12px;
-                                  color: #6b7280;
-                                  line-height: 1.6;
-                                "
-                              >
-                                Add a welcoming photo and clear meeting
-                                description. Personal touches increase bookings
-                                by
-                                <strong>40%</strong>.
-                              </p>
-                              <a
-                                href="https://cal.id/customize"
-                                style="
-                                  display: inline-block;
-                                  padding: 12px 24px;
-                                  background-color: #007ee5;
-                                  color: #ffffff;
-                                  text-decoration: none;
-                                  border-radius: 6px;
-                                  font-weight: 500;
-                                  font-size: 14px;
-                                "
-                              >
-                                Customize Your Page →
-                              </a>
-                            </td>
-                          </tr>
-                        </table>
-                      </td>
-                    </tr>
-
-                    <!-- Tip 2 -->
-                    <tr>
-                      <td style="padding-bottom: 24px">
-                        <table
-                          role="presentation"
-                          cellspacing="0"
-                          cellpadding="0"
-                          border="0"
-                          width="100%"
-                          style="
-                            border-left: 4px solid #008c44;
-                            padding-left: 24px;
-                          "
-                        >
-                          <tr>
-                            <td style="padding-left: 16px">
-                              <table
-                                role="presentation"
-                                cellspacing="0"
-                                cellpadding="0"
-                                border="0"
-                                width="100%"
-                              >
-                                <tr>
-                                  <td style="width: 44px">
-                                    <div
-                                      style="
-                                        width: 24px;
-                                        height: 24px;
-                                        background-color: #008c44;
-                                        color: #ffffff;
-                                        border-radius: 50%;
-                                        display: flex;
-                                        align-items: center;
-                                        justify-content: center;
-                                        font-weight: 600;
-                                        font-size: 14px;
-                                      "
-                                    >
-                                      2
-                                    </div>
-                                  </td>
-                                  <td>
-                                    <h3
-                                      style="
-                                        margin: 0;
-                                        font-size: 18px;
-                                        font-weight: 600;
-                                        color: #111827;
-                                      "
-                                    >
-                                      Share Smart
-                                    </h3>
-                                  </td>
-                                </tr>
-                              </table>
-                              <p
-                                style="
-                                  margin: 8px 0 0;
-                                  color: #6b7280;
-                                  line-height: 1.6;
-                                "
-                              >
-                                Replace "Let's schedule a time" with your Cal.id
-                                link in your email signature, social media, and
-                                business cards.
-                              </p>
-                            </td>
-                          </tr>
-                        </table>
-                      </td>
-                    </tr>
-
-                    <!-- Tip 3 -->
-                    <tr>
-                      <td>
-                        <table
-                          role="presentation"
-                          cellspacing="0"
-                          cellpadding="0"
-                          border="0"
-                          width="100%"
-                          style="
-                            border-left: 4px solid #f1352c;
-                            padding-left: 24px;
-                          "
-                        >
-                          <tr>
-                            <td style="padding-left: 16px">
-                              <table
-                                role="presentation"
-                                cellspacing="0"
-                                cellpadding="0"
-                                border="0"
-                                width="100%"
-                              >
-                                <tr>
-                                  <td style="width: 44px">
-                                    <div
-                                      style="
-                                        width: 24px;
-                                        height: 24px;
-                                        background-color: #f1352c;
-                                        color: #ffffff;
-                                        border-radius: 50%;
-                                        display: flex;
-                                        align-items: center;
-                                        justify-content: center;
-                                        font-weight: 600;
-                                        font-size: 14px;
-                                      "
-                                    >
-                                      3
-                                    </div>
-                                  </td>
-                                  <td>
-                                    <h3
-                                      style="
-                                        margin: 0;
-                                        font-size: 18px;
-                                        font-weight: 600;
-                                        color: #111827;
-                                      "
-                                    >
-                                      Set Strategic Availability
-                                    </h3>
-                                  </td>
-                                </tr>
-                              </table>
-                              <p
-                                style="
-                                  margin: 8px 0 0;
-                                  color: #6b7280;
-                                  line-height: 1.6;
-                                "
-                              >
-                                Most bookings happen 2-7 days out. Block
-                                personal time but keep business hours available.
-                              </p>
-                            </td>
-                          </tr>
-                        </table>
-                      </td>
-                    </tr>
-                  </table>
-                </div>
-
-                <!-- Success Story -->
-                <div class="content-section">
-                  <table
-                    role="presentation"
-                    cellspacing="0"
-                    cellpadding="0"
-                    width="100%"
                     style="
-                      background-color: #e6f7ec;
-                      border: 1px solid #a3e6b8;
+                      background: linear-gradient(
+                        90deg,
+                        #fdf4f4 0%,
+                        #fee2e2 100%
+                      );
                       border-radius: 8px;
+                      padding: 24px;
                       margin-bottom: 32px;
-                      border-collapse: separate;
                     "
                   >
                     <tr>
-                      <td style="padding: 16px">
-                        <h4 style="margin: 0; font-weight: 600; color: #008c44">
-                          Real User Success
-                        </h4>
-                        <p
+                      <td>
+                        <h2
                           style="
-                            margin: 0 0 12px 0;
-                            color: #008c44;
-                            font-style: italic;
-                            line-height: 1.6;
+                            margin: 0 0 16px 0;
+                            font-size: 20px;
+                            font-weight: 600;
+                            color: #111827;
                           "
                         >
-                          "I got 3 bookings within 24 hours just by adding
-                          Cal.id to my LinkedIn profile!"
-                        </p>
-                        <p style="margin: 0; font-size: 14px; color: #008c44">
-                          — Marcus, Marketing Consultant
-                        </p>
+                          ⏰ Here's what you've been missing:
+                        </h2>
+
+                        <!-- Missing stat 1 -->
+                        <table
+                          role="presentation"
+                          cellspacing="0"
+                          cellpadding="0"
+                          border="0"
+                          width="100%"
+                          style="margin-bottom: 16px"
+                        >
+                          <tr>
+                            <td
+                              style="
+                                width: 40px;
+                                padding-right: 16px;
+                                vertical-align: top;
+                              "
+                            >
+                              <div
+                                style="
+                                  width: 32px;
+                                  height: 32px;
+                                  background-color: #f1352c;
+                                  color: #ffffff;
+                                  border-radius: 8px;
+                                  display: flex;
+                                  align-items: center;
+                                  justify-content: center;
+                                  font-weight: 600;
+                                  font-size: 16px;
+                                "
+                              >
+                                📈
+                              </div>
+                            </td>
+                            <td style="vertical-align: top">
+                              <h4
+                                style="
+                                  margin: 0 0 4px 0;
+                                  font-weight: 600;
+                                  color: #111827;
+                                "
+                              >
+                                Time lost to scheduling back-and-forth
+                              </h4>
+                              <p
+                                style="
+                                  margin: 0;
+                                  color: #6b7280;
+                                  font-size: 14px;
+                                "
+                              >
+                                Approximately <strong>4.5 hours</strong> since
+                                your last login
+                              </p>
+                            </td>
+                          </tr>
+                        </table>
+
+                        <!-- Missing stat 2 -->
+                        <table
+                          role="presentation"
+                          cellspacing="0"
+                          cellpadding="0"
+                          border="0"
+                          width="100%"
+                          style="margin-bottom: 16px"
+                        >
+                          <tr>
+                            <td
+                              style="
+                                width: 40px;
+                                padding-right: 16px;
+                                vertical-align: top;
+                              "
+                            >
+                              <div
+                                style="
+                                  width: 32px;
+                                  height: 32px;
+                                  background-color: #f1352c;
+                                  color: #ffffff;
+                                  border-radius: 8px;
+                                  display: flex;
+                                  align-items: center;
+                                  justify-content: center;
+                                  font-weight: 600;
+                                  font-size: 16px;
+                                "
+                              >
+                                📧
+                              </div>
+                            </td>
+                            <td style="vertical-align: top">
+                              <h4
+                                style="
+                                  margin: 0 0 4px 0;
+                                  font-weight: 600;
+                                  color: #111827;
+                                "
+                              >
+                                Scheduling emails avoided
+                              </h4>
+                              <p
+                                style="
+                                  margin: 0;
+                                  color: #6b7280;
+                                  font-size: 14px;
+                                "
+                              >
+                                You could have avoided about
+                                <strong>25+ emails</strong>
+                              </p>
+                            </td>
+                          </tr>
+                        </table>
+
+                        <!-- Missing stat 3 -->
+                        <table
+                          role="presentation"
+                          cellspacing="0"
+                          cellpadding="0"
+                          border="0"
+                          width="100%"
+                        >
+                          <tr>
+                            <td
+                              style="
+                                width: 40px;
+                                padding-right: 16px;
+                                vertical-align: top;
+                              "
+                            >
+                              <div
+                                style="
+                                  width: 32px;
+                                  height: 32px;
+                                  background-color: #f1352c;
+                                  color: #ffffff;
+                                  border-radius: 8px;
+                                  display: flex;
+                                  align-items: center;
+                                  justify-content: center;
+                                  font-weight: 600;
+                                  font-size: 16px;
+                                "
+                              >
+                                ✨
+                              </div>
+                            </td>
+                            <td style="vertical-align: top">
+                              <h4
+                                style="
+                                  margin: 0 0 4px 0;
+                                  font-weight: 600;
+                                  color: #111827;
+                                "
+                              >
+                                Stress-free meetings
+                              </h4>
+                              <p
+                                style="
+                                  margin: 0;
+                                  color: #6b7280;
+                                  font-size: 14px;
+                                "
+                              >
+                                No more "when works for you?" conversations
+                              </p>
+                            </td>
+                          </tr>
+                        </table>
                       </td>
                     </tr>
                   </table>
                 </div>
 
-                <!-- Progress Section -->
+                <!-- What's New -->
                 <div class="content-section">
                   <table
                     role="presentation"
@@ -511,7 +446,7 @@
                     border="0"
                     width="100%"
                     style="
-                      background-color: #f9fafb;
+                      background-color: #e6f4ff;
                       border-radius: 8px;
                       padding: 24px;
                       margin-bottom: 32px;
@@ -526,24 +461,30 @@
                             color: #111827;
                           "
                         >
-                          Your progress so far:
+                          🎉 What's new since you've been away:
                         </h3>
 
-                        <!-- Progress Item 1 -->
+                        <!-- New Feature 1 -->
                         <table
                           role="presentation"
                           cellspacing="0"
                           cellpadding="0"
                           border="0"
                           width="100%"
-                          style="margin-bottom: 8px"
+                          style="margin-bottom: 12px"
                         >
                           <tr>
-                            <td style="width: 35px">
+                            <td
+                              style="
+                                width: 20px;
+                                padding-right: 12px;
+                                vertical-align: top;
+                              "
+                            >
                               <div
                                 style="
-                                  width: 20px;
-                                  height: 20px;
+                                  width: 16px;
+                                  height: 16px;
                                   background-color: #008c44;
                                   border-radius: 50%;
                                   display: flex;
@@ -551,49 +492,61 @@
                                   justify-content: center;
                                 "
                               >
-                                <span style="color: #ffffff; font-size: 12px"
+                                <span style="color: #ffffff; font-size: 10px"
                                   >✓</span
                                 >
                               </div>
                             </td>
                             <td>
-                              <span style="color: #374751"
-                                >Account created</span
+                              <span style="color: #374751; font-weight: 500"
+                                >Auto-Zoom link generation</span
                               >
                             </td>
                           </tr>
                         </table>
 
-                        <!-- Progress Item 2 -->
+                        <!-- New Feature 2 -->
                         <table
                           role="presentation"
                           cellspacing="0"
                           cellpadding="0"
                           border="0"
                           width="100%"
-                          style="margin-bottom: 8px"
+                          style="margin-bottom: 12px"
                         >
                           <tr>
-                            <td style="width: 35px">
+                            <td
+                              style="
+                                width: 20px;
+                                padding-right: 12px;
+                                vertical-align: top;
+                              "
+                            >
                               <div
                                 style="
-                                  width: 20px;
-                                  height: 20px;
-                                  background-color: #f9a400;
+                                  width: 16px;
+                                  height: 16px;
+                                  background-color: #008c44;
                                   border-radius: 50%;
+                                  display: flex;
+                                  align-items: center;
+                                  justify-content: center;
                                 "
-                              ></div>
+                              >
+                                <span style="color: #ffffff; font-size: 10px"
+                                  >✓</span
+                                >
+                              </div>
                             </td>
                             <td>
-                              <span style="color: #374751"
-                                >Calendar status:
-                                <strong>Needs connection</strong></span
+                              <span style="color: #374751; font-weight: 500"
+                                >Mobile app improvements</span
                               >
                             </td>
                           </tr>
                         </table>
 
-                        <!-- Progress Item 3 -->
+                        <!-- New Feature 3 -->
                         <table
                           role="presentation"
                           cellspacing="0"
@@ -602,19 +555,32 @@
                           width="100%"
                         >
                           <tr>
-                            <td style="width: 35px">
+                            <td
+                              style="
+                                width: 20px;
+                                padding-right: 12px;
+                                vertical-align: top;
+                              "
+                            >
                               <div
                                 style="
-                                  width: 20px;
-                                  height: 20px;
-                                  background-color: #f9a400;
+                                  width: 16px;
+                                  height: 16px;
+                                  background-color: #008c44;
                                   border-radius: 50%;
+                                  display: flex;
+                                  align-items: center;
+                                  justify-content: center;
                                 "
-                              ></div>
+                              >
+                                <span style="color: #ffffff; font-size: 10px"
+                                  >✓</span
+                                >
+                              </div>
                             </td>
                             <td>
-                              <span style="color: #374751"
-                                >Booking page: <strong>Incomplete</strong></span
+                              <span style="color: #374751; font-weight: 500"
+                                >Advanced calendar sync</span
                               >
                             </td>
                           </tr>
@@ -624,7 +590,54 @@
                   </table>
                 </div>
 
-                <!-- CTA Button -->
+                <!-- Success Story -->
+                <div class="content-section">
+                  <table
+                    role="presentation"
+                    cellspacing="0"
+                    cellpadding="0"
+                    border="0"
+                    width="100%"
+                    style="
+                      background-color: #e6f7ec;
+                      border: 1px solid #a3e6b8;
+                      border-radius: 8px;
+                      padding: 24px;
+                      margin-bottom: 32px;
+                    "
+                  >
+                    <tr>
+                      <td>
+                        <h4
+                          style="
+                            margin: 0 0 8px 0;
+                            font-weight: 600;
+                            color: #008c44;
+                          "
+                        >
+                          📈 Active users are seeing great results:
+                        </h4>
+                        <p
+                          style="
+                            margin: 0 0 12px 0;
+                            color: #008c44;
+                            font-style: italic;
+                            line-height: 1.6;
+                          "
+                        >
+                          "I came back to Cal.id after a 2-month break and
+                          immediately got 5 bookings in one week. I forgot how
+                          much easier this makes my life!"
+                        </p>
+                        <p style="margin: 0; font-size: 14px; color: #008c44">
+                          — Maria S., Consultant
+                        </p>
+                      </td>
+                    </tr>
+                  </table>
+                </div>
+
+                <!-- CTA Buttons -->
                 <div class="content-section">
                   <table
                     role="presentation"
@@ -637,7 +650,7 @@
                     <tr>
                       <td style="text-align: center">
                         <a
-                          href="https://cal.id/create-page"
+                          href="https://cal.id/dashboard"
                           class="btn"
                           style="
                             display: inline-block;
@@ -647,11 +660,32 @@
                             text-decoration: none;
                             border-radius: 8px;
                             font-weight: 600;
+                            margin-bottom: 12px;
                             width: 100%;
+                            max-width: 250px;
                             box-sizing: border-box;
                           "
                         >
-                          Create Your First Booking Page →
+                          Welcome Me Back! →
+                        </a>
+                        <br />
+                        <a
+                          href="https://cal.id/profile"
+                          class="btn-success"
+                          style="
+                            display: inline-block;
+                            padding: 16px 32px;
+                            background-color: #008c44;
+                            color: #ffffff;
+                            text-decoration: none;
+                            border-radius: 8px;
+                            font-weight: 600;
+                            width: 100%;
+                            max-width: 250px;
+                            box-sizing: border-box;
+                          "
+                        >
+                          Update My Profile →
                         </a>
                       </td>
                     </tr>
@@ -666,25 +700,49 @@
                     cellpadding="0"
                     border="0"
                     width="100%"
-                    style="margin-bottom: 32px"
+                    style="
+                      background-color: #f9fafb;
+                      border-radius: 8px;
+                      padding: 20px;
+                      margin-bottom: 24px;
+                    "
                   >
                     <tr>
                       <td style="text-align: center">
-                        <p style="margin: 0 0 8px 0; color: #6b7280">
-                          Need help?
+                        <h4
+                          style="
+                            margin: 0 0 8px 0;
+                            font-weight: 600;
+                            color: #111827;
+                          "
+                        >
+                          🤔 Why did you stop using Cal.id?
+                        </h4>
+                        <p
+                          style="
+                            margin: 0 0 12px 0;
+                            color: #6b7280;
+                            font-size: 14px;
+                          "
+                        >
+                          We'd love to hear your feedback to improve
                         </p>
                         <a
-                          href="https://cal.id/setup-help"
-                          style="color: #007ee5; text-decoration: none"
+                          href="https://cal.id/feedback?reason=inactive"
+                          style="
+                            color: #007ee5;
+                            text-decoration: none;
+                            font-weight: 500;
+                          "
                         >
-                          Book a free 15-minute setup call with our team
+                          Share feedback in 30 seconds →
                         </a>
                       </td>
                     </tr>
                   </table>
                 </div>
 
-                <!-- Signature -->
+                <!-- Your Data Section -->
                 <div class="content-section">
                   <table
                     role="presentation"
@@ -692,13 +750,27 @@
                     cellpadding="0"
                     border="0"
                     width="100%"
-                    style="border-top: 1px solid #e5e7eb; padding-top: 24px"
+                    style="
+                      background-color: #fef9e7;
+                      border-radius: 8px;
+                      padding: 20px;
+                    "
                   >
                     <tr>
-                      <td>
-                        <p style="margin: 8px 0; color: #6b7280">
-                          Best,<br />
-                          <strong>Sarah</strong>
+                      <td style="text-align: center">
+                        <p
+                          style="
+                            margin: 0 0 8px 0;
+                            color: #b8860b;
+                            font-size: 14px;
+                          "
+                        >
+                          <strong>Good news:</strong> All your data is safe and
+                          waiting for you!
+                        </p>
+                        <p style="margin: 0; color: #b8860b; font-size: 14px">
+                          Your booking pages, settings, and calendar connections
+                          are exactly as you left them.
                         </p>
                       </td>
                     </tr>
@@ -743,7 +815,7 @@
                           font-size: 14px;
                         "
                       >
-                        Questions? Reply to this email or visit our help center
+                        We hope to see you soon!
                       </p>
                       <table
                         role="presentation"
@@ -767,25 +839,13 @@
                           <td style="color: #9ca3af; font-size: 12px">|</td>
                           <td style="padding: 0 8px">
                             <a
-                              href="{{ unsubscribe_url }}"
+                              href="{{customer.unsubscribe_url}}"
                               style="
                                 color: #007ee5;
                                 text-decoration: none;
                                 font-size: 12px;
                               "
                               >Unsubscribe</a
-                            >
-                          </td>
-                          <td style="color: #9ca3af; font-size: 12px">|</td>
-                          <td style="padding: 0 8px">
-                            <a
-                              href="#"
-                              style="
-                                color: #007ee5;
-                                text-decoration: none;
-                                font-size: 12px;
-                              "
-                              >Update Preferences</a
                             >
                           </td>
                         </tr>

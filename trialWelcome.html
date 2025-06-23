@@ -16,20 +16,11 @@
       content="IE=edge"
     />
     <meta name="x-apple-disable-message-reformatting" />
-    <title>Welcome to Cal.id</title>
+    <title>Welcome to Cal.id Pro - Your trial has started!</title>
     <link
       href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
       rel="stylesheet"
     />
-    <!--[if mso]>
-      <noscript>
-        <xml>
-          <o:OfficeDocumentSettings>
-            <o:PixelsPerInch>96</o:PixelsPerInch>
-          </o:OfficeDocumentSettings>
-        </xml>
-      </noscript>
-    <![endif]-->
     <style>
       body {
         margin: 0;
@@ -62,7 +53,21 @@
       .btn:hover {
         background-color: #006bb8;
       }
-
+      .btn-success {
+        background-color: #008c44;
+      }
+      .btn-success:hover {
+        background-color: #007038;
+      }
+      .btn-warning {
+        background-color: #f9a400;
+      }
+      .btn-warning:hover {
+        background-color: #e6930a;
+      }
+      .content-section {
+        padding: 8px;
+      }
       @media only screen and (max-width: 600px) {
         .container {
           width: 100% !important;
@@ -71,6 +76,11 @@
         .mobile-padding {
           padding-left: 16px !important;
           padding-right: 16px !important;
+        }
+        .mobile-stack {
+          display: block !important;
+          width: 100% !important;
+          margin-bottom: 16px !important;
         }
       }
     </style>
@@ -83,7 +93,6 @@
       font-family: 'Poppins', sans-serif;
     "
   >
-    <!-- Preheader -->
     <div
       style="
         display: none;
@@ -94,11 +103,9 @@
         color: #f9fafb;
       "
     >
-      Your free scheduling setup starts here - 5 minutes to transform your
-      meetings
+      Your Cal.id Pro trial has started - explore all premium features now
     </div>
 
-    <!-- Main Container -->
     <table
       role="presentation"
       cellspacing="0"
@@ -109,7 +116,6 @@
     >
       <tr>
         <td style="padding: 32px 16px">
-          <!-- Email Container -->
           <table
             role="presentation"
             cellspacing="0"
@@ -128,7 +134,7 @@
             <tr>
               <td
                 style="
-                  background: linear-gradient(90deg, #007ee5 0%, #006bb8 100%);
+                  background: linear-gradient(90deg, #008c44 0%, #007038 100%);
                   padding: 24px 32px;
                   border-radius: 12px 12px 0 0;
                 "
@@ -161,10 +167,14 @@
                                 justify-content: center;
                               "
                             >
-                              <img
-                                src="https://images.remotehub.com/c3ad06466a1b11edbf0d069a40d7f0fc/180x180/74a7cd9f.png?version=1669090303"
-                                width="30"
-                              />
+                              <span
+                                style="
+                                  color: #008c44;
+                                  font-weight: bold;
+                                  font-size: 18px;
+                                "
+                                >C</span
+                              >
                             </div>
                           </td>
                           <td>
@@ -174,8 +184,22 @@
                                 font-weight: 600;
                                 font-size: 20px;
                               "
-                              >Cal.id</span
+                              >Cal.id Pro</span
                             >
+                            <div
+                              style="
+                                background-color: rgba(255, 255, 255, 0.2);
+                                color: #ffffff;
+                                padding: 2px 8px;
+                                border-radius: 12px;
+                                font-size: 12px;
+                                font-weight: 500;
+                                margin-top: 4px;
+                                display: inline-block;
+                              "
+                            >
+                              TRIAL ACTIVE
+                            </div>
                           </td>
                         </tr>
                       </table>
@@ -191,7 +215,7 @@
                 style="padding: 32px"
                 class="mobile-padding"
               >
-                <!-- Welcome Message -->
+                <!-- Title -->
                 <div class="content-section">
                   <table
                     role="presentation"
@@ -205,305 +229,31 @@
                         <h1
                           style="
                             margin: 0 0 16px 0;
-                            font-size: 30px;
+                            font-size: 28px;
                             font-weight: bold;
                             color: #111827;
                           "
                         >
-                          Welcome to Cal.id, {{ customer.first_name | default:
-                          "there" }}!
+                          🎉 Welcome to Cal.id Pro!
                         </h1>
                         <p
                           style="
                             margin: 0;
-                            font-size: 10px;
+                            font-size: 18px;
                             color: #6b7280;
                             line-height: 1.6;
                           "
                         >
-                          You just joined
-                          <strong>50,000+ professionals</strong> who eliminated
-                          scheduling back-and-forth forever.
+                          Hi {{ customer.first_name | default: "there" }}! Your
+                          14-day Pro trial has started. You now have access to
+                          all our premium features!
                         </p>
                       </td>
                     </tr>
                   </table>
                 </div>
 
-                <!-- Setup Steps -->
-                <div class="content-section">
-                  <table
-                    role="presentation"
-                    cellspacing="0"
-                    cellpadding="0"
-                    border="0"
-                    width="100%"
-                    style="
-                      background-color: #e6f4ff;
-                      border-radius: 8px;
-                      padding: 24px;
-                      margin-bottom: 32px;
-                    "
-                  >
-                    <tr>
-                      <td style="padding: 16px">
-                        <h2
-                          style="
-                            margin: 0 0 16px 0;
-                            font-size: 20px;
-                            font-weight: 600;
-                            color: #111827;
-                          "
-                        >
-                          Your next 5 minutes will transform how you schedule
-                          meetings:
-                        </h2>
-
-                        <!-- Step 1 -->
-                        <table
-                          role="presentation"
-                          cellspacing="0"
-                          cellpadding="0"
-                          border="0"
-                          width="100%"
-                          style="margin-bottom: 16px"
-                        >
-                          <tr>
-                            <td
-                              style="
-                                width: 32px;
-                                padding-right: 16px;
-                                vertical-align: top;
-                              "
-                            >
-                              <div
-                                style="
-                                  width: 24px;
-                                  height: 24px;
-                                  background-color: #007ee5;
-                                  color: #ffffff;
-                                  border-radius: 50%;
-                                  display: flex;
-                                  align-items: center;
-                                  justify-content: center;
-                                  font-weight: 600;
-                                  font-size: 14px;
-                                "
-                              >
-                                1
-                              </div>
-                            </td>
-                            <td style="vertical-align: top">
-                              <h4
-                                style="
-                                  margin: 0 0 4px 0;
-                                  font-weight: 600;
-                                  color: #111827;
-                                "
-                              >
-                                Connect your calendar
-                              </h4>
-                              <p
-                                style="
-                                  margin: 0;
-                                  color: #6b7280;
-                                  font-size: 14px;
-                                "
-                              >
-                                Sync with Google, Outlook, or any calendar
-                                provider
-                              </p>
-                              <span style="color: #6b7280; font-size: 12px"
-                                >(30 seconds)</span
-                              >
-                            </td>
-                          </tr>
-                        </table>
-
-                        <!-- Step 2 -->
-                        <table
-                          role="presentation"
-                          cellspacing="0"
-                          cellpadding="0"
-                          border="0"
-                          width="100%"
-                          style="margin-bottom: 16px"
-                        >
-                          <tr>
-                            <td
-                              style="
-                                width: 32px;
-                                padding-right: 16px;
-                                vertical-align: top;
-                              "
-                            >
-                              <div
-                                style="
-                                  width: 24px;
-                                  height: 24px;
-                                  background-color: #007ee5;
-                                  color: #ffffff;
-                                  border-radius: 50%;
-                                  display: flex;
-                                  align-items: center;
-                                  justify-content: center;
-                                  font-weight: 600;
-                                  font-size: 14px;
-                                "
-                              >
-                                2
-                              </div>
-                            </td>
-                            <td style="vertical-align: top">
-                              <h4
-                                style="
-                                  margin: 0 0 4px 0;
-                                  font-weight: 600;
-                                  color: #111827;
-                                "
-                              >
-                                Set your availability
-                              </h4>
-                              <p
-                                style="
-                                  margin: 0;
-                                  color: #6b7280;
-                                  font-size: 14px;
-                                "
-                              >
-                                Define when you're available for meetings
-                              </p>
-                              <span style="color: #6b7280; font-size: 12px"
-                                >(2 minutes)</span
-                              >
-                            </td>
-                          </tr>
-                        </table>
-
-                        <!-- Step 3 -->
-                        <table
-                          role="presentation"
-                          cellspacing="0"
-                          cellpadding="0"
-                          border="0"
-                          width="100%"
-                          style="margin-bottom: 16px"
-                        >
-                          <tr>
-                            <td
-                              style="
-                                width: 32px;
-                                padding-right: 16px;
-                                vertical-align: top;
-                              "
-                            >
-                              <div
-                                style="
-                                  width: 24px;
-                                  height: 24px;
-                                  background-color: #007ee5;
-                                  color: #ffffff;
-                                  border-radius: 50%;
-                                  display: flex;
-                                  align-items: center;
-                                  justify-content: center;
-                                  font-weight: 600;
-                                  font-size: 14px;
-                                "
-                              >
-                                3
-                              </div>
-                            </td>
-                            <td style="vertical-align: top">
-                              <h4
-                                style="
-                                  margin: 0 0 4px 0;
-                                  font-weight: 600;
-                                  color: #111827;
-                                "
-                              >
-                                Create your first booking page
-                              </h4>
-                              <p
-                                style="
-                                  margin: 0;
-                                  color: #6b7280;
-                                  font-size: 14px;
-                                "
-                              >
-                                Customize your personal scheduling page
-                              </p>
-                              <span style="color: #6b7280; font-size: 12px"
-                                >(2 minutes)</span
-                              >
-                            </td>
-                          </tr>
-                        </table>
-
-                        <!-- Step 4 -->
-                        <table
-                          role="presentation"
-                          cellspacing="0"
-                          cellpadding="0"
-                          border="0"
-                          width="100%"
-                        >
-                          <tr>
-                            <td
-                              style="
-                                width: 32px;
-                                padding-right: 16px;
-                                vertical-align: top;
-                              "
-                            >
-                              <div
-                                style="
-                                  width: 24px;
-                                  height: 24px;
-                                  background-color: #007ee5;
-                                  color: #ffffff;
-                                  border-radius: 50%;
-                                  display: flex;
-                                  align-items: center;
-                                  justify-content: center;
-                                  font-weight: 600;
-                                  font-size: 14px;
-                                "
-                              >
-                                4
-                              </div>
-                            </td>
-                            <td style="vertical-align: top">
-                              <h4
-                                style="
-                                  margin: 0 0 4px 0;
-                                  font-weight: 600;
-                                  color: #111827;
-                                "
-                              >
-                                Share your personalized link
-                              </h4>
-                              <p
-                                style="
-                                  margin: 0;
-                                  color: #6b7280;
-                                  font-size: 14px;
-                                "
-                              >
-                                Start receiving bookings immediately
-                              </p>
-                              <span style="color: #6b7280; font-size: 12px"
-                                >(30 seconds)</span
-                              >
-                            </td>
-                          </tr>
-                        </table>
-                      </td>
-                    </tr>
-                  </table>
-                </div>
-
-                <!-- Why Cal.id Section -->
+                <!-- Trial Info -->
                 <div class="content-section">
                   <table
                     role="presentation"
@@ -515,7 +265,7 @@
                       background: linear-gradient(
                         90deg,
                         #e6f7ec 0%,
-                        #e6f4ff 100%
+                        #dcfce7 100%
                       );
                       border-radius: 8px;
                       padding: 24px;
@@ -523,49 +273,35 @@
                     "
                   >
                     <tr>
-                      <td style="padding: 16px">
+                      <td style="text-align: center">
                         <h3
                           style="
-                            margin: 0 0 12px 0;
+                            margin: 0 0 8px 0;
                             font-weight: 600;
-                            color: #111827;
+                            color: #008c44;
                           "
                         >
-                          Why Cal.id?
+                          Your trial expires in:
                         </h3>
-                        <p
+                        <div
                           style="
-                            margin: 0 0 16px 0;
-                            color: #374751;
-                            line-height: 1.6;
+                            font-size: 36px;
+                            font-weight: bold;
+                            color: #008c44;
+                            margin-bottom: 8px;
                           "
                         >
-                          Unlike other tools, you get
-                          <strong>unlimited meetings</strong>, multiple
-                          calendars, and pro features — completely free. No
-                          credit card, no trials, no catches.
-                        </p>
-                        <div style="text-align: center">
-                          <span
-                            style="
-                              display: inline-block;
-                              background-color: #e6f7ec;
-                              color: #008c44;
-                              padding: 8px 16px;
-                              border-radius: 20px;
-                              font-size: 14px;
-                              font-weight: 500;
-                            "
-                          >
-                            Save 5+ hours per week on scheduling
-                          </span>
+                          14 days
                         </div>
+                        <p style="margin: 0; color: #6b7280; font-size: 14px">
+                          That's plenty of time to explore everything!
+                        </p>
                       </td>
                     </tr>
                   </table>
                 </div>
 
-                <!-- CTA Button -->
+                <!-- Features Unlocked -->
                 <div class="content-section">
                   <table
                     role="presentation"
@@ -576,9 +312,504 @@
                     style="margin-bottom: 32px"
                   >
                     <tr>
+                      <td>
+                        <h2
+                          style="
+                            margin: 0 0 24px 0;
+                            font-size: 20px;
+                            font-weight: 600;
+                            color: #111827;
+                          "
+                        >
+                          🚀 Pro features now unlocked:
+                        </h2>
+
+                        <!-- Feature 1 -->
+                        <table
+                          role="presentation"
+                          cellspacing="0"
+                          cellpadding="0"
+                          border="0"
+                          width="100%"
+                          style="
+                            border-left: 4px solid #007ee5;
+                            background-color: #e6f4ff;
+                            border-radius: 0 8px 8px 0;
+                            padding: 20px;
+                            margin-bottom: 16px;
+                          "
+                        >
+                          <tr>
+                            <td
+                              style="
+                                width: 40px;
+                                padding-right: 16px;
+                                vertical-align: top;
+                              "
+                            >
+                              <div
+                                style="
+                                  width: 32px;
+                                  height: 32px;
+                                  background-color: #007ee5;
+                                  color: #ffffff;
+                                  border-radius: 8px;
+                                  display: flex;
+                                  align-items: center;
+                                  justify-content: center;
+                                  font-weight: 600;
+                                  font-size: 16px;
+                                "
+                              >
+                                👥
+                              </div>
+                            </td>
+                            <td>
+                              <h4
+                                style="
+                                  margin: 0 0 8px 0;
+                                  font-weight: 600;
+                                  color: #111827;
+                                "
+                              >
+                                Team Scheduling
+                              </h4>
+                              <p
+                                style="
+                                  margin: 0 0 12px 0;
+                                  color: #6b7280;
+                                  font-size: 14px;
+                                "
+                              >
+                                Round-robin booking for your team members
+                              </p>
+                              <a
+                                href="https://cal.id/team"
+                                style="
+                                  display: inline-block;
+                                  padding: 8px 16px;
+                                  background-color: #007ee5;
+                                  color: #ffffff;
+                                  text-decoration: none;
+                                  border-radius: 6px;
+                                  font-weight: 500;
+                                  font-size: 14px;
+                                "
+                              >
+                                Set Up Team →
+                              </a>
+                            </td>
+                          </tr>
+                        </table>
+
+                        <!-- Feature 2 -->
+                        <table
+                          role="presentation"
+                          cellspacing="0"
+                          cellpadding="0"
+                          border="0"
+                          width="100%"
+                          style="
+                            border-left: 4px solid #008c44;
+                            background-color: #e6f7ec;
+                            border-radius: 0 8px 8px 0;
+                            padding: 20px;
+                            margin-bottom: 16px;
+                          "
+                        >
+                          <tr>
+                            <td
+                              style="
+                                width: 40px;
+                                padding-right: 16px;
+                                vertical-align: top;
+                              "
+                            >
+                              <div
+                                style="
+                                  width: 32px;
+                                  height: 32px;
+                                  background-color: #008c44;
+                                  color: #ffffff;
+                                  border-radius: 8px;
+                                  display: flex;
+                                  align-items: center;
+                                  justify-content: center;
+                                  font-weight: 600;
+                                  font-size: 16px;
+                                "
+                              >
+                                🔗
+                              </div>
+                            </td>
+                            <td>
+                              <h4
+                                style="
+                                  margin: 0 0 8px 0;
+                                  font-weight: 600;
+                                  color: #111827;
+                                "
+                              >
+                                Advanced Integrations
+                              </h4>
+                              <p
+                                style="
+                                  margin: 0 0 12px 0;
+                                  color: #6b7280;
+                                  font-size: 14px;
+                                "
+                              >
+                                Connect with Zapier, Salesforce, HubSpot & more
+                              </p>
+                              <a
+                                href="https://cal.id/integrations"
+                                style="
+                                  display: inline-block;
+                                  padding: 8px 16px;
+                                  background-color: #008c44;
+                                  color: #ffffff;
+                                  text-decoration: none;
+                                  border-radius: 6px;
+                                  font-weight: 500;
+                                  font-size: 14px;
+                                "
+                              >
+                                Browse Integrations →
+                              </a>
+                            </td>
+                          </tr>
+                        </table>
+
+                        <!-- Feature 3 -->
+                        <table
+                          role="presentation"
+                          cellspacing="0"
+                          cellpadding="0"
+                          border="0"
+                          width="100%"
+                          style="
+                            border-left: 4px solid #f9a400;
+                            background-color: #fef9e7;
+                            border-radius: 0 8px 8px 0;
+                            padding: 20px;
+                            margin-bottom: 16px;
+                          "
+                        >
+                          <tr>
+                            <td
+                              style="
+                                width: 40px;
+                                padding-right: 16px;
+                                vertical-align: top;
+                              "
+                            >
+                              <div
+                                style="
+                                  width: 32px;
+                                  height: 32px;
+                                  background-color: #f9a400;
+                                  color: #ffffff;
+                                  border-radius: 8px;
+                                  display: flex;
+                                  align-items: center;
+                                  justify-content: center;
+                                  font-weight: 600;
+                                  font-size: 16px;
+                                "
+                              >
+                                🎨
+                              </div>
+                            </td>
+                            <td>
+                              <h4
+                                style="
+                                  margin: 0 0 8px 0;
+                                  font-weight: 600;
+                                  color: #111827;
+                                "
+                              >
+                                Custom Branding
+                              </h4>
+                              <p
+                                style="
+                                  margin: 0 0 12px 0;
+                                  color: #6b7280;
+                                  font-size: 14px;
+                                "
+                              >
+                                Upload your logo, customize colors, remove
+                                Cal.id branding
+                              </p>
+                              <a
+                                href="https://cal.id/branding"
+                                style="
+                                  display: inline-block;
+                                  padding: 8px 16px;
+                                  background-color: #f9a400;
+                                  color: #ffffff;
+                                  text-decoration: none;
+                                  border-radius: 6px;
+                                  font-weight: 500;
+                                  font-size: 14px;
+                                "
+                              >
+                                Customize Branding →
+                              </a>
+                            </td>
+                          </tr>
+                        </table>
+
+                        <!-- Feature 4 -->
+                        <table
+                          role="presentation"
+                          cellspacing="0"
+                          cellpadding="0"
+                          border="0"
+                          width="100%"
+                          style="
+                            border-left: 4px solid #f1352c;
+                            background-color: #fdf4f4;
+                            border-radius: 0 8px 8px 0;
+                            padding: 20px;
+                          "
+                        >
+                          <tr>
+                            <td
+                              style="
+                                width: 40px;
+                                padding-right: 16px;
+                                vertical-align: top;
+                              "
+                            >
+                              <div
+                                style="
+                                  width: 32px;
+                                  height: 32px;
+                                  background-color: #f1352c;
+                                  color: #ffffff;
+                                  border-radius: 8px;
+                                  display: flex;
+                                  align-items: center;
+                                  justify-content: center;
+                                  font-weight: 600;
+                                  font-size: 16px;
+                                "
+                              >
+                                📊
+                              </div>
+                            </td>
+                            <td>
+                              <h4
+                                style="
+                                  margin: 0 0 8px 0;
+                                  font-weight: 600;
+                                  color: #111827;
+                                "
+                              >
+                                Advanced Analytics
+                              </h4>
+                              <p
+                                style="
+                                  margin: 0 0 12px 0;
+                                  color: #6b7280;
+                                  font-size: 14px;
+                                "
+                              >
+                                Detailed reports, booking analytics, and
+                                performance insights
+                              </p>
+                              <a
+                                href="https://cal.id/analytics"
+                                style="
+                                  display: inline-block;
+                                  padding: 8px 16px;
+                                  background-color: #f1352c;
+                                  color: #ffffff;
+                                  text-decoration: none;
+                                  border-radius: 6px;
+                                  font-weight: 500;
+                                  font-size: 14px;
+                                "
+                              >
+                                View Analytics →
+                              </a>
+                            </td>
+                          </tr>
+                        </table>
+                      </td>
+                    </tr>
+                  </table>
+                </div>
+
+                <!-- Quick Start Guide -->
+                <div class="content-section">
+                  <table
+                    role="presentation"
+                    cellspacing="0"
+                    cellpadding="0"
+                    border="0"
+                    width="100%"
+                    style="
+                      background-color: #f9fafb;
+                      border-radius: 8px;
+                      padding: 24px;
+                      margin-bottom: 32px;
+                    "
+                  >
+                    <tr>
+                      <td>
+                        <h3
+                          style="
+                            margin: 0 0 16px 0;
+                            font-weight: 600;
+                            color: #111827;
+                          "
+                        >
+                          🎯 Quick start guide for your trial:
+                        </h3>
+
+                        <!-- Quick Start Item 1 -->
+                        <table
+                          role="presentation"
+                          cellspacing="0"
+                          cellpadding="0"
+                          border="0"
+                          width="100%"
+                          style="margin-bottom: 12px"
+                        >
+                          <tr>
+                            <td
+                              style="
+                                width: 24px;
+                                padding-right: 12px;
+                                vertical-align: top;
+                              "
+                            >
+                              <div
+                                style="
+                                  width: 20px;
+                                  height: 20px;
+                                  background-color: #008c44;
+                                  border-radius: 50%;
+                                  display: flex;
+                                  align-items: center;
+                                  justify-content: center;
+                                "
+                              >
+                                <span style="color: #ffffff; font-size: 12px"
+                                  >1</span
+                                >
+                              </div>
+                            </td>
+                            <td>
+                              <span style="color: #374751; font-weight: 500"
+                                >Try team scheduling with a colleague</span
+                              >
+                            </td>
+                          </tr>
+                        </table>
+
+                        <!-- Quick Start Item 2 -->
+                        <table
+                          role="presentation"
+                          cellspacing="0"
+                          cellpadding="0"
+                          border="0"
+                          width="100%"
+                          style="margin-bottom: 12px"
+                        >
+                          <tr>
+                            <td
+                              style="
+                                width: 24px;
+                                padding-right: 12px;
+                                vertical-align: top;
+                              "
+                            >
+                              <div
+                                style="
+                                  width: 20px;
+                                  height: 20px;
+                                  background-color: #008c44;
+                                  border-radius: 50%;
+                                  display: flex;
+                                  align-items: center;
+                                  justify-content: center;
+                                "
+                              >
+                                <span style="color: #ffffff; font-size: 12px"
+                                  >2</span
+                                >
+                              </div>
+                            </td>
+                            <td>
+                              <span style="color: #374751; font-weight: 500"
+                                >Connect your favorite apps via
+                                integrations</span
+                              >
+                            </td>
+                          </tr>
+                        </table>
+
+                        <!-- Quick Start Item 3 -->
+                        <table
+                          role="presentation"
+                          cellspacing="0"
+                          cellpadding="0"
+                          border="0"
+                          width="100%"
+                        >
+                          <tr>
+                            <td
+                              style="
+                                width: 24px;
+                                padding-right: 12px;
+                                vertical-align: top;
+                              "
+                            >
+                              <div
+                                style="
+                                  width: 20px;
+                                  height: 20px;
+                                  background-color: #008c44;
+                                  border-radius: 50%;
+                                  display: flex;
+                                  align-items: center;
+                                  justify-content: center;
+                                "
+                              >
+                                <span style="color: #ffffff; font-size: 12px"
+                                  >3</span
+                                >
+                              </div>
+                            </td>
+                            <td>
+                              <span style="color: #374751; font-weight: 500"
+                                >Customize your branding to match your
+                                business</span
+                              >
+                            </td>
+                          </tr>
+                        </table>
+                      </td>
+                    </tr>
+                  </table>
+                </div>
+
+                <!-- CTA Buttons -->
+                <div class="content-section">
+                  <table
+                    role="presentation"
+                    cellspacing="0"
+                    cellpadding="0"
+                    border="0"
+                    width="100%"
+                    style="margin-bottom: 24px"
+                  >
+                    <tr>
                       <td style="text-align: center">
                         <a
-                          href="https://cal.id/setup"
+                          href="https://cal.id/pro-features"
                           class="btn"
                           style="
                             display: inline-block;
@@ -588,18 +819,31 @@
                             text-decoration: none;
                             border-radius: 8px;
                             font-weight: 600;
+                            margin-bottom: 12px;
                             width: 100%;
+                            max-width: 280px;
                             box-sizing: border-box;
                           "
                         >
-                          Complete Your Setup →
+                          Explore Pro Features →
+                        </a>
+                        <br />
+                        <a
+                          href="https://cal.id/setup-guide"
+                          style="
+                            color: #007ee5;
+                            text-decoration: none;
+                            font-weight: 500;
+                          "
+                        >
+                          📖 View setup guide
                         </a>
                       </td>
                     </tr>
                   </table>
                 </div>
 
-                <!-- Founder Message -->
+                <!-- Support Section -->
                 <div class="content-section">
                   <table
                     role="presentation"
@@ -607,88 +851,42 @@
                     cellpadding="0"
                     border="0"
                     width="100%"
-                    style="border-top: 1px solid #e5e7eb; padding-top: 24px"
+                    style="
+                      background-color: #e6f4ff;
+                      border-radius: 8px;
+                      padding: 20px;
+                    "
                   >
                     <tr>
-                      <td>
-                        <p style="margin: 16px 0; color: #6b7280">
-                          Having trouble? Reply to this email — I personally
-                          read every message.
-                        </p>
-                        <table
-                          role="presentation"
-                          cellspacing="0"
-                          cellpadding="0"
-                          border="0"
-                        >
-                          <tr>
-                            <td style="padding-right: 16px">
-                              <div
-                                style="
-                                  width: 48px;
-                                  height: 48px;
-                                  background: linear-gradient(
-                                    135deg,
-                                    #007ee5 0%,
-                                    #006bb8 100%
-                                  );
-                                  border-radius: 50%;
-                                  display: flex;
-                                  align-items: center;
-                                  justify-content: center;
-                                "
-                              >
-                                <span
-                                  style="
-                                    color: #ffffff;
-                                    font-weight: 600;
-                                    font-size: 16px;
-                                  "
-                                  >SC</span
-                                >
-                              </div>
-                            </td>
-                            <td>
-                              <div>
-                                <p
-                                  style="
-                                    margin: 0;
-                                    font-weight: 600;
-                                    color: #111827;
-                                  "
-                                >
-                                  Sarah Chen
-                                </p>
-                                <p
-                                  style="
-                                    margin: 0;
-                                    font-size: 14px;
-                                    color: #6b7280;
-                                  "
-                                >
-                                  Founder, Cal.id
-                                </p>
-                              </div>
-                            </td>
-                          </tr>
-                        </table>
-                        <!-- <div
+                      <td style="text-align: center">
+                        <h4
                           style="
-                            margin-top: 16px;
-                            padding: 16px;
-                            background-color: #f9fafb;
-                            border-radius: 8px;
+                            margin: 0 0 8px 0;
+                            font-weight: 600;
+                            color: #111827;
                           "
                         >
-                          <p style="margin: 0; font-size: 14px; color: #6b7280">
-                            <strong>P.S.</strong> Your unique Cal.id link will
-                            be ready in minutes:
-                            <span style="color: #007ee5; font-weight: 500"
-                              >cal.id/{{ customer.username | default: "yourname"
-                              }}</span
-                            >
-                          </p>
-                        </div> -->
+                          🤝 Need help getting started?
+                        </h4>
+                        <p
+                          style="
+                            margin: 0 0 12px 0;
+                            color: #6b7280;
+                            font-size: 14px;
+                          "
+                        >
+                          Book a free onboarding call with our team
+                        </p>
+                        <a
+                          href="https://cal.id/onboarding"
+                          style="
+                            color: #007ee5;
+                            text-decoration: none;
+                            font-weight: 500;
+                          "
+                        >
+                          Schedule my onboarding call →
+                        </a>
                       </td>
                     </tr>
                   </table>
@@ -723,7 +921,7 @@
                           font-size: 14px;
                         "
                       >
-                        Cal.id - Scheduling made simple
+                        Cal.id Pro - Premium scheduling features
                       </p>
                       <p
                         style="
@@ -732,7 +930,7 @@
                           font-size: 14px;
                         "
                       >
-                        Questions? Reply to this email or visit our help center
+                        Questions? Reply to this email
                       </p>
                       <table
                         role="presentation"
@@ -756,25 +954,13 @@
                           <td style="color: #9ca3af; font-size: 12px">|</td>
                           <td style="padding: 0 8px">
                             <a
-                              href="{{ unsubscribe_url }}"
+                              href="{{customer.unsubscribe_url}}"
                               style="
                                 color: #007ee5;
                                 text-decoration: none;
                                 font-size: 12px;
                               "
                               >Unsubscribe</a
-                            >
-                          </td>
-                          <td style="color: #9ca3af; font-size: 12px">|</td>
-                          <td style="padding: 0 8px">
-                            <a
-                              href="#"
-                              style="
-                                color: #007ee5;
-                                text-decoration: none;
-                                font-size: 12px;
-                              "
-                              >Update Preferences</a
                             >
                           </td>
                         </tr>

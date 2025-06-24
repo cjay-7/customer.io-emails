@@ -1,0 +1,745 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0"
+    />
+    <title>Cal.id Email Templates Dashboard</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+          sans-serif;
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        min-height: 100vh;
+        padding: 20px;
+      }
+
+      .dashboard {
+        max-width: 1400px;
+        margin: 0 auto;
+        background: rgba(255, 255, 255, 0.95);
+        border-radius: 20px;
+        box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+        backdrop-filter: blur(10px);
+        overflow: hidden;
+      }
+
+      .header {
+        background: linear-gradient(135deg, #007ee5 0%, #0056b3 100%);
+        color: white;
+        padding: 40px;
+        text-align: center;
+      }
+
+      .header h1 {
+        font-size: 36px;
+        font-weight: 700;
+        margin-bottom: 10px;
+      }
+
+      .header p {
+        font-size: 18px;
+        opacity: 0.9;
+      }
+
+      .stats {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        gap: 20px;
+        padding: 30px 40px;
+        background: #f8fafc;
+        border-bottom: 1px solid #e2e8f0;
+      }
+
+      .stat-item {
+        text-align: center;
+        padding: 20px;
+        background: white;
+        border-radius: 12px;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+      }
+
+      .stat-number {
+        font-size: 32px;
+        font-weight: bold;
+        color: #007ee5;
+        margin-bottom: 5px;
+      }
+
+      .stat-label {
+        color: #64748b;
+        font-size: 14px;
+        font-weight: 500;
+      }
+
+      .content {
+        padding: 40px;
+      }
+
+      .category {
+        margin-bottom: 40px;
+      }
+
+      .category-header {
+        display: flex;
+        align-items: center;
+        margin-bottom: 20px;
+        padding-bottom: 15px;
+        border-bottom: 2px solid #e2e8f0;
+      }
+
+      .category-icon {
+        font-size: 28px;
+        margin-right: 15px;
+      }
+
+      .category-title {
+        font-size: 24px;
+        font-weight: 600;
+        color: #1e293b;
+        margin-right: 15px;
+      }
+
+      .category-count {
+        background: #007ee5;
+        color: white;
+        padding: 4px 12px;
+        border-radius: 20px;
+        font-size: 14px;
+        font-weight: 600;
+      }
+
+      .emails-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+        gap: 20px;
+      }
+
+      .email-card {
+        background: white;
+        border-radius: 12px;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+        padding: 20px;
+        transition: all 0.3s ease;
+        border: 2px solid transparent;
+      }
+
+      .email-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+        border-color: #007ee5;
+      }
+
+      .email-header {
+        display: flex;
+        align-items: center;
+        margin-bottom: 12px;
+      }
+
+      .email-icon {
+        font-size: 20px;
+        margin-right: 10px;
+      }
+
+      .email-title {
+        font-size: 16px;
+        font-weight: 600;
+        color: #1e293b;
+        flex: 1;
+      }
+
+      .email-status {
+        padding: 4px 8px;
+        border-radius: 12px;
+        font-size: 12px;
+        font-weight: 600;
+      }
+
+      .status-completed {
+        background: #dcfce7;
+        color: #166534;
+      }
+
+      .status-new {
+        background: #fef3c7;
+        color: #92400e;
+      }
+
+      .email-description {
+        color: #64748b;
+        font-size: 14px;
+        line-height: 1.5;
+        margin-bottom: 15px;
+      }
+
+      .email-tags {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 6px;
+      }
+
+      .tag {
+        padding: 3px 8px;
+        background: #f1f5f9;
+        color: #475569;
+        border-radius: 8px;
+        font-size: 12px;
+        font-weight: 500;
+      }
+
+      .trigger-tag {
+        background: #dbeafe;
+        color: #1e40af;
+      }
+
+      .feature-tag {
+        background: #fce7f3;
+        color: #be185d;
+      }
+
+      .summary {
+        background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+        color: white;
+        padding: 30px;
+        border-radius: 12px;
+        margin-top: 40px;
+        text-align: center;
+      }
+
+      .summary h2 {
+        font-size: 24px;
+        margin-bottom: 10px;
+      }
+
+      .summary p {
+        font-size: 16px;
+        opacity: 0.9;
+      }
+
+      @media (max-width: 768px) {
+        .header {
+          padding: 30px 20px;
+        }
+
+        .header h1 {
+          font-size: 28px;
+        }
+
+        .content {
+          padding: 30px 20px;
+        }
+
+        .stats {
+          padding: 20px;
+          grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+        }
+
+        .emails-grid {
+          grid-template-columns: 1fr;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="dashboard">
+      <!-- Header -->
+      <div class="header">
+        <h1>📧 Cal.id Email Templates</h1>
+        <p>Complete Customer.io Implementation Dashboard</p>
+      </div>
+
+      <!-- Stats -->
+      <!-- <div class="stats">
+        <div class="stat-item">
+          <div class="stat-number">26</div>
+          <div class="stat-label">Total Templates</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-number">7</div>
+          <div class="stat-label">Categories</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-number">15+</div>
+          <div class="stat-label">Liquid Variables</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-number">100%</div>
+          <div class="stat-label">Mobile Optimized</div>
+        </div>
+      </div> -->
+
+      <!-- Content -->
+      <div class="content">
+        <!-- Onboarding Series -->
+        <div class="category">
+          <div class="category-header">
+            <div class="category-icon">🎯</div>
+            <div class="category-title">Onboarding Series</div>
+            <div class="category-count">5</div>
+          </div>
+          <div class="emails-grid">
+            <div class="email-card">
+              <div class="email-header">
+                <div class="email-icon">📅</div>
+                <div class="email-title">Welcome Email</div>
+                <div class="email-status status-completed">✓ Done</div>
+              </div>
+              <div class="email-description">
+                Welcome new users with calendar setup guide and first steps
+              </div>
+              <div class="email-tags">
+                <div class="tag trigger-tag">signed_up</div>
+                <div class="tag">setup-guide</div>
+              </div>
+            </div>
+
+            <div class="email-card">
+              <div class="email-header">
+                <div class="email-icon">⚡</div>
+                <div class="email-title">First Booking Tips</div>
+                <div class="email-status status-completed">✓ Done</div>
+              </div>
+              <div class="email-description">
+                Tips and best practices to get first booking fast
+              </div>
+              <div class="email-tags">
+                <div class="tag trigger-tag">Day 1</div>
+                <div class="tag">optimization</div>
+              </div>
+            </div>
+
+            <div class="email-card">
+              <div class="email-header">
+                <div class="email-icon">🔗</div>
+                <div class="email-title">Zoom/Meet Setup</div>
+                <div class="email-status status-completed">✓ Done</div>
+              </div>
+              <div class="email-description">
+                Guide to connecting video conferencing tools
+              </div>
+              <div class="email-tags">
+                <div class="tag trigger-tag">Day 2</div>
+                <div class="tag">integrations</div>
+              </div>
+            </div>
+
+            <div class="email-card">
+              <div class="email-header">
+                <div class="email-icon">🌟</div>
+                <div class="email-title">Success Examples</div>
+                <div class="email-status status-completed">✓ Done</div>
+              </div>
+              <div class="email-description">
+                Showcase examples of successful booking pages
+              </div>
+              <div class="email-tags">
+                <div class="tag trigger-tag">Day 3</div>
+                <div class="tag">inspiration</div>
+              </div>
+            </div>
+
+            <div class="email-card">
+              <div class="email-header">
+                <div class="email-icon">🚀</div>
+                <div class="email-title">Power User Workflows</div>
+                <div class="email-status status-completed">✓ Done</div>
+              </div>
+              <div class="email-description">
+                Advanced features: multi-calendar, team pages, workflows
+              </div>
+              <div class="email-tags">
+                <div class="tag trigger-tag">Day 5</div>
+                <div class="tag">advanced</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Trial Lifecycle -->
+        <div class="category">
+          <div class="category-header">
+            <div class="category-icon">🧪</div>
+            <div class="category-title">Trial Lifecycle</div>
+            <div class="category-count">3</div>
+          </div>
+          <div class="emails-grid">
+            <div class="email-card">
+              <div class="email-header">
+                <div class="email-icon">🎉</div>
+                <div class="email-title">Trial Welcome</div>
+                <div class="email-status status-completed">✓ Done</div>
+              </div>
+              <div class="email-description">
+                Welcome trial users and highlight unlocked features
+              </div>
+              <div class="email-tags">
+                <div class="tag trigger-tag">trial_started</div>
+                <div class="tag">features</div>
+              </div>
+            </div>
+
+            <div class="email-card">
+              <div class="email-header">
+                <div class="email-icon">🤔</div>
+                <div class="email-title">Trial Check-in</div>
+                <div class="email-status status-completed">✓ Done</div>
+              </div>
+              <div class="email-description">
+                "How are things going?" with usage nudges
+              </div>
+              <div class="email-tags">
+                <div class="tag trigger-tag">Day 5</div>
+                <div class="tag">engagement</div>
+              </div>
+            </div>
+
+            <div class="email-card">
+              <div class="email-header">
+                <div class="email-icon">⬆️</div>
+                <div class="email-title">Trial Ended - Upgrade</div>
+                <div class="email-status status-completed">✓ Done</div>
+              </div>
+              <div class="email-description">
+                Convert trial users with compelling upgrade offer
+              </div>
+              <div class="email-tags">
+                <div class="tag trigger-tag">trial_ended</div>
+                <div class="tag">conversion</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Payment & Subscription -->
+        <div class="category">
+          <div class="category-header">
+            <div class="category-icon">💳</div>
+            <div class="category-title">Payment & Subscription</div>
+            <div class="category-count">4</div>
+          </div>
+          <div class="emails-grid">
+            <div class="email-card">
+              <div class="email-header">
+                <div class="email-icon">❌</div>
+                <div class="email-title">Payment Failed</div>
+                <div class="email-status status-completed">✓ Done</div>
+              </div>
+              <div class="email-description">
+                Credit card failed with retry links and urgency
+              </div>
+              <div class="email-tags">
+                <div class="tag trigger-tag">payment_failed</div>
+                <div class="tag">urgency</div>
+              </div>
+            </div>
+
+            <div class="email-card">
+              <div class="email-header">
+                <div class="email-icon">📄</div>
+                <div class="email-title">Invoice Generated</div>
+                <div class="email-status status-completed">✓ Done</div>
+              </div>
+              <div class="email-description">
+                PDF invoice email with payment details
+              </div>
+              <div class="email-tags">
+                <div class="tag trigger-tag">invoice_generated</div>
+                <div class="tag">billing</div>
+              </div>
+            </div>
+
+            <div class="email-card">
+              <div class="email-header">
+                <div class="email-icon">✅</div>
+                <div class="email-title">Payment Success</div>
+                <div class="email-status status-completed">✓ Done</div>
+              </div>
+              <div class="email-description">
+                Payment receipt with upsell opportunities
+              </div>
+              <div class="email-tags">
+                <div class="tag trigger-tag">payment_success</div>
+                <div class="tag">upsell</div>
+              </div>
+            </div>
+
+            <div class="email-card">
+              <div class="email-header">
+                <div class="email-icon">🔄</div>
+                <div class="email-title">Subscription Update</div>
+                <div class="email-status status-completed">✓ Done</div>
+              </div>
+              <div class="email-description">
+                Plan changes and subscription modifications
+              </div>
+              <div class="email-tags">
+                <div class="tag trigger-tag">plan_upgraded</div>
+                <div class="tag">retention</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Activation Campaigns -->
+        <div class="category">
+          <div class="category-header">
+            <div class="category-icon">🚀</div>
+            <div class="category-title">Activation Campaigns</div>
+            <div class="category-count">3</div>
+          </div>
+          <div class="emails-grid">
+            <div class="email-card">
+              <div class="email-header">
+                <div class="email-icon">⏰</div>
+                <div class="email-title">No Booking in 48hrs</div>
+                <div class="email-status status-completed">✓ Done</div>
+              </div>
+              <div class="email-description">
+                Nudge users who haven't created their first booking
+              </div>
+              <div class="email-tags">
+                <div class="tag trigger-tag">inactive_48h</div>
+                <div class="tag">activation</div>
+              </div>
+            </div>
+
+            <div class="email-card">
+              <div class="email-header">
+                <div class="email-icon">👤</div>
+                <div class="email-title">Profile Incomplete</div>
+                <div class="email-status status-completed">✓ Done</div>
+              </div>
+              <div class="email-description">
+                Remind users to complete their profile setup
+              </div>
+              <div class="email-tags">
+                <div class="tag trigger-tag">profile_incomplete</div>
+                <div class="tag">setup</div>
+              </div>
+            </div>
+
+            <div class="email-card">
+              <div class="email-header">
+                <div class="email-icon">🤝</div>
+                <div class="email-title">Success Manager Meeting</div>
+                <div class="email-status status-completed">✓ Done</div>
+              </div>
+              <div class="email-description">
+                Schedule meeting with success manager (Enterprise)
+              </div>
+              <div class="email-tags">
+                <div class="tag trigger-tag">enterprise</div>
+                <div class="tag">white-glove</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Churn Risk Campaigns -->
+        <div class="category">
+          <div class="category-header">
+            <div class="category-icon">📉</div>
+            <div class="category-title">Churn Risk Campaigns</div>
+            <div class="category-count">4</div>
+          </div>
+          <div class="emails-grid">
+            <div class="email-card">
+              <div class="email-header">
+                <div class="email-icon">😔</div>
+                <div class="email-title">We Miss You</div>
+                <div class="email-status status-completed">✓ Done</div>
+              </div>
+              <div class="email-description">
+                Re-engage inactive users with personalized message
+              </div>
+              <div class="email-tags">
+                <div class="tag trigger-tag">inactive_7_days</div>
+                <div class="tag">re-engagement</div>
+              </div>
+            </div>
+
+            <div class="email-card">
+              <div class="email-header">
+                <div class="email-icon">📊</div>
+                <div class="email-title">Value Reminder</div>
+                <div class="email-status status-completed">✓ Done</div>
+              </div>
+              <div class="email-description">
+                "Here's what you're missing" with value metrics
+              </div>
+              <div class="email-tags">
+                <div class="tag trigger-tag">inactive_14_days</div>
+                <div class="tag">value-prop</div>
+              </div>
+            </div>
+
+            <div class="email-card">
+              <div class="email-header">
+                <div class="email-icon">💬</div>
+                <div class="email-title">Feedback + Reactivation</div>
+                <div class="email-status status-new">🆕 New</div>
+              </div>
+              <div class="email-description">
+                Ask for feedback with 1-click account reactivation
+              </div>
+              <div class="email-tags">
+                <div class="tag trigger-tag">at_risk</div>
+                <div class="tag feature-tag">1-click</div>
+              </div>
+            </div>
+
+            <div class="email-card">
+              <div class="email-header">
+                <div class="email-icon">🎁</div>
+                <div class="email-title">Win-Back Offer</div>
+                <div class="email-status status-completed">✓ Done</div>
+              </div>
+              <div class="email-description">
+                Last-ditch effort with special discount offer
+              </div>
+              <div class="email-tags">
+                <div class="tag trigger-tag">churn_imminent</div>
+                <div class="tag">discount</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Feedback Campaigns -->
+        <div class="category">
+          <div class="category-header">
+            <div class="category-icon">💬</div>
+            <div class="category-title">Feedback Campaigns</div>
+            <div class="category-count">3</div>
+          </div>
+          <div class="emails-grid">
+            <div class="email-card">
+              <div class="email-header">
+                <div class="email-icon">⭐</div>
+                <div class="email-title">After 3rd Meeting</div>
+                <div class="email-status status-completed">✓ Done</div>
+              </div>
+              <div class="email-description">
+                Feedback request after user hosts 3rd meeting
+              </div>
+              <div class="email-tags">
+                <div class="tag trigger-tag">3rd_meeting</div>
+                <div class="tag">feedback</div>
+              </div>
+            </div>
+
+            <div class="email-card">
+              <div class="email-header">
+                <div class="email-icon">📊</div>
+                <div class="email-title">NPS Survey</div>
+                <div class="email-status status-completed">✓ Done</div>
+              </div>
+              <div class="email-description">
+                Net Promoter Score survey every 60 days
+              </div>
+              <div class="email-tags">
+                <div class="tag trigger-tag">60_days</div>
+                <div class="tag">NPS</div>
+              </div>
+            </div>
+
+            <div class="email-card">
+              <div class="email-header">
+                <div class="email-icon">🚀</div>
+                <div class="email-title">What Do You Want Next?</div>
+                <div class="email-status status-new">🆕 New</div>
+              </div>
+              <div class="email-description">
+                Feature priority survey with voting system
+              </div>
+              <div class="email-tags">
+                <div class="tag trigger-tag">active_user</div>
+                <div class="tag feature-tag">roadmap</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Newsletter & Product Updates -->
+        <div class="category">
+          <div class="category-header">
+            <div class="category-icon">📰</div>
+            <div class="category-title">Newsletter & Product Updates</div>
+            <div class="category-count">4</div>
+          </div>
+          <div class="emails-grid">
+            <div class="email-card">
+              <div class="email-header">
+                <div class="email-icon">📅</div>
+                <div class="email-title">Monthly Newsletter</div>
+                <div class="email-status status-completed">✓ Done</div>
+              </div>
+              <div class="email-description">
+                Monthly product updates and company news
+              </div>
+              <div class="email-tags">
+                <div class="tag trigger-tag">monthly</div>
+                <div class="tag">newsletter</div>
+              </div>
+            </div>
+
+            <div class="email-card">
+              <div class="email-header">
+                <div class="email-icon">🧪</div>
+                <div class="email-title">Beta Feature Opt-ins</div>
+                <div class="email-status status-new">🆕 New</div>
+              </div>
+              <div class="email-description">
+                Invite power users to try beta features first
+              </div>
+              <div class="email-tags">
+                <div class="tag trigger-tag">power_user</div>
+                <div class="tag feature-tag">beta</div>
+              </div>
+            </div>
+
+            <div class="email-card">
+              <div class="email-header">
+                <div class="email-icon">🌟</div>
+                <div class="email-title">Customer Showcase</div>
+                <div class="email-status status-new">🆕 New</div>
+              </div>
+              <div class="email-description">
+                Highlight customer success stories and case studies
+              </div>
+              <div class="email-tags">
+                <div class="tag trigger-tag">quarterly</div>
+                <div class="tag feature-tag">social-proof</div>
+              </div>
+            </div>
+
+            <div class="email-card">
+              <div class="email-header">
+                <div class="email-icon">🎯</div>
+                <div class="email-title">Milestone Content</div>
+                <div class="email-status status-completed">✓ Done</div>
+              </div>
+              <div class="email-description">
+                Celebrate user milestones (100 meetings, 1 year, etc.)
+              </div>
+              <div class="email-tags">
+                <div class="tag trigger-tag">milestone</div>
+                <div class="tag">celebration</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Summary -->
+      </div>
+    </div>
+  </body>
+</html>

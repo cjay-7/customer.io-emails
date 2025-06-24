@@ -130,12 +130,23 @@
         padding: 20px;
         transition: all 0.3s ease;
         border: 2px solid transparent;
+        cursor: pointer;
+        text-decoration: none;
+        color: inherit;
+        display: block;
       }
 
       .email-card:hover {
         transform: translateY(-5px);
         box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
         border-color: #007ee5;
+        text-decoration: none;
+        color: inherit;
+      }
+
+      .email-card:active {
+        transform: translateY(-2px);
+        box-shadow: 0 6px 20px rgba(0, 0, 0, 0.12);
       }
 
       .email-header {
@@ -224,6 +235,27 @@
         opacity: 0.9;
       }
 
+      /* Click indicator */
+      .email-card::after {
+        content: "→";
+        position: absolute;
+        top: 20px;
+        right: 20px;
+        opacity: 0;
+        transition: opacity 0.3s ease;
+        color: #007ee5;
+        font-weight: bold;
+        font-size: 18px;
+      }
+
+      .email-card {
+        position: relative;
+      }
+
+      .email-card:hover::after {
+        opacity: 1;
+      }
+
       @media (max-width: 768px) {
         .header {
           padding: 30px 20px;
@@ -256,26 +288,6 @@
         <p>Complete Customer.io Implementation Dashboard</p>
       </div>
 
-      <!-- Stats -->
-      <!-- <div class="stats">
-        <div class="stat-item">
-          <div class="stat-number">26</div>
-          <div class="stat-label">Total Templates</div>
-        </div>
-        <div class="stat-item">
-          <div class="stat-number">7</div>
-          <div class="stat-label">Categories</div>
-        </div>
-        <div class="stat-item">
-          <div class="stat-number">15+</div>
-          <div class="stat-label">Liquid Variables</div>
-        </div>
-        <div class="stat-item">
-          <div class="stat-number">100%</div>
-          <div class="stat-label">Mobile Optimized</div>
-        </div>
-      </div> -->
-
       <!-- Content -->
       <div class="content">
         <!-- Onboarding Series -->
@@ -286,7 +298,10 @@
             <div class="category-count">5</div>
           </div>
           <div class="emails-grid">
-            <div class="email-card">
+            <a
+              href="welcome_email.html"
+              class="email-card"
+            >
               <div class="email-header">
                 <div class="email-icon">📅</div>
                 <div class="email-title">Welcome Email</div>
@@ -299,9 +314,12 @@
                 <div class="tag trigger-tag">signed_up</div>
                 <div class="tag">setup-guide</div>
               </div>
-            </div>
+            </a>
 
-            <div class="email-card">
+            <a
+              href="first_booking_tips.html"
+              class="email-card"
+            >
               <div class="email-header">
                 <div class="email-icon">⚡</div>
                 <div class="email-title">First Booking Tips</div>
@@ -314,9 +332,12 @@
                 <div class="tag trigger-tag">Day 1</div>
                 <div class="tag">optimization</div>
               </div>
-            </div>
+            </a>
 
-            <div class="email-card">
+            <a
+              href="zoom_setup.html"
+              class="email-card"
+            >
               <div class="email-header">
                 <div class="email-icon">🔗</div>
                 <div class="email-title">Zoom/Meet Setup</div>
@@ -329,9 +350,12 @@
                 <div class="tag trigger-tag">Day 2</div>
                 <div class="tag">integrations</div>
               </div>
-            </div>
+            </a>
 
-            <div class="email-card">
+            <a
+              href="success_examples.html"
+              class="email-card"
+            >
               <div class="email-header">
                 <div class="email-icon">🌟</div>
                 <div class="email-title">Success Examples</div>
@@ -344,9 +368,12 @@
                 <div class="tag trigger-tag">Day 3</div>
                 <div class="tag">inspiration</div>
               </div>
-            </div>
+            </a>
 
-            <div class="email-card">
+            <a
+              href="power_user_workflows.html"
+              class="email-card"
+            >
               <div class="email-header">
                 <div class="email-icon">🚀</div>
                 <div class="email-title">Power User Workflows</div>
@@ -359,7 +386,7 @@
                 <div class="tag trigger-tag">Day 5</div>
                 <div class="tag">advanced</div>
               </div>
-            </div>
+            </a>
           </div>
         </div>
 
@@ -371,7 +398,10 @@
             <div class="category-count">3</div>
           </div>
           <div class="emails-grid">
-            <div class="email-card">
+            <a
+              href="trial_welcome.html"
+              class="email-card"
+            >
               <div class="email-header">
                 <div class="email-icon">🎉</div>
                 <div class="email-title">Trial Welcome</div>
@@ -384,9 +414,12 @@
                 <div class="tag trigger-tag">trial_started</div>
                 <div class="tag">features</div>
               </div>
-            </div>
+            </a>
 
-            <div class="email-card">
+            <a
+              href="trial_checkin.html"
+              class="email-card"
+            >
               <div class="email-header">
                 <div class="email-icon">🤔</div>
                 <div class="email-title">Trial Check-in</div>
@@ -399,9 +432,12 @@
                 <div class="tag trigger-tag">Day 5</div>
                 <div class="tag">engagement</div>
               </div>
-            </div>
+            </a>
 
-            <div class="email-card">
+            <a
+              href="trial_upgrade.html"
+              class="email-card"
+            >
               <div class="email-header">
                 <div class="email-icon">⬆️</div>
                 <div class="email-title">Trial Ended - Upgrade</div>
@@ -414,7 +450,7 @@
                 <div class="tag trigger-tag">trial_ended</div>
                 <div class="tag">conversion</div>
               </div>
-            </div>
+            </a>
           </div>
         </div>
 
@@ -426,7 +462,10 @@
             <div class="category-count">4</div>
           </div>
           <div class="emails-grid">
-            <div class="email-card">
+            <a
+              href="payment_failed.html"
+              class="email-card"
+            >
               <div class="email-header">
                 <div class="email-icon">❌</div>
                 <div class="email-title">Payment Failed</div>
@@ -439,9 +478,12 @@
                 <div class="tag trigger-tag">payment_failed</div>
                 <div class="tag">urgency</div>
               </div>
-            </div>
+            </a>
 
-            <div class="email-card">
+            <a
+              href="invoice_generated.html"
+              class="email-card"
+            >
               <div class="email-header">
                 <div class="email-icon">📄</div>
                 <div class="email-title">Invoice Generated</div>
@@ -454,9 +496,12 @@
                 <div class="tag trigger-tag">invoice_generated</div>
                 <div class="tag">billing</div>
               </div>
-            </div>
+            </a>
 
-            <div class="email-card">
+            <a
+              href="payment_success.html"
+              class="email-card"
+            >
               <div class="email-header">
                 <div class="email-icon">✅</div>
                 <div class="email-title">Payment Success</div>
@@ -469,9 +514,12 @@
                 <div class="tag trigger-tag">payment_success</div>
                 <div class="tag">upsell</div>
               </div>
-            </div>
+            </a>
 
-            <div class="email-card">
+            <a
+              href="subscription_update.html"
+              class="email-card"
+            >
               <div class="email-header">
                 <div class="email-icon">🔄</div>
                 <div class="email-title">Subscription Update</div>
@@ -484,7 +532,7 @@
                 <div class="tag trigger-tag">plan_upgraded</div>
                 <div class="tag">retention</div>
               </div>
-            </div>
+            </a>
           </div>
         </div>
 
@@ -496,7 +544,10 @@
             <div class="category-count">3</div>
           </div>
           <div class="emails-grid">
-            <div class="email-card">
+            <a
+              href="no_booking_48hrs.html"
+              class="email-card"
+            >
               <div class="email-header">
                 <div class="email-icon">⏰</div>
                 <div class="email-title">No Booking in 48hrs</div>
@@ -506,67 +557,79 @@
                 Nudge users who haven't created their first booking
               </div>
               <div class="email-tags">
-                <div class="tag trigger-tag">inactive_48h</div>
+                <div class="tag trigger-tag">48_hours</div>
                 <div class="tag">activation</div>
               </div>
-            </div>
+            </a>
 
-            <div class="email-card">
+            <a
+              href="setup_incomplete.html"
+              class="email-card"
+            >
               <div class="email-header">
-                <div class="email-icon">👤</div>
-                <div class="email-title">Profile Incomplete</div>
+                <div class="email-icon">⚠️</div>
+                <div class="email-title">Setup Incomplete</div>
                 <div class="email-status status-completed">✓ Done</div>
               </div>
               <div class="email-description">
-                Remind users to complete their profile setup
+                Remind users to complete profile and availability setup
               </div>
               <div class="email-tags">
-                <div class="tag trigger-tag">profile_incomplete</div>
-                <div class="tag">setup</div>
+                <div class="tag trigger-tag">incomplete_setup</div>
+                <div class="tag">onboarding</div>
               </div>
-            </div>
+            </a>
 
-            <div class="email-card">
+            <a
+              href="enterprise_success_manager.html"
+              class="email-card"
+            >
               <div class="email-header">
-                <div class="email-icon">🤝</div>
-                <div class="email-title">Success Manager Meeting</div>
+                <div class="email-icon">🎉</div>
+                <div class="email-title">
+                  Schedule meeting with success manager
+                </div>
                 <div class="email-status status-completed">✓ Done</div>
               </div>
-              <div class="email-description">
-                Schedule meeting with success manager (Enterprise)
-              </div>
+              <div class="email-description">(for enterprise)</div>
               <div class="email-tags">
-                <div class="tag trigger-tag">enterprise</div>
-                <div class="tag">white-glove</div>
+                <div class="tag trigger-tag">first_booking</div>
+                <div class="tag">manager</div>
               </div>
-            </div>
+            </a>
           </div>
         </div>
 
-        <!-- Churn Risk Campaigns -->
+        <!-- Re-engagement -->
         <div class="category">
           <div class="category-header">
-            <div class="category-icon">📉</div>
-            <div class="category-title">Churn Risk Campaigns</div>
-            <div class="category-count">4</div>
+            <div class="category-icon">🔄</div>
+            <div class="category-title">Re-engagement</div>
+            <div class="category-count">3</div>
           </div>
           <div class="emails-grid">
-            <div class="email-card">
+            <a
+              href="inactive_7_days.html"
+              class="email-card"
+            >
               <div class="email-header">
-                <div class="email-icon">😔</div>
-                <div class="email-title">We Miss You</div>
+                <div class="email-icon">💤</div>
+                <div class="email-title">7 Days Inactive</div>
                 <div class="email-status status-completed">✓ Done</div>
               </div>
               <div class="email-description">
-                Re-engage inactive users with personalized message
+                "We miss you" gentle nudge with recent features
               </div>
               <div class="email-tags">
                 <div class="tag trigger-tag">inactive_7_days</div>
                 <div class="tag">re-engagement</div>
               </div>
-            </div>
+            </a>
 
-            <div class="email-card">
+            <a
+              href="value_reminder.html"
+              class="email-card"
+            >
               <div class="email-header">
                 <div class="email-icon">📊</div>
                 <div class="email-title">Value Reminder</div>
@@ -579,9 +642,12 @@
                 <div class="tag trigger-tag">inactive_14_days</div>
                 <div class="tag">value-prop</div>
               </div>
-            </div>
+            </a>
 
-            <div class="email-card">
+            <a
+              href="feedback_reactivation.html"
+              class="email-card"
+            >
               <div class="email-header">
                 <div class="email-icon">💬</div>
                 <div class="email-title">Feedback + Reactivation</div>
@@ -594,9 +660,12 @@
                 <div class="tag trigger-tag">at_risk</div>
                 <div class="tag feature-tag">1-click</div>
               </div>
-            </div>
+            </a>
 
-            <div class="email-card">
+            <a
+              href="winback_offer.html"
+              class="email-card"
+            >
               <div class="email-header">
                 <div class="email-icon">🎁</div>
                 <div class="email-title">Win-Back Offer</div>
@@ -609,7 +678,7 @@
                 <div class="tag trigger-tag">churn_imminent</div>
                 <div class="tag">discount</div>
               </div>
-            </div>
+            </a>
           </div>
         </div>
 
@@ -621,7 +690,10 @@
             <div class="category-count">3</div>
           </div>
           <div class="emails-grid">
-            <div class="email-card">
+            <a
+              href="after_3rd_meeting.html"
+              class="email-card"
+            >
               <div class="email-header">
                 <div class="email-icon">⭐</div>
                 <div class="email-title">After 3rd Meeting</div>
@@ -634,9 +706,12 @@
                 <div class="tag trigger-tag">3rd_meeting</div>
                 <div class="tag">feedback</div>
               </div>
-            </div>
+            </a>
 
-            <div class="email-card">
+            <a
+              href="nps_survey.html"
+              class="email-card"
+            >
               <div class="email-header">
                 <div class="email-icon">📊</div>
                 <div class="email-title">NPS Survey</div>
@@ -649,9 +724,12 @@
                 <div class="tag trigger-tag">60_days</div>
                 <div class="tag">NPS</div>
               </div>
-            </div>
+            </a>
 
-            <div class="email-card">
+            <a
+              href="feature_priority_survey.html"
+              class="email-card"
+            >
               <div class="email-header">
                 <div class="email-icon">🚀</div>
                 <div class="email-title">What Do You Want Next?</div>
@@ -664,7 +742,7 @@
                 <div class="tag trigger-tag">active_user</div>
                 <div class="tag feature-tag">roadmap</div>
               </div>
-            </div>
+            </a>
           </div>
         </div>
 
@@ -676,7 +754,10 @@
             <div class="category-count">4</div>
           </div>
           <div class="emails-grid">
-            <div class="email-card">
+            <a
+              href="monthly_newsletter.html"
+              class="email-card"
+            >
               <div class="email-header">
                 <div class="email-icon">📅</div>
                 <div class="email-title">Monthly Newsletter</div>
@@ -689,9 +770,12 @@
                 <div class="tag trigger-tag">monthly</div>
                 <div class="tag">newsletter</div>
               </div>
-            </div>
+            </a>
 
-            <div class="email-card">
+            <a
+              href="beta_feature_optins.html"
+              class="email-card"
+            >
               <div class="email-header">
                 <div class="email-icon">🧪</div>
                 <div class="email-title">Beta Feature Opt-ins</div>
@@ -704,9 +788,12 @@
                 <div class="tag trigger-tag">power_user</div>
                 <div class="tag feature-tag">beta</div>
               </div>
-            </div>
+            </a>
 
-            <div class="email-card">
+            <a
+              href="customer_showcase_email.html"
+              class="email-card"
+            >
               <div class="email-header">
                 <div class="email-icon">🌟</div>
                 <div class="email-title">Customer Showcase</div>
@@ -719,9 +806,12 @@
                 <div class="tag trigger-tag">quarterly</div>
                 <div class="tag feature-tag">social-proof</div>
               </div>
-            </div>
+            </a>
 
-            <div class="email-card">
+            <a
+              href="milestone_celebration.html"
+              class="email-card"
+            >
               <div class="email-header">
                 <div class="email-icon">🎯</div>
                 <div class="email-title">Milestone Content</div>
@@ -734,11 +824,17 @@
                 <div class="tag trigger-tag">milestone</div>
                 <div class="tag">celebration</div>
               </div>
-            </div>
+            </a>
           </div>
         </div>
 
         <!-- Summary -->
+        <div class="summary">
+          <h2>🎉 All Set!</h2>
+          <p>
+            Complete email campaign system ready for Customer.io implementation
+          </p>
+        </div>
       </div>
     </div>
   </body>

@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Beta Access: New Cal.id Features</title>
+    <style>
+      @media only screen and (max-width: 600px) {
+        .mobile-padding {
+          padding: 20px !important;
+        }
+        .mobile-button {
+          padding: 12px 20px !important;
+          font-size: 16px !important;
+        }
+        .mobile-text {
+          font-size: 16px !important;
+        }
+      }
+    </style>
+  </head>
+  <body style="margin: 0; padding: 0; background-color: #f3f4f6; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;">
+    <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%" style="background-color: #f3f4f6;">
+      <tr>
+        <td align="center" style="padding: 40px 20px;">
+          <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%" style="max-width: 600px; background-color: #ffffff; border-radius: 12px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);">
+            
+            <!-- Header with Beta Badge -->
+            <tr>
+              <td style="background: linear-gradient(135deg, #f59e0b 0%, #d97706 100%); padding: 32px; text-align: center; border-radius: 12px 12px 0 0; position: relative;" class="mobile-padding">
+                <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%">
+                  <tr>
+                    <td style="text-align: center;">
+                      <!-- Beta Badge -->
+                      <div style="background-color: rgba(255, 255, 255, 0.9); color: #f59e0b; font-size: 12px; font-weight: bold; padding: 6px 12px; border-radius: 20px; display: inline-block; margin-bottom: 16px; letter-spacing: 0.5px;">
+                        🚀 BETA ACCESS
+                      </div>
+                      <table role="presentation" cellspacing="0" cellpadding="0" border="0" style="margin: 0 auto;">
+                        <tr>
+                          <td style="background-color: rgba(255, 255, 255, 0.2); padding: 16px; border-radius: 8px; text-align: center;">
+                            <div style="color: #ffffff; font-size: 24px; font-weight: bold; margin-bottom: 4px;">📅</div>
+                            <div style="color: #ffffff; font-size: 14px; font-weight: 600; letter-spacing: 1px; margin-top: 4px; display: inline-block;">CAL.ID</div>
+                          </td>
+                        </tr>
+                      </table>
+                    </td>
+                  </tr>
+                </table>
+              </td>
+            </tr>
+
+            <!-- Content -->
+            <tr>
+              <td style="padding: 32px" class="mobile-padding">
+                
+                <!-- Title -->
+                <div style="margin-bottom: 32px;">
+                  <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%">
+                    <tr>
+                      <td style="text-align: center; padding-bottom: 24px">
+                        <h1 style="margin: 0 0 16px 0; font-size: 28px; font-weight: bold; color: #111827;">
+                          🎉 {{ customer.first_name | default: "There" }}, you're invited to try our newest features!
+                        </h1>
+                        <p style="margin: 0; font-size: 18px; color: #6b7280; line-height: 1.6;" class="mobile-text">
+                          As a valued Cal.id user, you get exclusive early access to features before they launch publicly.
+                        </p>
+                      </td>
+                    </tr>
+                  </table>
+                </div>
+
+                <!-- Beta Feature Cards -->
+                <div style="margin-bottom: 32px;">
+                  
+                  <!-- Feature 1: AI Smart Scheduling -->
+                  <div style="background: linear-gradient(135deg, #ede9fe 0%, #ddd6fe 100%); border: 2px solid #c4b5fd; border-radius: 12px; padding: 24px; margin-bottom: 20px;">
+                    <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%">
+                      <tr>
+                        <td>
+                          <div style="display: flex; align-items: flex-start; margin-bottom: 16px;">
+                            <div style="background-color: #8b5cf6; color: white; font-size: 20px; padding: 8px; border-radius: 8px; margin-right: 16px;">🤖</div>
+                            <div>
+                              <h3 style="margin: 0 0 8px 0; font-size: 20px; font-weight: 600; color: #581c87;">
+                                AI Smart Scheduling
+                              </h3>
+                              <p style="margin: 0; color: #6b7280; font-size: 14px; line-height: 1.5;">
+                                Let AI automatically suggest the best meeting times based on participant preferences, time zones, and availability patterns.
+                              </p>
+                            </div>
+                          </div>
+                          <div style="background-color: rgba(139, 92, 246, 0.1); padding: 12px; border-radius: 6px; margin-bottom: 16px;">
+                            <p style="margin: 0; font-size: 12px; color: #581c87; font-weight: 500;">
+                              ✨ NEW: Now includes conflict detection and automatic rescheduling suggestions
+                            </p>
+                          </div>
+                          <table role="presentation" cellspacing="0" cellpadding="0" border="0">
+                            <tr>
+                              <td style="border-radius: 6px; background-color: #8b5cf6;">
+                                <a href="https://cal.id/beta-optin?feature=ai_scheduling&user={{ customer.id }}" 
+                                   style="display: inline-block; padding: 10px 20px; background-color: #8b5cf6; color: #ffffff; text-decoration: none; border-radius: 6px; font-weight: 600; font-size: 14px;">
+                                  Try AI Scheduling
+                                </a>
+                              </td>
+                            </tr>
+                          </table>
+                        </td>
+                      </tr>
+                    </table>
+                  </div>
+
+                  <!-- Feature 2: Advanced Analytics -->
+                  <div style="background: linear-gradient(135deg, #ecfdf5 0%, #d1fae5 100%); border: 2px solid #86efac; border-radius: 12px; padding: 24px; margin-bottom: 20px;">
+                    <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%">
+                      <tr>
+                        <td>
+                          <div style="display: flex; align-items: flex-start; margin-bottom: 16px;">
+                            <div style="background-color: #10b981; color: white; font-size: 20px; padding: 8px; border-radius: 8px; margin-right: 16px;">📊</div>
+                            <div>
+                              <h3 style="margin: 0 0 8px 0; font-size: 20px; font-weight: 600; color: #064e3b;">
+                                Advanced Analytics Dashboard
+                              </h3>
+                              <p style="margin: 0; color: #6b7280; font-size: 14px; line-height: 1.5;">
+                                Get deep insights into your meeting patterns, productivity trends, and team collaboration metrics.
+                              </p>
+                            </div>
+                          </div>
+                          <div style="background-color: rgba(16, 185, 129, 0.1); padding: 12px; border-radius: 6px; margin-bottom: 16px;">
+                            <p style="margin: 0; font-size: 12px; color: #064e3b; font-weight: 500;">
+                              📈 Includes: Meeting efficiency scores, time-saving reports, and ROI tracking
+                            </p>
+                          </div>
+                          <table role="presentation" cellspacing="0" cellpadding="0" border="0">
+                            <tr>
+                              <td style="border-radius: 6px; background-color: #10b981;">
+                                <a href="https://cal.id/beta-optin?feature=analytics&user={{ customer.id }}" 
+                                   style="display: inline-block; padding: 10px 20px; background-color: #10b981; color: #ffffff; text-decoration: none; border-radius: 6px; font-weight: 600; font-size: 14px;">
+                                  View Analytics
+                                </a>
+                              </td>
+                            </tr>
+                          </table>
+                        </td>
+                      </tr>
+                    </table>
+                  </div>
+
+                  <!-- Feature 3: Payment Integration -->
+                  <div style="background: linear-gradient(135deg, #fef3c7 0%, #fde68a 100%); border: 2px solid #fbbf24; border-radius: 12px; padding: 24px; margin-bottom: 20px;">
+                    <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%">
+                      <tr>
+                        <td>
+                          <div style="display: flex; align-items: flex-start; margin-bottom: 16px;">
+                            <div style="background-color: #f59e0b; color: white; font-size: 20px; padding: 8px; border-radius: 8px; margin-right: 16px;">💳</div>
+                            <div>
+                              <h3 style="margin: 0 0 8px 0; font-size: 20px; font-weight: 600; color: #92400e;">
+                                Integrated Payments
+                              </h3>
+                              <p style="margin: 0; color: #6b7280; font-size: 14px; line-height: 1.5;">
+                                Collect payments for consultations, coaching sessions, and services directly through your booking links.
+                              </p>
+                            </div>
+                          </div>
+                          <div style="background-color: rgba(245, 158, 11, 0.1); padding: 12px; border-radius: 6px; margin-bottom: 16px;">
+                            <p style="margin: 0; font-size: 12px; color: #92400e; font-weight: 500;">
+                              💰 Supports Stripe, PayPal, and Razorpay with automatic invoicing
+                            </p>
+                          </div>
+                          <table role="presentation" cellspacing="0" cellpadding="0" border="0">
+                            <tr>
+                              <td style="border-radius: 6px; background-color: #f59e0b;">
+                                <a href="https://cal.id/beta-optin?feature=payments&user={{ customer.id }}" 
+                                   style="display: inline-block; padding: 10px 20px; background-color: #f59e0b; color: #ffffff; text-decoration: none; border-radius: 6px; font-weight: 600; font-size: 14px;">
+                                  Enable Payments
+                                </a>
+                              </td>
+                            </tr>
+                          </table>
+                        </td>
+                      </tr>
+                    </table>
+                  </div>
+
+                </div>
+
+                <!-- Why Beta? -->
+                <div style="background-color: #f9fafb; padding: 24px; border-radius: 8px; margin-bottom: 32px; border-left: 4px solid #f59e0b;">
+                  <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%">
+                    <tr>
+                      <td>
+                        <h3 style="margin: 0 0 12px 0; color: #374151; font-size: 18px; font-weight: 600;">
+                          🛠️ Why join our beta program?
+                        </h3>
+                        <ul style="margin: 0; padding-left: 20px; color: #6b7280; font-size: 14px; line-height: 1.6;">
+                          <li style="margin-bottom: 8px;">Get features weeks before everyone else</li>
+                          <li style="margin-bottom: 8px;">Direct line to our product team for feedback</li>
+                          <li style="margin-bottom: 8px;">Help shape the final version with your input</li>
+                          <li style="margin-bottom: 8px;">Free access during beta period</li>
+                          <li>Priority support and onboarding</li>
+                        </ul>
+                      </td>
+                    </tr>
+                  </table>
+                </div>
+
+                <!-- Conditional Logic for User Type -->
+                {% if customer.plan_name == 'pro' or customer.plan_name == 'team' %}
+                <!-- Pro/Team User CTA -->
+                <div style="background: linear-gradient(135deg, #f59e0b 0%, #d97706 100%); padding: 24px; border-radius: 8px; margin-bottom: 32px;">
+                  <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%">
+                    <tr>
+                      <td style="text-align: center;">
+                        <h3 style="margin: 0 0 12px 0; color: #ffffff; font-size: 18px; font-weight: 600;">
+                          🌟 Premium User Exclusive
+                        </h3>
+                        <p style="margin: 0 0 20px 0; color: rgba(255, 255, 255, 0.9); font-size: 14px;">
+                          As a {{ customer.plan_name | capitalize }} user, you get access to ALL beta features
+                        </p>
+                        <table role="presentation" cellspacing="0" cellpadding="0" border="0" style="margin: 0 auto;">
+                          <tr>
+                            <td style="border-radius: 6px; background-color: #ffffff;">
+                              <a href="https://cal.id/beta-optin?all_features=true&user={{ customer.id }}" 
+                                 style="display: inline-block; padding: 14px 28px; background-color: #ffffff; color: #d97706; text-decoration: none; border-radius: 6px; font-weight: 600; font-size: 16px;" 
+                                 class="mobile-button">
+                                🚀 Activate All Beta Features
+                              </a>
+                            </td>
+                          </tr>
+                        </table>
+                      </td>
+                    </tr>
+                  </table>
+                </div>
+                {% else %}
+                <!-- Free User CTA -->
+                <div style="background: linear-gradient(135deg, #6366f1 0%, #4f46e5 100%); padding: 24px; border-radius: 8px; margin-bottom: 32px;">
+                  <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%">
+                    <tr>
+                      <td style="text-align: center;">
+                        <h3 style="margin: 0 0 12px 0; color: #ffffff; font-size: 18px; font-weight: 600;">
+                          🎯 Select Your Beta Features
+                        </h3>
+                        <p style="margin: 0 0 20px 0; color: rgba(255, 255, 255, 0.9); font-size: 14px;">
+                          Choose up to 2 beta features to try for free
+                        </p>
+                        <table role="presentation" cellspacing="0" cellpadding="0" border="0" style="margin: 0 auto;">
+                          <tr>
+                            <td style="border-radius: 6px; background-color: #ffffff;">
+                              <a href="https://cal.id/beta-selection?user={{ customer.id }}" 
+                                 style="display: inline-block; padding: 14px 28px; background-color: #ffffff; color: #4f46e5; text-decoration: none; border-radius: 6px; font-weight: 600; font-size: 16px;" 
+                                 class="mobile-button">
+                                🎮 Choose My Beta Features
+                              </a>
+                            </td>
+                          </tr>
+                        </table>
+                      </td>
+                    </tr>
+                  </table>
+                </div>
+                {% endif %}
+
+                <!-- Limited Time Notice -->
+                <div style="text-align: center; margin-bottom: 24px;">
+                  <p style="margin: 0 0 8px 0; color: #dc2626; font-size: 14px; font-weight: 600;">
+                    ⏰ Limited beta spots available - Expires in 72 hours
+                  </p>
+                  <p style="margin: 0; color: #6b7280; font-size: 12px;">
+                    Questions? Reply to this email or <a href="https://cal.id/beta-help" style="color: #f59e0b; text-decoration: none;">visit our beta FAQ</a>
+                  </p>
+                </div>
+
+              </td>
+            </tr>
+
+            <!-- Footer -->
+            <tr>
+              <td style="background-color: #f9fafb; padding: 24px 32px; border-top: 1px solid #e5e7eb; border-radius: 0 0 12px 12px;" class="mobile-padding">
+                <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%">
+                  <tr>
+                    <td style="text-align: center">
+                      <p style="margin: 0 0 8px 0; color: #6b7280; font-size: 14px;">
+                        Cal.id Beta Program - Innovating together
+                      </p>
+                      <p style="margin: 0 0 16px 0; color: #6b7280; font-size: 14px;">
+                        Your feedback drives our innovation
+                      </p>
+                      <table role="presentation" cellspacing="0" cellpadding="0" border="0" style="margin: 0 auto">
+                        <tr>
+                          <td style="padding: 0 8px">
+                            <a href="https://cal.id/beta-help" style="color: #007ee5; text-decoration: none; font-size: 12px;">Beta FAQ</a>
+                          </td>
+                          <td style="color: #9ca3af; font-size: 12px">|</td>
+                          <td style="padding: 0 8px">
+                            <a href="https://cal.id/help" style="color: #007ee5; text-decoration: none; font-size: 12px;">Help Center</a>
+                          </td>
+                          <td style="color: #9ca3af; font-size: 12px">|</td>
+                          <td style="padding: 0 8px">
+                            <a href="{{customer.unsubscribe_url}}" style="color: #007ee5; text-decoration: none; font-size: 12px;">Unsubscribe</a>
+                          </td>
+                        </tr>
+                      </table>
+                    </td>
+                  </tr>
+                </table>
+              </td>
+            </tr>
+          </table>
+        </td>
+      </tr>
+    </table>
+  </body>
+</html>

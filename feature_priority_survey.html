@@ -2,7 +2,10 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0"
+    />
     <title>Help us build what you need next</title>
     <style>
       @media only screen and (max-width: 600px) {
@@ -19,23 +22,99 @@
       }
     </style>
   </head>
-  <body style="margin: 0; padding: 0; background-color: #f3f4f6; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;">
-    <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%" style="background-color: #f3f4f6;">
+  <body
+    style="
+      margin: 0;
+      padding: 0;
+      background-color: #f3f4f6;
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
+        'Helvetica Neue', Arial, sans-serif;
+    "
+  >
+    <table
+      role="presentation"
+      cellspacing="0"
+      cellpadding="0"
+      border="0"
+      width="100%"
+      style="background-color: #f3f4f6"
+    >
       <tr>
-        <td align="center" style="padding: 40px 20px;">
-          <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%" style="max-width: 600px; background-color: #ffffff; border-radius: 12px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);">
-            
+        <td
+          align="center"
+          style="padding: 40px 20px"
+        >
+          <table
+            role="presentation"
+            cellspacing="0"
+            cellpadding="0"
+            border="0"
+            width="100%"
+            style="
+              max-width: 600px;
+              background-color: #fafafa;
+              border-radius: 12px;
+              box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+            "
+          >
             <!-- Header -->
             <tr>
-              <td style="background: linear-gradient(135deg, #8b5cf6 0%, #7c3aed 100%); padding: 32px; text-align: center; border-radius: 12px 12px 0 0;" class="mobile-padding">
-                <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%">
+              <td
+                style="
+                  background: linear-gradient(135deg, #8b5cf6 0%, #7c3aed 100%);
+                  padding: 32px;
+                  text-align: center;
+                  border-radius: 12px 12px 0 0;
+                "
+                class="mobile-padding"
+              >
+                <table
+                  role="presentation"
+                  cellspacing="0"
+                  cellpadding="0"
+                  border="0"
+                  width="100%"
+                >
                   <tr>
-                    <td style="text-align: center;">
-                      <table role="presentation" cellspacing="0" cellpadding="0" border="0" style="margin: 0 auto;">
+                    <td style="text-align: center">
+                      <table
+                        role="presentation"
+                        cellspacing="0"
+                        cellpadding="0"
+                        border="0"
+                        style="margin: 0 auto"
+                      >
                         <tr>
-                          <td style="background-color: rgba(255, 255, 255, 0.2); padding: 16px; border-radius: 8px; text-align: center;">
-                            <div style="color: #ffffff; font-size: 24px; font-weight: bold; margin-bottom: 4px;">📅</div>
-                            <div style="color: #ffffff; font-size: 14px; font-weight: 600; letter-spacing: 1px; margin-top: 4px; display: inline-block;">CAL.ID</div>
+                          <td
+                            style="
+                              background-color: rgba(255, 255, 255, 0.2);
+                              padding: 16px;
+                              border-radius: 8px;
+                              text-align: center;
+                            "
+                          >
+                            <div
+                              style="
+                                color: #fafafa;
+                                font-size: 24px;
+                                font-weight: bold;
+                                margin-bottom: 4px;
+                              "
+                            >
+                              📅
+                            </div>
+                            <div
+                              style="
+                                color: #fafafa;
+                                font-size: 14px;
+                                font-weight: 600;
+                                letter-spacing: 1px;
+                                margin-top: 4px;
+                                display: inline-block;
+                              "
+                            >
+                              Cal ID
+                            </div>
                           </td>
                         </tr>
                       </table>
@@ -47,18 +126,43 @@
 
             <!-- Content -->
             <tr>
-              <td style="padding: 32px" class="mobile-padding">
-                
+              <td
+                style="padding: 32px"
+                class="mobile-padding"
+              >
                 <!-- Title -->
-                <div style="margin-bottom: 32px;">
-                  <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%">
+                <div style="margin-bottom: 32px">
+                  <table
+                    role="presentation"
+                    cellspacing="0"
+                    cellpadding="0"
+                    border="0"
+                    width="100%"
+                  >
                     <tr>
                       <td style="text-align: center; padding-bottom: 24px">
-                        <h1 style="margin: 0 0 16px 0; font-size: 28px; font-weight: bold; color: #111827;">
-                          🚀 What do you want next, {{ customer.first_name | default: "there" }}?
+                        <h1
+                          style="
+                            margin: 0 0 16px 0;
+                            font-size: 28px;
+                            font-weight: bold;
+                            color: #444444;
+                          "
+                        >
+                          🚀 What do you want next, {{ customer.first_name |
+                          default: "there" }}?
                         </h1>
-                        <p style="margin: 0; font-size: 18px; color: #6b7280; line-height: 1.6;" class="mobile-text">
-                          You've been using Cal.id for a while now. Help us prioritize what to build next!
+                        <p
+                          style="
+                            margin: 0;
+                            font-size: 18px;
+                            color: #6b7280;
+                            line-height: 1.6;
+                          "
+                          class="mobile-text"
+                        >
+                          You've been using Cal ID for a while now. Help us
+                          prioritize what to build next!
                         </p>
                       </td>
                     </tr>
@@ -67,29 +171,110 @@
 
                 <!-- User Stats -->
                 {% if customer.meetings_count > 0 %}
-                <div style="background: linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 100%); padding: 24px; border-radius: 8px; margin-bottom: 32px; border-left: 4px solid #8b5cf6;">
-                  <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%">
+                <div
+                  style="
+                    background: linear-gradient(
+                      135deg,
+                      #f0f9ff 0%,
+                      #e0f2fe 100%
+                    );
+                    padding: 24px;
+                    border-radius: 8px;
+                    margin-bottom: 32px;
+                    border-left: 4px solid #8b5cf6;
+                  "
+                >
+                  <table
+                    role="presentation"
+                    cellspacing="0"
+                    cellpadding="0"
+                    border="0"
+                    width="100%"
+                  >
                     <tr>
-                      <td style="text-align: center;">
-                        <p style="margin: 0 0 8px 0; color: #6b7280; font-size: 14px; font-weight: 500;">
+                      <td style="text-align: center">
+                        <p
+                          style="
+                            margin: 0 0 8px 0;
+                            color: #6b7280;
+                            font-size: 14px;
+                            font-weight: 500;
+                          "
+                        >
                           YOUR IMPACT SO FAR
                         </p>
-                        <table role="presentation" cellspacing="0" cellpadding="0" border="0" style="margin: 0 auto;">
+                        <table
+                          role="presentation"
+                          cellspacing="0"
+                          cellpadding="0"
+                          border="0"
+                          style="margin: 0 auto"
+                        >
                           <tr>
-                            <td style="padding: 0 16px; text-align: center;">
-                              <p style="margin: 0; color: #8b5cf6; font-size: 24px; font-weight: bold;">{{ customer.meetings_count }}</p>
-                              <p style="margin: 0; color: #6b7280; font-size: 12px;">meetings hosted</p>
+                            <td style="padding: 0 16px; text-align: center">
+                              <p
+                                style="
+                                  margin: 0;
+                                  color: #8b5cf6;
+                                  font-size: 24px;
+                                  font-weight: bold;
+                                "
+                              >
+                                {{ customer.meetings_count }}
+                              </p>
+                              <p
+                                style="
+                                  margin: 0;
+                                  color: #6b7280;
+                                  font-size: 12px;
+                                "
+                              >
+                                meetings hosted
+                              </p>
                             </td>
                             {% if customer.team_size > 1 %}
-                            <td style="padding: 0 16px; text-align: center;">
-                              <p style="margin: 0; color: #8b5cf6; font-size: 24px; font-weight: bold;">{{ customer.team_size }}</p>
-                              <p style="margin: 0; color: #6b7280; font-size: 12px;">team members</p>
+                            <td style="padding: 0 16px; text-align: center">
+                              <p
+                                style="
+                                  margin: 0;
+                                  color: #8b5cf6;
+                                  font-size: 24px;
+                                  font-weight: bold;
+                                "
+                              >
+                                {{ customer.team_size }}
+                              </p>
+                              <p
+                                style="
+                                  margin: 0;
+                                  color: #6b7280;
+                                  font-size: 12px;
+                                "
+                              >
+                                team members
+                              </p>
                             </td>
-                            {% endif %}
-                            {% if customer.days_active > 0 %}
-                            <td style="padding: 0 16px; text-align: center;">
-                              <p style="margin: 0; color: #8b5cf6; font-size: 24px; font-weight: bold;">{{ customer.days_active }}</p>
-                              <p style="margin: 0; color: #6b7280; font-size: 12px;">days active</p>
+                            {% endif %} {% if customer.days_active > 0 %}
+                            <td style="padding: 0 16px; text-align: center">
+                              <p
+                                style="
+                                  margin: 0;
+                                  color: #8b5cf6;
+                                  font-size: 24px;
+                                  font-weight: bold;
+                                "
+                              >
+                                {{ customer.days_active }}
+                              </p>
+                              <p
+                                style="
+                                  margin: 0;
+                                  color: #6b7280;
+                                  font-size: 12px;
+                                "
+                              >
+                                days active
+                              </p>
                             </td>
                             {% endif %}
                           </tr>
@@ -101,15 +286,36 @@
                 {% endif %}
 
                 <!-- Survey Introduction -->
-                <div style="margin-bottom: 32px;">
-                  <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%">
+                <div style="margin-bottom: 32px">
+                  <table
+                    role="presentation"
+                    cellspacing="0"
+                    cellpadding="0"
+                    border="0"
+                    width="100%"
+                  >
                     <tr>
-                      <td style="text-align: center;">
-                        <h2 style="margin: 0 0 16px 0; font-size: 20px; font-weight: 600; color: #111827;">
-                          Which features would make Cal.id even better for you?
+                      <td style="text-align: center">
+                        <h2
+                          style="
+                            margin: 0 0 16px 0;
+                            font-size: 20px;
+                            font-weight: 600;
+                            color: #444444;
+                          "
+                        >
+                          Which features would make Cal ID even better for you?
                         </h2>
-                        <p style="margin: 0 0 24px 0; color: #6b7280; font-size: 16px; line-height: 1.6;">
-                          Vote for your top 3 priorities. This takes less than 60 seconds!
+                        <p
+                          style="
+                            margin: 0 0 24px 0;
+                            color: #6b7280;
+                            font-size: 16px;
+                            line-height: 1.6;
+                          "
+                        >
+                          Vote for your top 3 priorities. This takes less than
+                          60 seconds!
                         </p>
                       </td>
                     </tr>
@@ -117,87 +323,237 @@
                 </div>
 
                 <!-- Feature Options -->
-                <div style="margin-bottom: 32px;">
-                  <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%">
+                <div style="margin-bottom: 32px">
+                  <table
+                    role="presentation"
+                    cellspacing="0"
+                    cellpadding="0"
+                    border="0"
+                    width="100%"
+                  >
                     <tr>
-                      <td style="padding: 8px;">
-                        <a href="https://cal.id/feature-vote?feature=mobile_app&user={{ customer.id }}" 
-                           style="display: block; background-color: #f9fafb; border: 2px solid #e5e7eb; padding: 20px; border-radius: 8px; text-decoration: none; color: #374151; margin-bottom: 12px; transition: all 0.2s;">
-                          <div style="display: flex; align-items: center;">
-                            <div style="font-size: 24px; margin-right: 16px;">📱</div>
+                      <td style="padding: 8px">
+                        <a
+                          href="https://Cal ID/feature-vote?feature=mobile_app&user={{ customer.id }}"
+                          style="
+                            display: block;
+                            background-color: #f9fafb;
+                            border: 2px solid #e5e7eb;
+                            padding: 20px;
+                            border-radius: 8px;
+                            text-decoration: none;
+                            color: #374151;
+                            margin-bottom: 12px;
+                            transition: all 0.2s;
+                          "
+                        >
+                          <div style="display: flex; align-items: center">
+                            <div style="font-size: 24px; margin-right: 16px">
+                              📱
+                            </div>
                             <div>
-                              <div style="font-weight: 600; font-size: 16px; margin-bottom: 4px;">Mobile App (iOS & Android)</div>
-                              <div style="font-size: 14px; color: #6b7280;">Native mobile experience for on-the-go scheduling</div>
+                              <div
+                                style="
+                                  font-weight: 600;
+                                  font-size: 16px;
+                                  margin-bottom: 4px;
+                                "
+                              >
+                                Mobile App (iOS & Android)
+                              </div>
+                              <div style="font-size: 14px; color: #6b7280">
+                                Native mobile experience for on-the-go
+                                scheduling
+                              </div>
                             </div>
                           </div>
                         </a>
                       </td>
                     </tr>
                     <tr>
-                      <td style="padding: 8px;">
-                        <a href="https://cal.id/feature-vote?feature=advanced_analytics&user={{ customer.id }}" 
-                           style="display: block; background-color: #f9fafb; border: 2px solid #e5e7eb; padding: 20px; border-radius: 8px; text-decoration: none; color: #374151; margin-bottom: 12px;">
-                          <div style="display: flex; align-items: center;">
-                            <div style="font-size: 24px; margin-right: 16px;">📊</div>
+                      <td style="padding: 8px">
+                        <a
+                          href="https://Cal ID/feature-vote?feature=advanced_analytics&user={{ customer.id }}"
+                          style="
+                            display: block;
+                            background-color: #f9fafb;
+                            border: 2px solid #e5e7eb;
+                            padding: 20px;
+                            border-radius: 8px;
+                            text-decoration: none;
+                            color: #374151;
+                            margin-bottom: 12px;
+                          "
+                        >
+                          <div style="display: flex; align-items: center">
+                            <div style="font-size: 24px; margin-right: 16px">
+                              📊
+                            </div>
                             <div>
-                              <div style="font-weight: 600; font-size: 16px; margin-bottom: 4px;">Advanced Analytics & Insights</div>
-                              <div style="font-size: 14px; color: #6b7280;">Detailed reports on meeting patterns and productivity</div>
+                              <div
+                                style="
+                                  font-weight: 600;
+                                  font-size: 16px;
+                                  margin-bottom: 4px;
+                                "
+                              >
+                                Advanced Analytics & Insights
+                              </div>
+                              <div style="font-size: 14px; color: #6b7280">
+                                Detailed reports on meeting patterns and
+                                productivity
+                              </div>
                             </div>
                           </div>
                         </a>
                       </td>
                     </tr>
                     <tr>
-                      <td style="padding: 8px;">
-                        <a href="https://cal.id/feature-vote?feature=ai_scheduling&user={{ customer.id }}" 
-                           style="display: block; background-color: #f9fafb; border: 2px solid #e5e7eb; padding: 20px; border-radius: 8px; text-decoration: none; color: #374151; margin-bottom: 12px;">
-                          <div style="display: flex; align-items: center;">
-                            <div style="font-size: 24px; margin-right: 16px;">🤖</div>
+                      <td style="padding: 8px">
+                        <a
+                          href="https://Cal ID/feature-vote?feature=ai_scheduling&user={{ customer.id }}"
+                          style="
+                            display: block;
+                            background-color: #f9fafb;
+                            border: 2px solid #e5e7eb;
+                            padding: 20px;
+                            border-radius: 8px;
+                            text-decoration: none;
+                            color: #374151;
+                            margin-bottom: 12px;
+                          "
+                        >
+                          <div style="display: flex; align-items: center">
+                            <div style="font-size: 24px; margin-right: 16px">
+                              🤖
+                            </div>
                             <div>
-                              <div style="font-weight: 600; font-size: 16px; margin-bottom: 4px;">AI-Powered Smart Scheduling</div>
-                              <div style="font-size: 14px; color: #6b7280;">Automatic optimal time suggestions based on preferences</div>
+                              <div
+                                style="
+                                  font-weight: 600;
+                                  font-size: 16px;
+                                  margin-bottom: 4px;
+                                "
+                              >
+                                AI-Powered Smart Scheduling
+                              </div>
+                              <div style="font-size: 14px; color: #6b7280">
+                                Automatic optimal time suggestions based on
+                                preferences
+                              </div>
                             </div>
                           </div>
                         </a>
                       </td>
                     </tr>
                     <tr>
-                      <td style="padding: 8px;">
-                        <a href="https://cal.id/feature-vote?feature=payment_integration&user={{ customer.id }}" 
-                           style="display: block; background-color: #f9fafb; border: 2px solid #e5e7eb; padding: 20px; border-radius: 8px; text-decoration: none; color: #374151; margin-bottom: 12px;">
-                          <div style="display: flex; align-items: center;">
-                            <div style="font-size: 24px; margin-right: 16px;">💳</div>
+                      <td style="padding: 8px">
+                        <a
+                          href="https://Cal ID/feature-vote?feature=payment_integration&user={{ customer.id }}"
+                          style="
+                            display: block;
+                            background-color: #f9fafb;
+                            border: 2px solid #e5e7eb;
+                            padding: 20px;
+                            border-radius: 8px;
+                            text-decoration: none;
+                            color: #374151;
+                            margin-bottom: 12px;
+                          "
+                        >
+                          <div style="display: flex; align-items: center">
+                            <div style="font-size: 24px; margin-right: 16px">
+                              💳
+                            </div>
                             <div>
-                              <div style="font-weight: 600; font-size: 16px; margin-bottom: 4px;">Payment Integration</div>
-                              <div style="font-size: 14px; color: #6b7280;">Collect payments for consultations and services</div>
+                              <div
+                                style="
+                                  font-weight: 600;
+                                  font-size: 16px;
+                                  margin-bottom: 4px;
+                                "
+                              >
+                                Payment Integration
+                              </div>
+                              <div style="font-size: 14px; color: #6b7280">
+                                Collect payments for consultations and services
+                              </div>
                             </div>
                           </div>
                         </a>
                       </td>
                     </tr>
                     <tr>
-                      <td style="padding: 8px;">
-                        <a href="https://cal.id/feature-vote?feature=workflow_automation&user={{ customer.id }}" 
-                           style="display: block; background-color: #f9fafb; border: 2px solid #e5e7eb; padding: 20px; border-radius: 8px; text-decoration: none; color: #374151; margin-bottom: 12px;">
-                          <div style="display: flex; align-items: center;">
-                            <div style="font-size: 24px; margin-right: 16px;">⚡</div>
+                      <td style="padding: 8px">
+                        <a
+                          href="https://Cal ID/feature-vote?feature=workflow_automation&user={{ customer.id }}"
+                          style="
+                            display: block;
+                            background-color: #f9fafb;
+                            border: 2px solid #e5e7eb;
+                            padding: 20px;
+                            border-radius: 8px;
+                            text-decoration: none;
+                            color: #374151;
+                            margin-bottom: 12px;
+                          "
+                        >
+                          <div style="display: flex; align-items: center">
+                            <div style="font-size: 24px; margin-right: 16px">
+                              ⚡
+                            </div>
                             <div>
-                              <div style="font-weight: 600; font-size: 16px; margin-bottom: 4px;">Advanced Workflow Automation</div>
-                              <div style="font-size: 14px; color: #6b7280;">Custom triggers, actions, and integrations with Zapier</div>
+                              <div
+                                style="
+                                  font-weight: 600;
+                                  font-size: 16px;
+                                  margin-bottom: 4px;
+                                "
+                              >
+                                Advanced Workflow Automation
+                              </div>
+                              <div style="font-size: 14px; color: #6b7280">
+                                Custom triggers, actions, and integrations with
+                                Zapier
+                              </div>
                             </div>
                           </div>
                         </a>
                       </td>
                     </tr>
                     <tr>
-                      <td style="padding: 8px;">
-                        <a href="https://cal.id/feature-vote?feature=room_booking&user={{ customer.id }}" 
-                           style="display: block; background-color: #f9fafb; border: 2px solid #e5e7eb; padding: 20px; border-radius: 8px; text-decoration: none; color: #374151; margin-bottom: 12px;">
-                          <div style="display: flex; align-items: center;">
-                            <div style="font-size: 24px; margin-right: 16px;">🏢</div>
+                      <td style="padding: 8px">
+                        <a
+                          href="https://Cal ID/feature-vote?feature=room_booking&user={{ customer.id }}"
+                          style="
+                            display: block;
+                            background-color: #f9fafb;
+                            border: 2px solid #e5e7eb;
+                            padding: 20px;
+                            border-radius: 8px;
+                            text-decoration: none;
+                            color: #374151;
+                            margin-bottom: 12px;
+                          "
+                        >
+                          <div style="display: flex; align-items: center">
+                            <div style="font-size: 24px; margin-right: 16px">
+                              🏢
+                            </div>
                             <div>
-                              <div style="font-weight: 600; font-size: 16px; margin-bottom: 4px;">Room & Resource Booking</div>
-                              <div style="font-size: 14px; color: #6b7280;">Reserve meeting rooms and equipment automatically</div>
+                              <div
+                                style="
+                                  font-weight: 600;
+                                  font-size: 16px;
+                                  margin-bottom: 4px;
+                                "
+                              >
+                                Room & Resource Booking
+                              </div>
+                              <div style="font-size: 14px; color: #6b7280">
+                                Reserve meeting rooms and equipment
+                                automatically
+                              </div>
                             </div>
                           </div>
                         </a>
@@ -207,22 +563,71 @@
                 </div>
 
                 <!-- Custom Request -->
-                <div style="background-color: #f9fafb; padding: 24px; border-radius: 8px; margin-bottom: 32px; border: 2px dashed #d1d5db;">
-                  <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%">
+                <div
+                  style="
+                    background-color: #f9fafb;
+                    padding: 24px;
+                    border-radius: 8px;
+                    margin-bottom: 32px;
+                    border: 2px dashed #d1d5db;
+                  "
+                >
+                  <table
+                    role="presentation"
+                    cellspacing="0"
+                    cellpadding="0"
+                    border="0"
+                    width="100%"
+                  >
                     <tr>
-                      <td style="text-align: center;">
-                        <h3 style="margin: 0 0 12px 0; color: #374151; font-size: 18px; font-weight: 600;">
+                      <td style="text-align: center">
+                        <h3
+                          style="
+                            margin: 0 0 12px 0;
+                            color: #374151;
+                            font-size: 18px;
+                            font-weight: 600;
+                          "
+                        >
                           💡 Have something else in mind?
                         </h3>
-                        <p style="margin: 0 0 20px 0; color: #6b7280; font-size: 14px;">
+                        <p
+                          style="
+                            margin: 0 0 20px 0;
+                            color: #6b7280;
+                            font-size: 14px;
+                          "
+                        >
                           Tell us about a feature that's not listed above
                         </p>
-                        <table role="presentation" cellspacing="0" cellpadding="0" border="0" style="margin: 0 auto;">
+                        <table
+                          role="presentation"
+                          cellspacing="0"
+                          cellpadding="0"
+                          border="0"
+                          style="margin: 0 auto"
+                        >
                           <tr>
-                            <td style="border-radius: 6px; background-color: #8b5cf6;">
-                              <a href="https://cal.id/feature-request?user={{ customer.id }}" 
-                                 style="display: inline-block; padding: 14px 28px; background-color: #8b5cf6; color: #ffffff; text-decoration: none; border-radius: 6px; font-weight: 600; font-size: 16px;" 
-                                 class="mobile-button">
+                            <td
+                              style="
+                                border-radius: 6px;
+                                background-color: #8b5cf6;
+                              "
+                            >
+                              <a
+                                href="https://Cal ID/feature-request?user={{ customer.id }}"
+                                style="
+                                  display: inline-block;
+                                  padding: 14px 28px;
+                                  background-color: #8b5cf6;
+                                  color: #fafafa;
+                                  text-decoration: none;
+                                  border-radius: 6px;
+                                  font-weight: 600;
+                                  font-size: 16px;
+                                "
+                                class="mobile-button"
+                              >
                                 ✨ Submit Custom Request
                               </a>
                             </td>
@@ -234,38 +639,88 @@
                 </div>
 
                 <!-- Incentive -->
-                <div style="text-align: center; margin-bottom: 24px;">
-                  <p style="margin: 0 0 8px 0; color: #6b7280; font-size: 14px;">
-                    🎁 Complete the survey and get <strong style="color: #8b5cf6;">20% off your next upgrade</strong>
+                <div style="text-align: center; margin-bottom: 24px">
+                  <p style="margin: 0 0 8px 0; color: #6b7280; font-size: 14px">
+                    🎁 Complete the survey and get
+                    <strong style="color: #8b5cf6"
+                      >20% off your next upgrade</strong
+                    >
                   </p>
-                  <p style="margin: 0; color: #9ca3af; font-size: 12px;">
+                  <p style="margin: 0; color: #9ca3af; font-size: 12px">
                     Survey closes in 7 days
                   </p>
                 </div>
-
               </td>
             </tr>
 
             <!-- Footer -->
             <tr>
-              <td style="background-color: #f9fafb; padding: 24px 32px; border-top: 1px solid #e5e7eb; border-radius: 0 0 12px 12px;" class="mobile-padding">
-                <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%">
+              <td
+                style="
+                  background-color: #f9fafb;
+                  padding: 24px 32px;
+                  border-top: 1px solid #e5e7eb;
+                  border-radius: 0 0 12px 12px;
+                "
+                class="mobile-padding"
+              >
+                <table
+                  role="presentation"
+                  cellspacing="0"
+                  cellpadding="0"
+                  border="0"
+                  width="100%"
+                >
                   <tr>
                     <td style="text-align: center">
-                      <p style="margin: 0 0 8px 0; color: #6b7280; font-size: 14px;">
-                        Cal.id - Building the future of scheduling together
+                      <p
+                        style="
+                          margin: 0 0 8px 0;
+                          color: #6b7280;
+                          font-size: 14px;
+                        "
+                      >
+                        Cal ID - Building the future of scheduling together
                       </p>
-                      <p style="margin: 0 0 16px 0; color: #6b7280; font-size: 14px;">
+                      <p
+                        style="
+                          margin: 0 0 16px 0;
+                          color: #6b7280;
+                          font-size: 14px;
+                        "
+                      >
                         Your voice shapes our roadmap
                       </p>
-                      <table role="presentation" cellspacing="0" cellpadding="0" border="0" style="margin: 0 auto">
+                      <table
+                        role="presentation"
+                        cellspacing="0"
+                        cellpadding="0"
+                        border="0"
+                        style="margin: 0 auto"
+                      >
                         <tr>
                           <td style="padding: 0 8px">
-                            <a href="https://cal.id/help" style="color: #007ee5; text-decoration: none; font-size: 12px;">Help Center</a>
+                            <a
+                              href="https://Cal ID/help"
+                              style="
+                                color: #007ee5;
+                                text-decoration: none;
+                                font-size: 12px;
+                              "
+                              >Help Center</a
+                            >
                           </td>
                           <td style="color: #9ca3af; font-size: 12px">|</td>
                           <td style="padding: 0 8px">
-                            <a href="{{customer.unsubscribe_url}}" style="color: #007ee5; text-decoration: none; font-size: 12px;">Unsubscribe</a>
+                            <a
+                              href="{{customer.unsubscribe_url}}"
+                              style="
+                                color: #007ee5;
+                                text-decoration: none;
+                                font-size: 12px;
+                              "
+                              >Unsubscribe</a
+                            >
                           </td>
                         </tr>
                       </table>

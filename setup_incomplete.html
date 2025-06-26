@@ -16,7 +16,7 @@
       content="IE=edge"
     />
     <meta name="x-apple-disable-message-reformatting" />
-    <title>Complete your profile in 2 minutes</title>
+    <title>Complete your Cal ID setup to get the most out of Cal ID</title>
     <link
       href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
       rel="stylesheet"
@@ -43,7 +43,7 @@
         display: inline-block;
         padding: 16px 32px;
         background-color: #007ee5;
-        color: #ffffff;
+        color: #fafafa;
         text-decoration: none;
         border-radius: 8px;
         font-weight: 600;
@@ -85,7 +85,8 @@
         color: #f9fafb;
       "
     >
-      Complete your profile to get 3x more bookings
+      Complete your Cal ID setup to get the most out of automated scheduling
+      with basic features
     </div>
 
     <table
@@ -107,7 +108,7 @@
             style="
               max-width: 600px;
               margin: 0 auto;
-              background-color: #ffffff;
+              background-color: #fafafa;
               border-radius: 12px;
               box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
             "
@@ -116,7 +117,7 @@
             <tr>
               <td
                 style="
-                  background: linear-gradient(90deg, #f9a400 0%, #e6930a 100%);
+                  background: linear-gradient(90deg, #007ee5 0%, #006bb8 100%);
                   padding: 24px 32px;
                   border-radius: 12px 12px 0 0;
                 "
@@ -142,31 +143,27 @@
                               style="
                                 width: 40px;
                                 height: 40px;
-                                background-color: #ffffff;
+                                background-color: #fafafa;
                                 border-radius: 8px;
                                 display: flex;
                                 align-items: center;
                                 justify-content: center;
                               "
                             >
-                              <span
-                                style="
-                                  color: #f9a400;
-                                  font-weight: bold;
-                                  font-size: 18px;
-                                "
-                                >C</span
-                              >
+                              <img
+                                src="https://images.remotehub.com/c3ad06466a1b11edbf0d069a40d7f0fc/180x180/74a7cd9f.png?version=1669090303"
+                                width="30"
+                              />
                             </div>
                           </td>
                           <td>
                             <span
                               style="
-                                color: #ffffff;
+                                color: #fafafa;
                                 font-weight: 600;
                                 font-size: 20px;
                               "
-                              >Cal.id</span
+                              >Cal ID</span
                             >
                           </td>
                         </tr>
@@ -183,7 +180,7 @@
                 style="padding: 32px"
                 class="mobile-padding"
               >
-                <!-- Title -->
+                <!-- Title - Personalized based on completion -->
                 <div class="content-section">
                   <table
                     role="presentation"
@@ -194,15 +191,41 @@
                   >
                     <tr>
                       <td style="text-align: center; padding-bottom: 32px">
+                        {% if customer.setup_items_completed == 0 %} {% assign
+                        main_heading = "You're 4 steps away from getting the
+                        most out of Cal ID! 🚀" %} {% assign main_description =
+                        "Hi " | append: customer.first_name | default: "there" |
+                        append: "! Your Cal ID account is ready to be optimized.
+                        Complete these basic features to unlock your full
+                        scheduling potential." %} {% elsif
+                        customer.setup_items_completed == 1 %} {% assign
+                        main_heading = "Great progress! 3 more steps to optimize
+                        Cal ID 🔥" %} {% assign main_description = "Nice work "
+                        | append: customer.first_name | default: "there" |
+                        append: "! You've completed your first setup step. Let's
+                        finish the remaining 3 basic features to get the most
+                        out of Cal ID." %} {% elsif
+                        customer.setup_items_completed == 2 %} {% assign
+                        main_heading = "You're halfway there! 2 steps left ⚡"
+                        %} {% assign main_description = "Awesome " | append:
+                        customer.first_name | default: "there" | append: "!
+                        You're 50% complete. Just 2 more basic features to
+                        unlock Cal ID's full potential." %} {% else %} {% assign
+                        main_heading = "Final step! Complete your Cal ID setup
+                        🎉" %} {% assign main_description = "Amazing " | append:
+                        customer.first_name | default: "there" | append: "!
+                        You've completed 3/4 steps. Just one final basic feature
+                        to get the most out of Cal ID." %} {% endif %}
+
                         <h1
                           style="
                             margin: 0 0 16px 0;
                             font-size: 28px;
                             font-weight: bold;
-                            color: #111827;
+                            color: #444444;
                           "
                         >
-                          You're 2 minutes away from 3x more bookings! ⚡
+                          {{ main_heading }}
                         </h1>
                         <p
                           style="
@@ -212,16 +235,14 @@
                             line-height: 1.6;
                           "
                         >
-                          Hi {{ customer.first_name | default: "there" }}! Your
-                          Cal.id account is almost ready. Just add these missing
-                          details to unlock your full potential.
+                          {{ main_description }}
                         </p>
                       </td>
                     </tr>
                   </table>
                 </div>
 
-                <!-- Progress Bar -->
+                <!-- Progress Bar - Dynamic based on completion -->
                 <div class="content-section">
                   <table
                     role="presentation"
@@ -242,13 +263,23 @@
                           style="
                             margin: 0 0 16px 0;
                             font-weight: 600;
-                            color: #111827;
+                            color: #444444;
                           "
                         >
-                          Your profile completion:
+                          Your Cal ID setup completion:
                         </h3>
 
-                        <!-- Progress bar -->
+                        <!-- Dynamic Progress bar -->
+                        {% if customer.setup_items_completed == 0 %} {% assign
+                        progress_width = "0%" %} {% elsif
+                        customer.setup_items_completed == 1 %} {% assign
+                        progress_width = "25%" %} {% elsif
+                        customer.setup_items_completed == 2 %} {% assign
+                        progress_width = "50%" %} {% elsif
+                        customer.setup_items_completed == 3 %} {% assign
+                        progress_width = "75%" %} {% else %} {% assign
+                        progress_width = "100%" %} {% endif %}
+
                         <div
                           style="
                             background-color: #e5e7eb;
@@ -262,31 +293,43 @@
                             style="
                               background: linear-gradient(
                                 90deg,
-                                #f9a400 0%,
-                                #e6930a 100%
+                                #007ee5 0%,
+                                #006bb8 100%
                               );
                               height: 100%;
-                              width: 60%;
+                              width: {{ progress_width }};
                               border-radius: 10px;
                             "
                           ></div>
                         </div>
+
+                        {% if customer.setup_items_completed == 0 %} {% assign
+                        progress_text = "0% Complete - Let's get started!" %} {%
+                        elsif customer.setup_items_completed == 1 %} {% assign
+                        progress_text = "25% Complete - You're doing great!" %}
+                        {% elsif customer.setup_items_completed == 2 %} {%
+                        assign progress_text = "50% Complete - Halfway there!"
+                        %} {% elsif customer.setup_items_completed == 3 %} {%
+                        assign progress_text = "75% Complete - Almost done!" %}
+                        {% else %} {% assign progress_text = "100% Complete -
+                        All done! 🎉" %} {% endif %}
+
                         <p
                           style="
                             margin: 0;
                             font-size: 16px;
                             font-weight: 600;
-                            color: #f9a400;
+                            color: #007ee5;
                           "
                         >
-                          60% Complete
+                          {{ progress_text }}
                         </p>
                       </td>
                     </tr>
                   </table>
                 </div>
 
-                <!-- Missing Items -->
+                <!-- Setup Items - Conditional based on completion -->
                 <div class="content-section">
                   <table
                     role="presentation"
@@ -298,18 +341,32 @@
                   >
                     <tr>
                       <td>
+                        {% if customer.setup_items_completed != 4 %} {% if
+                        customer.setup_items_completed == 0 %} {% assign
+                        section_heading = "Complete these 4 basic features:" %}
+                        {% elsif customer.setup_items_completed == 1 %} {%
+                        assign section_heading = "Complete these 3 remaining
+                        basic features:" %} {% elsif
+                        customer.setup_items_completed == 2 %} {% assign
+                        section_heading = "Complete these 2 final basic
+                        features:" %} {% else %} {% assign section_heading =
+                        "Complete this final basic feature:" %} {% endif %}
+
                         <h2
                           style="
                             margin: 0 0 24px 0;
                             font-size: 20px;
                             font-weight: 600;
-                            color: #111827;
+                            color: #444444;
                           "
                         >
-                          Complete these to get more bookings:
+                          {{ section_heading }}
                         </h2>
 
-                        <!-- Missing Item 1 -->
+                        <!-- Setup Item 1: Configure Availability -->
+                        {% if customer.availability_configured == false or
+                        customer.availability_configured == "false" or
+                        customer.availability_configured == nil %}
                         <table
                           role="presentation"
                           cellspacing="0"
@@ -317,8 +374,8 @@
                           border="0"
                           width="100%"
                           style="
-                            border-left: 4px solid #f1352c;
-                            background-color: #fdf2f2;
+                            border-left: 4px solid #008c44;
+                            background-color: #f0fdf4;
                             border-radius: 0 8px 8px 0;
                             padding: 20px;
                             margin-bottom: 16px;
@@ -336,8 +393,8 @@
                                 style="
                                   width: 24px;
                                   height: 24px;
-                                  background-color: #f1352c;
-                                  color: #ffffff;
+                                  background-color: #008c44;
+                                  color: #fafafa;
                                   border-radius: 50%;
                                   display: flex;
                                   align-items: center;
@@ -354,10 +411,10 @@
                                 style="
                                   margin: 0 0 8px 0;
                                   font-weight: 600;
-                                  color: #111827;
+                                  color: #444444;
                                 "
                               >
-                                Add a professional photo
+                                ⏰ Set Your Availability
                               </h4>
                               <p
                                 style="
@@ -366,29 +423,300 @@
                                   font-size: 14px;
                                 "
                               >
-                                People are 67% more likely to book when they see
-                                your face
+                                Define when you're available for meetings. Set
+                                working hours, breaks, and buffer times.
                               </p>
                               <a
-                                href="https://cal.id/profile/photo"
+                                href="https://cal.id/availability"
                                 style="
                                   display: inline-block;
                                   padding: 10px 20px;
-                                  background-color: #f1352c;
-                                  color: #ffffff;
+                                  background-color: #008c44;
+                                  color: #fafafa;
                                   text-decoration: none;
                                   border-radius: 6px;
                                   font-weight: 500;
                                   font-size: 14px;
                                 "
                               >
-                                Add Photo →
+                                Update / Configure →
                               </a>
                             </td>
                           </tr>
                         </table>
+                        {% else %}
+                        <!-- Completed Availability -->
+                        <table
+                          role="presentation"
+                          cellspacing="0"
+                          cellpadding="0"
+                          border="0"
+                          width="100%"
+                          style="
+                            border-left: 4px solid #008c44;
+                            background-color: #f0fdf4;
+                            border-radius: 0 8px 8px 0;
+                            padding: 20px;
+                            margin-bottom: 16px;
+                            opacity: 0.7;
+                          "
+                        >
+                          <tr>
+                            <td
+                              style="
+                                width: 32px;
+                                padding-right: 16px;
+                                vertical-align: top;
+                              "
+                            >
+                              <div
+                                style="
+                                  width: 24px;
+                                  height: 24px;
+                                  background-color: #008c44;
+                                  color: #fafafa;
+                                  border-radius: 50%;
+                                  display: flex;
+                                  align-items: center;
+                                  justify-content: center;
+                                  font-weight: 600;
+                                  font-size: 14px;
+                                "
+                              >
+                                ✓
+                              </div>
+                            </td>
+                            <td style="vertical-align: top">
+                              <h4
+                                style="
+                                  margin: 0 0 8px 0;
+                                  font-weight: 600;
+                                  color: #008c44;
+                                  text-decoration: line-through;
+                                "
+                              >
+                                ⏰ Set Your Availability
+                              </h4>
+                              <p
+                                style="
+                                  margin: 0;
+                                  color: #6b7280;
+                                  font-size: 14px;
+                                "
+                              >
+                                Great! Your availability is all set up.
+                              </p>
+                            </td>
+                          </tr>
+                        </table>
+                        {% endif %}
 
-                        <!-- Missing Item 2 -->
+                        <!-- Setup Item 2: Unlimited Integrations -->
+                        {% if customer.integrations_connected == false or
+                        customer.integrations_connected == "false" or
+                        customer.integrations_connected == nil %}
+                        <table
+                          role="presentation"
+                          cellspacing="0"
+                          cellpadding="0"
+                          border="0"
+                          width="100%"
+                          style="
+                            border-left: 4px solid #007ee5;
+                            background-color: #eff6ff;
+                            border-radius: 0 8px 8px 0;
+                            padding: 20px;
+                            margin-bottom: 16px;
+                          "
+                        >
+                          <tr>
+                            <td
+                              style="
+                                width: 32px;
+                                padding-right: 16px;
+                                vertical-align: top;
+                              "
+                            >
+                              <div
+                                style="
+                                  width: 24px;
+                                  height: 24px;
+                                  background-color: #007ee5;
+                                  color: #fafafa;
+                                  border-radius: 50%;
+                                  display: flex;
+                                  align-items: center;
+                                  justify-content: center;
+                                  font-weight: 600;
+                                  font-size: 14px;
+                                "
+                              >
+                                2
+                              </div>
+                            </td>
+                            <td style="vertical-align: top">
+                              <h4
+                                style="
+                                  margin: 0 0 8px 0;
+                                  font-weight: 600;
+                                  color: #444444;
+                                "
+                              >
+                                🔗 Unlimited Integrations
+                              </h4>
+                              <p
+                                style="
+                                  margin: 0 0 12px 0;
+                                  color: #6b7280;
+                                  font-size: 14px;
+                                "
+                              >
+                                Connect Zoom, Google Meet, Teams, Calendar &
+                                Razorpay for seamless automation.
+                              </p>
+                              <div style="margin-bottom: 12px">
+                                <span
+                                  style="
+                                    display: inline-block;
+                                    background-color: #dbeafe;
+                                    color: #1e40af;
+                                    padding: 4px 8px;
+                                    border-radius: 4px;
+                                    font-size: 12px;
+                                    margin-right: 6px;
+                                    margin-bottom: 4px;
+                                  "
+                                  >📹 Zoom</span
+                                >
+                                <span
+                                  style="
+                                    display: inline-block;
+                                    background-color: #dbeafe;
+                                    color: #1e40af;
+                                    padding: 4px 8px;
+                                    border-radius: 4px;
+                                    font-size: 12px;
+                                    margin-right: 6px;
+                                    margin-bottom: 4px;
+                                  "
+                                  >📅 Calendar</span
+                                >
+                                <span
+                                  style="
+                                    display: inline-block;
+                                    background-color: #dbeafe;
+                                    color: #1e40af;
+                                    padding: 4px 8px;
+                                    border-radius: 4px;
+                                    font-size: 12px;
+                                    margin-right: 6px;
+                                    margin-bottom: 4px;
+                                  "
+                                  >💼 Teams</span
+                                >
+                                <span
+                                  style="
+                                    display: inline-block;
+                                    background-color: #dbeafe;
+                                    color: #1e40af;
+                                    padding: 4px 8px;
+                                    border-radius: 4px;
+                                    font-size: 12px;
+                                    margin-bottom: 4px;
+                                  "
+                                  >💳 Razorpay</span
+                                >
+                              </div>
+                              <a
+                                href="https://cal.id/integrations"
+                                style="
+                                  display: inline-block;
+                                  padding: 10px 20px;
+                                  background-color: #007ee5;
+                                  color: #fafafa;
+                                  text-decoration: none;
+                                  border-radius: 6px;
+                                  font-weight: 500;
+                                  font-size: 14px;
+                                "
+                              >
+                                Connect Apps →
+                              </a>
+                            </td>
+                          </tr>
+                        </table>
+                        {% else %}
+                        <!-- Completed Integrations -->
+                        <table
+                          role="presentation"
+                          cellspacing="0"
+                          cellpadding="0"
+                          border="0"
+                          width="100%"
+                          style="
+                            border-left: 4px solid #007ee5;
+                            background-color: #eff6ff;
+                            border-radius: 0 8px 8px 0;
+                            padding: 20px;
+                            margin-bottom: 16px;
+                            opacity: 0.7;
+                          "
+                        >
+                          <tr>
+                            <td
+                              style="
+                                width: 32px;
+                                padding-right: 16px;
+                                vertical-align: top;
+                              "
+                            >
+                              <div
+                                style="
+                                  width: 24px;
+                                  height: 24px;
+                                  background-color: #007ee5;
+                                  color: #fafafa;
+                                  border-radius: 50%;
+                                  display: flex;
+                                  align-items: center;
+                                  justify-content: center;
+                                  font-weight: 600;
+                                  font-size: 14px;
+                                "
+                              >
+                                ✓
+                              </div>
+                            </td>
+                            <td style="vertical-align: top">
+                              <h4
+                                style="
+                                  margin: 0 0 8px 0;
+                                  font-weight: 600;
+                                  color: #007ee5;
+                                  text-decoration: line-through;
+                                "
+                              >
+                                🔗 Unlimited Integrations
+                              </h4>
+                              <p
+                                style="
+                                  margin: 0;
+                                  color: #6b7280;
+                                  font-size: 14px;
+                                "
+                              >
+                                Perfect! Your integrations are connected and
+                                working.
+                              </p>
+                            </td>
+                          </tr>
+                        </table>
+                        {% endif %}
+
+                        <!-- Setup Item 3: Custom Branding -->
+                        {% if customer.branding_configured == false or
+                        customer.branding_configured == "false" or
+                        customer.branding_configured == nil %}
                         <table
                           role="presentation"
                           cellspacing="0"
@@ -397,7 +725,7 @@
                           width="100%"
                           style="
                             border-left: 4px solid #f9a400;
-                            background-color: #fef9e7;
+                            background-color: #fffbeb;
                             border-radius: 0 8px 8px 0;
                             padding: 20px;
                             margin-bottom: 16px;
@@ -416,85 +744,7 @@
                                   width: 24px;
                                   height: 24px;
                                   background-color: #f9a400;
-                                  color: #ffffff;
-                                  border-radius: 50%;
-                                  display: flex;
-                                  align-items: center;
-                                  justify-content: center;
-                                  font-weight: 600;
-                                  font-size: 14px;
-                                "
-                              >
-                                2
-                              </div>
-                            </td>
-                            <td style="vertical-align: top">
-                              <h4
-                                style="
-                                  margin: 0 0 8px 0;
-                                  font-weight: 600;
-                                  color: #111827;
-                                "
-                              >
-                                Write a compelling bio
-                              </h4>
-                              <p
-                                style="
-                                  margin: 0 0 12px 0;
-                                  color: #6b7280;
-                                  font-size: 14px;
-                                "
-                              >
-                                Tell people what you do and how you can help
-                                them
-                              </p>
-                              <a
-                                href="https://cal.id/profile/bio"
-                                style="
-                                  display: inline-block;
-                                  padding: 10px 20px;
-                                  background-color: #f9a400;
-                                  color: #ffffff;
-                                  text-decoration: none;
-                                  border-radius: 6px;
-                                  font-weight: 500;
-                                  font-size: 14px;
-                                "
-                              >
-                                Add Bio →
-                              </a>
-                            </td>
-                          </tr>
-                        </table>
-
-                        <!-- Missing Item 3 -->
-                        <table
-                          role="presentation"
-                          cellspacing="0"
-                          cellpadding="0"
-                          border="0"
-                          width="100%"
-                          style="
-                            border-left: 4px solid #007ee5;
-                            background-color: #e6f4ff;
-                            border-radius: 0 8px 8px 0;
-                            padding: 20px;
-                          "
-                        >
-                          <tr>
-                            <td
-                              style="
-                                width: 32px;
-                                padding-right: 16px;
-                                vertical-align: top;
-                              "
-                            >
-                              <div
-                                style="
-                                  width: 24px;
-                                  height: 24px;
-                                  background-color: #007ee5;
-                                  color: #ffffff;
+                                  color: #fafafa;
                                   border-radius: 50%;
                                   display: flex;
                                   align-items: center;
@@ -511,10 +761,10 @@
                                 style="
                                   margin: 0 0 8px 0;
                                   font-weight: 600;
-                                  color: #111827;
+                                  color: #444444;
                                 "
                               >
-                                Set your availability
+                                🎨 Custom Branding
                               </h4>
                               <p
                                 style="
@@ -523,26 +773,294 @@
                                   font-size: 14px;
                                 "
                               >
-                                Define when you're available for meetings
+                                Add your logo, colors, and personal touch to
+                                your booking page and calendar.
                               </p>
                               <a
-                                href="https://cal.id/availability"
+                                href="https://cal.id/branding"
                                 style="
                                   display: inline-block;
                                   padding: 10px 20px;
-                                  background-color: #007ee5;
-                                  color: #ffffff;
+                                  background-color: #f9a400;
+                                  color: #fafafa;
                                   text-decoration: none;
                                   border-radius: 6px;
                                   font-weight: 500;
                                   font-size: 14px;
                                 "
                               >
-                                Set Hours →
+                                Customize Branding →
                               </a>
                             </td>
                           </tr>
                         </table>
+                        {% else %}
+                        <!-- Completed Branding -->
+                        <table
+                          role="presentation"
+                          cellspacing="0"
+                          cellpadding="0"
+                          border="0"
+                          width="100%"
+                          style="
+                            border-left: 4px solid #f9a400;
+                            background-color: #fffbeb;
+                            border-radius: 0 8px 8px 0;
+                            padding: 20px;
+                            margin-bottom: 16px;
+                            opacity: 0.7;
+                          "
+                        >
+                          <tr>
+                            <td
+                              style="
+                                width: 32px;
+                                padding-right: 16px;
+                                vertical-align: top;
+                              "
+                            >
+                              <div
+                                style="
+                                  width: 24px;
+                                  height: 24px;
+                                  background-color: #f9a400;
+                                  color: #fafafa;
+                                  border-radius: 50%;
+                                  display: flex;
+                                  align-items: center;
+                                  justify-content: center;
+                                  font-weight: 600;
+                                  font-size: 14px;
+                                "
+                              >
+                                ✓
+                              </div>
+                            </td>
+                            <td style="vertical-align: top">
+                              <h4
+                                style="
+                                  margin: 0 0 8px 0;
+                                  font-weight: 600;
+                                  color: #f9a400;
+                                  text-decoration: line-through;
+                                "
+                              >
+                                🎨 Custom Branding
+                              </h4>
+                              <p
+                                style="
+                                  margin: 0;
+                                  color: #6b7280;
+                                  font-size: 14px;
+                                "
+                              >
+                                Excellent! Your branding looks professional.
+                              </p>
+                            </td>
+                          </tr>
+                        </table>
+                        {% endif %}
+
+                        <!-- Setup Item 4: Workflows (Most Important) -->
+                        {% if customer.workflows_configured == false or
+                        customer.workflows_configured == "false" or
+                        customer.workflows_configured == nil %}
+                        <table
+                          role="presentation"
+                          cellspacing="0"
+                          cellpadding="0"
+                          border="0"
+                          width="100%"
+                          style="
+                            border-left: 4px solid #f1352c;
+                            background-color: #fef2f2;
+                            border-radius: 0 8px 8px 0;
+                            padding: 20px;
+                            position: relative;
+                          "
+                        >
+                          <tr>
+                            <td colspan="2">
+                              <div
+                                style="
+                                  position: absolute;
+                                  top: 10px;
+                                  right: 16px;
+                                  background-color: #f1352c;
+                                  color: white;
+                                  padding: 4px 8px;
+                                  border-radius: 4px;
+                                  font-size: 11px;
+                                  font-weight: 600;
+                                "
+                              >
+                                MOST IMPORTANT
+                              </div>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td
+                              style="
+                                width: 32px;
+                                padding-right: 16px;
+                                vertical-align: top;
+                              "
+                            >
+                              <div
+                                style="
+                                  width: 24px;
+                                  height: 24px;
+                                  background-color: #f1352c;
+                                  color: #fafafa;
+                                  border-radius: 50%;
+                                  display: flex;
+                                  align-items: center;
+                                  justify-content: center;
+                                  font-weight: 600;
+                                  font-size: 14px;
+                                "
+                              >
+                                4
+                              </div>
+                            </td>
+                            <td style="vertical-align: top">
+                              <h4
+                                style="
+                                  margin: 0 0 8px 0;
+                                  font-weight: 600;
+                                  color: #444444;
+                                "
+                              >
+                                ⚡ Automated Workflows
+                              </h4>
+                              <p
+                                style="
+                                  margin: 0 0 12px 0;
+                                  color: #6b7280;
+                                  font-size: 14px;
+                                "
+                              >
+                                Set up automated SMS/email reminders,
+                                follow-ups, and custom notifications. Essential
+                                for getting the most out of Cal ID!
+                              </p>
+                              <div style="margin-bottom: 12px">
+                                <div
+                                  style="
+                                    font-size: 12px;
+                                    color: #dc2626;
+                                    margin-bottom: 4px;
+                                  "
+                                >
+                                  ✅ SMS reminders 24hrs before meetings
+                                </div>
+                                <div
+                                  style="
+                                    font-size: 12px;
+                                    color: #dc2626;
+                                    margin-bottom: 4px;
+                                  "
+                                >
+                                  ✅ Custom email notifications for new bookings
+                                </div>
+                                <div
+                                  style="
+                                    font-size: 12px;
+                                    color: #dc2626;
+                                    margin-bottom: 4px;
+                                  "
+                                >
+                                  ✅ Automatic follow-up sequences
+                                </div>
+                                <div style="font-size: 12px; color: #dc2626">
+                                  ✅ Reschedule & cancellation workflows
+                                </div>
+                              </div>
+                              <a
+                                href="https://cal.id/workflows"
+                                style="
+                                  display: inline-block;
+                                  padding: 12px 24px;
+                                  background-color: #f1352c;
+                                  color: #fafafa;
+                                  text-decoration: none;
+                                  border-radius: 6px;
+                                  font-weight: 600;
+                                  font-size: 14px;
+                                  box-shadow: 0 4px 6px rgba(241, 53, 44, 0.3);
+                                "
+                              >
+                                🚀 Setup Workflows →
+                              </a>
+                            </td>
+                          </tr>
+                        </table>
+                        {% else %}
+                        <!-- Completed Workflows -->
+                        <table
+                          role="presentation"
+                          cellspacing="0"
+                          cellpadding="0"
+                          border="0"
+                          width="100%"
+                          style="
+                            border-left: 4px solid #f1352c;
+                            background-color: #fef2f2;
+                            border-radius: 0 8px 8px 0;
+                            padding: 20px;
+                            opacity: 0.7;
+                          "
+                        >
+                          <tr>
+                            <td
+                              style="
+                                width: 32px;
+                                padding-right: 16px;
+                                vertical-align: top;
+                              "
+                            >
+                              <div
+                                style="
+                                  width: 24px;
+                                  height: 24px;
+                                  background-color: #f1352c;
+                                  color: #fafafa;
+                                  border-radius: 50%;
+                                  display: flex;
+                                  align-items: center;
+                                  justify-content: center;
+                                  font-weight: 600;
+                                  font-size: 14px;
+                                "
+                              >
+                                ✓
+                              </div>
+                            </td>
+                            <td style="vertical-align: top">
+                              <h4
+                                style="
+                                  margin: 0 0 8px 0;
+                                  font-weight: 600;
+                                  color: #f1352c;
+                                  text-decoration: line-through;
+                                "
+                              >
+                                ⚡ Automated Workflows
+                              </h4>
+                              <p
+                                style="
+                                  margin: 0;
+                                  color: #6b7280;
+                                  font-size: 14px;
+                                "
+                              >
+                                Amazing! Your workflows are now automating
+                                everything for you.
+                              </p>
+                            </td>
+                          </tr>
+                        </table>
+                        {% endif %} {% endif %}
                       </td>
                     </tr>
                   </table>
@@ -559,8 +1077,8 @@
                     style="
                       background: linear-gradient(
                         90deg,
-                        #e6f7ec 0%,
-                        #e6f4ff 100%
+                        #f0fdf4 0%,
+                        #eff6ff 100%
                       );
                       border-radius: 8px;
                       padding: 24px;
@@ -573,10 +1091,10 @@
                           style="
                             margin: 0 0 16px 0;
                             font-weight: 600;
-                            color: #111827;
+                            color: #444444;
                           "
                         >
-                          Complete profiles get amazing results:
+                          Users who complete all 4 basic features get:
                         </h3>
                         <table
                           role="presentation"
@@ -589,7 +1107,7 @@
                             <td
                               style="
                                 text-align: center;
-                                width: 33.33%;
+                                width: 25%;
                                 vertical-align: top;
                               "
                             >
@@ -601,7 +1119,7 @@
                                   margin-bottom: 4px;
                                 "
                               >
-                                3x
+                                10x
                               </div>
                               <div style="font-size: 14px; color: #6b7280">
                                 More bookings
@@ -610,7 +1128,7 @@
                             <td
                               style="
                                 text-align: center;
-                                width: 33.33%;
+                                width: 25%;
                                 vertical-align: top;
                               "
                             >
@@ -622,16 +1140,16 @@
                                   margin-bottom: 4px;
                                 "
                               >
-                                85%
+                                95%
                               </div>
                               <div style="font-size: 14px; color: #6b7280">
-                                Booking rate
+                                Show-up rate
                               </div>
                             </td>
                             <td
                               style="
                                 text-align: center;
-                                width: 33.33%;
+                                width: 25%;
                                 vertical-align: top;
                               "
                             >
@@ -643,10 +1161,31 @@
                                   margin-bottom: 4px;
                                 "
                               >
-                                2min
+                                80%
                               </div>
                               <div style="font-size: 14px; color: #6b7280">
-                                To complete
+                                Time saved
+                              </div>
+                            </td>
+                            <td
+                              style="
+                                text-align: center;
+                                width: 25%;
+                                vertical-align: top;
+                              "
+                            >
+                              <div
+                                style="
+                                  font-size: 32px;
+                                  font-weight: bold;
+                                  color: #f1352c;
+                                  margin-bottom: 4px;
+                                "
+                              >
+                                24/7
+                              </div>
+                              <div style="font-size: 14px; color: #6b7280">
+                                Automation
                               </div>
                             </td>
                           </tr>
@@ -668,24 +1207,150 @@
                   >
                     <tr>
                       <td style="text-align: center">
+                        {% if customer.setup_items_completed == 0 %} {% assign
+                        cta_text = "🚀 Complete All 4 Steps (5 mins) →" %} {%
+                        elsif customer.setup_items_completed == 1 %} {% assign
+                        cta_text = "🚀 Complete Remaining 3 Steps →" %} {% elsif
+                        customer.setup_items_completed == 2 %} {% assign
+                        cta_text = "🚀 Complete Final 2 Steps →" %} {% else %}
+                        {% assign cta_text = "🚀 Complete Final Step →" %} {%
+                        endif %}
+
                         <a
-                          href="https://cal.id/profile/complete"
+                          href="https://cal.id/setup/complete"
                           class="btn"
                           style="
                             display: inline-block;
-                            padding: 16px 32px;
-                            background-color: #007ee5;
-                            color: #ffffff;
+                            padding: 18px 36px;
+                            background: linear-gradient(
+                              90deg,
+                              #007ee5 0%,
+                              #006bb8 100%
+                            );
+                            color: #fafafa;
                             text-decoration: none;
                             border-radius: 8px;
                             font-weight: 600;
                             width: 100%;
-                            max-width: 300px;
+                            max-width: 350px;
                             box-sizing: border-box;
+                            font-size: 16px;
+                            box-shadow: 0 4px 6px rgba(0, 126, 229, 0.3);
                           "
                         >
-                          Complete My Profile →
+                          {{ cta_text }}
                         </a>
+                      </td>
+                    </tr>
+                  </table>
+                </div>
+
+                <!-- Founder Message -->
+                <div class="content-section">
+                  <table
+                    role="presentation"
+                    cellspacing="0"
+                    cellpadding="0"
+                    border="0"
+                    width="100%"
+                    style="
+                      background-color: #f9fafb;
+                      border-radius: 8px;
+                      padding: 20px;
+                      margin-bottom: 16px;
+                    "
+                  >
+                    <tr>
+                      <td>
+                        <table
+                          role="presentation"
+                          cellspacing="0"
+                          cellpadding="0"
+                          border="0"
+                        >
+                          <tr>
+                            <td
+                              style="padding-right: 16px; vertical-align: top"
+                            >
+                              <div
+                                style="
+                                  width: 48px;
+                                  height: 48px;
+                                  background: linear-gradient(
+                                    135deg,
+                                    #007ee5 0%,
+                                    #006bb8 100%
+                                  );
+                                  border-radius: 50%;
+                                  display: flex;
+                                  align-items: center;
+                                  justify-content: center;
+                                "
+                              >
+                                <span
+                                  style="
+                                    color: #fafafa;
+                                    font-weight: 600;
+                                    font-size: 16px;
+                                  "
+                                  >RG</span
+                                >
+                              </div>
+                            </td>
+                            <td style="vertical-align: top">
+                              {% if customer.setup_items_completed == 0 %} {%
+                              assign founder_message = "These basic features are
+                              what make Cal ID truly powerful. I personally use
+                              them for my own business meetings and they've
+                              increased my booking efficiency by 500%. Don't
+                              skip any step!" %} {% elsif
+                              customer.setup_items_completed == 1 %} {% assign
+                              founder_message = "You're off to a great start!
+                              The next 3 basic features will unlock the real
+                              power of automated scheduling. Keep going!" %} {%
+                              elsif customer.setup_items_completed == 2 %} {%
+                              assign founder_message = "Halfway there! The final
+                              2 basic features (especially workflows) are
+                              game-changers. You're so close to maximum
+                              efficiency!" %} {% else %} {% assign
+                              founder_message = "Just one more step! Workflows
+                              are the secret sauce that separates Cal ID from
+                              every other scheduling tool. This final feature
+                              will transform your scheduling!" %} {% endif %}
+
+                              <p
+                                style="
+                                  margin: 0 0 8px 0;
+                                  color: #374751;
+                                  font-style: italic;
+                                  line-height: 1.5;
+                                "
+                              >
+                                "{{ founder_message }}"
+                              </p>
+                              <div>
+                                <p
+                                  style="
+                                    margin: 0;
+                                    font-weight: 600;
+                                    color: #444444;
+                                  "
+                                >
+                                  Rohit Gadia
+                                </p>
+                                <p
+                                  style="
+                                    margin: 0;
+                                    font-size: 14px;
+                                    color: #6b7280;
+                                  "
+                                >
+                                  Founder, Cal ID
+                                </p>
+                              </div>
+                            </td>
+                          </tr>
+                        </table>
                       </td>
                     </tr>
                   </table>
@@ -714,7 +1379,7 @@
                             font-size: 14px;
                           "
                         >
-                          Need help? We're here for you.
+                          Need help with setup? We're here for you.
                         </p>
                         <a
                           href="https://cal.id/help"
@@ -724,7 +1389,7 @@
                             font-weight: 500;
                           "
                         >
-                          Get personalized setup help →
+                          Book a free 10-min setup call with our team →
                         </a>
                       </td>
                     </tr>
@@ -760,7 +1425,7 @@
                           font-size: 14px;
                         "
                       >
-                        Cal.id - Scheduling made simple
+                        Cal ID - Scheduling made simple
                       </p>
                       <p
                         style="
@@ -793,7 +1458,7 @@
                           <td style="color: #9ca3af; font-size: 12px">|</td>
                           <td style="padding: 0 8px">
                             <a
-                              href="{{customer.unsubscribe_url}}"
+                              href="{%unsubscribe_url%}"
                               style="
                                 color: #007ee5;
                                 text-decoration: none;

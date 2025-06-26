@@ -16,7 +16,7 @@
       content="IE=edge"
     />
     <meta name="x-apple-disable-message-reformatting" />
-    <title>🎉 You've scheduled 100 meetings with Cal.id!</title>
+    <title>🎉 You've scheduled 100 meetings with Cal ID!</title>
     <link
       href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
       rel="stylesheet"
@@ -43,7 +43,7 @@
         display: inline-block;
         padding: 16px 32px;
         background-color: #007ee5;
-        color: #ffffff;
+        color: #fafafa;
         text-decoration: none;
         border-radius: 8px;
         font-weight: 600;
@@ -96,7 +96,7 @@
         color: #f9fafb;
       "
     >
-      🎉 Milestone achieved! You've scheduled 100 meetings with Cal.id
+      🎉 Milestone achieved! You've scheduled 100 meetings with Cal ID
     </div>
 
     <table
@@ -118,7 +118,7 @@
             style="
               max-width: 600px;
               margin: 0 auto;
-              background-color: #ffffff;
+              background-color: #fafafa;
               border-radius: 12px;
               box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
             "
@@ -153,36 +153,32 @@
                               style="
                                 width: 40px;
                                 height: 40px;
-                                background-color: #ffffff;
+                                background-color: #fafafa;
                                 border-radius: 8px;
                                 display: flex;
                                 align-items: center;
                                 justify-content: center;
                               "
                             >
-                              <span
-                                style="
-                                  color: #f9a400;
-                                  font-weight: bold;
-                                  font-size: 18px;
-                                "
-                                >C</span
-                              >
+                              <img
+                                src="https://images.remotehub.com/c3ad06466a1b11edbf0d069a40d7f0fc/180x180/74a7cd9f.png?version=1669090303"
+                                width="30"
+                              />
                             </div>
                           </td>
                           <td>
                             <span
                               style="
-                                color: #ffffff;
+                                color: #fafafa;
                                 font-weight: 600;
                                 font-size: 20px;
                               "
-                              >Cal.id</span
+                              >Cal ID</span
                             >
                             <div
                               style="
                                 background-color: rgba(255, 255, 255, 0.2);
-                                color: #ffffff;
+                                color: #fafafa;
                                 padding: 2px 8px;
                                 border-radius: 12px;
                                 font-size: 12px;
@@ -227,10 +223,11 @@
                             margin: 0 0 16px 0;
                             font-size: 32px;
                             font-weight: bold;
-                            color: #111827;
+                            color: #444444;
                           "
                         >
-                          {{ customer.milestone_number | default: "100" }} meetings milestone!
+                          {{ customer.milestone_number | default: "100" }}
+                          meetings milestone!
                         </h1>
                         <p
                           style="
@@ -240,7 +237,11 @@
                             line-height: 1.6;
                           "
                         >
-                          Incredible news, {{ customer.first_name | default: "there" }}! You've just scheduled your {{ customer.milestone_number | default: "100" }}th meeting using Cal.id. Let's celebrate this amazing achievement!
+                          Incredible news, {{ customer.first_name | default:
+                          "there" }}! You've just scheduled your {{
+                          customer.milestone_number | default: "100" }}th
+                          meeting using Cal ID. Let's celebrate this amazing
+                          achievement!
                         </p>
                       </td>
                     </tr>
@@ -269,7 +270,9 @@
                   >
                     <tr>
                       <td style="text-align: center">
-                        <div style="font-size: 64px; margin-bottom: 16px">🏆</div>
+                        <div style="font-size: 64px; margin-bottom: 16px">
+                          🏆
+                        </div>
                         <h2
                           style="
                             margin: 0 0 8px 0;
@@ -290,7 +293,14 @@
                         >
                           {{ customer.milestone_number | default: "100" }}
                         </div>
-                        <p style="margin: 0; color: #b8860b; font-size: 18px; font-weight: 600">
+                        <p
+                          style="
+                            margin: 0;
+                            color: #b8860b;
+                            font-size: 18px;
+                            font-weight: 600;
+                          "
+                        >
                           Meetings Scheduled
                         </p>
                       </td>
@@ -323,7 +333,7 @@
                           style="
                             margin: 0 0 20px 0;
                             font-weight: 600;
-                            color: #111827;
+                        color: #444444
                             text-align: center;
                           "
                         >
@@ -395,7 +405,8 @@
                                   margin-bottom: 4px;
                                 "
                               >
-                                {{ customer.no_shows_prevented | default: "12" }}
+                                {{ customer.no_shows_prevented | default: "12"
+                                }}
                               </div>
                               <div style="font-size: 12px; color: #6b7280">
                                 No-shows prevented
@@ -445,11 +456,12 @@
                           style="
                             margin: 0 0 20px 0;
                             font-weight: 600;
-                            color: #111827;
+                        color: #444444
                             text-align: center;
                           "
                         >
-                          🌟 What {{ customer.milestone_number | default: "100" }} meetings means:
+                          🌟 What {{ customer.milestone_number | default: "100"
+                          }} meetings means:
                         </h3>
 
                         <!-- Achievement 1 -->
@@ -479,7 +491,7 @@
                                   width: 24px;
                                   height: 24px;
                                   background-color: #007ee5;
-                                  color: #ffffff;
+                                  color: #fafafa;
                                   border-radius: 50%;
                                   display: flex;
                                   align-items: center;
@@ -496,7 +508,7 @@
                                 style="
                                   margin: 0 0 4px 0;
                                   font-weight: 600;
-                                  color: #111827;
+                                  color: #444444;
                                 "
                               >
                                 Time Master
@@ -508,7 +520,8 @@
                                   font-size: 14px;
                                 "
                               >
-                                You've eliminated over 67 hours of scheduling back-and-forth
+                                You've eliminated over 67 hours of scheduling
+                                back-and-forth
                               </p>
                             </td>
                           </tr>
@@ -541,7 +554,7 @@
                                   width: 24px;
                                   height: 24px;
                                   background-color: #008c44;
-                                  color: #ffffff;
+                                  color: #fafafa;
                                   border-radius: 50%;
                                   display: flex;
                                   align-items: center;
@@ -558,7 +571,7 @@
                                 style="
                                   margin: 0 0 4px 0;
                                   font-weight: 600;
-                                  color: #111827;
+                                  color: #444444;
                                 "
                               >
                                 Productivity Champion
@@ -570,7 +583,8 @@
                                   font-size: 14px;
                                 "
                               >
-                                You've boosted your meeting efficiency by an estimated 300%
+                                You've boosted your meeting efficiency by an
+                                estimated 300%
                               </p>
                             </td>
                           </tr>
@@ -602,7 +616,7 @@
                                   width: 24px;
                                   height: 24px;
                                   background-color: #f9a400;
-                                  color: #ffffff;
+                                  color: #fafafa;
                                   border-radius: 50%;
                                   display: flex;
                                   align-items: center;
@@ -619,7 +633,7 @@
                                 style="
                                   margin: 0 0 4px 0;
                                   font-weight: 600;
-                                  color: #111827;
+                                  color: #444444;
                                 "
                               >
                                 Professional Networker
@@ -631,7 +645,8 @@
                                   font-size: 14px;
                                 "
                               >
-                                You've connected with 100+ people efficiently and professionally
+                                You've connected with 100+ people efficiently
+                                and professionally
                               </p>
                             </td>
                           </tr>
@@ -666,7 +681,7 @@
                           style="
                             margin: 0 0 16px 0;
                             font-weight: 600;
-                            color: #111827;
+                            color: #444444;
                           "
                         >
                           🎁 Milestone Celebration Gift!
@@ -678,9 +693,11 @@
                             line-height: 1.6;
                           "
                         >
-                          To celebrate your achievement, we're giving you exclusive access to our "Scheduling Mastery" guide and a special Cal.id branded gift!
+                          To celebrate your achievement, we're giving you
+                          exclusive access to our "Scheduling Mastery" guide and
+                          a special Cal ID branded gift!
                         </p>
-                        
+
                         <!-- Gift Items -->
                         <table
                           role="presentation"
@@ -700,24 +717,34 @@
                             >
                               <div
                                 style="
-                                  background-color: #ffffff;
+                                  background-color: #fafafa;
                                   border-radius: 8px;
                                   padding: 16px;
                                   margin-bottom: 12px;
                                   text-align: center;
                                 "
                               >
-                                <div style="font-size: 24px; margin-bottom: 8px">📚</div>
+                                <div
+                                  style="font-size: 24px; margin-bottom: 8px"
+                                >
+                                  📚
+                                </div>
                                 <h5
                                   style="
                                     margin: 0 0 4px 0;
                                     font-weight: 600;
-                                    color: #111827;
+                                    color: #444444;
                                   "
                                 >
                                   Scheduling Mastery Guide
                                 </h5>
-                                <p style="margin: 0; color: #6b7280; font-size: 12px">
+                                <p
+                                  style="
+                                    margin: 0;
+                                    color: #6b7280;
+                                    font-size: 12px;
+                                  "
+                                >
                                   Advanced tips & tricks
                                 </p>
                               </div>
@@ -732,23 +759,33 @@
                             >
                               <div
                                 style="
-                                  background-color: #ffffff;
+                                  background-color: #fafafa;
                                   border-radius: 8px;
                                   padding: 16px;
                                   text-align: center;
                                 "
                               >
-                                <div style="font-size: 24px; margin-bottom: 8px">🎽</div>
+                                <div
+                                  style="font-size: 24px; margin-bottom: 8px"
+                                >
+                                  🎽
+                                </div>
                                 <h5
                                   style="
                                     margin: 0 0 4px 0;
                                     font-weight: 600;
-                                    color: #111827;
+                                    color: #444444;
                                   "
                                 >
-                                  Cal.id Swag Pack
+                                  Cal ID Swag Pack
                                 </h5>
-                                <p style="margin: 0; color: #6b7280; font-size: 12px">
+                                <p
+                                  style="
+                                    margin: 0;
+                                    color: #6b7280;
+                                    font-size: 12px;
+                                  "
+                                >
                                   T-shirt, stickers & more
                                 </p>
                               </div>
@@ -773,13 +810,13 @@
                     <tr>
                       <td style="text-align: center">
                         <a
-                          href="https://cal.id/milestone-gift?milestone={{ customer.milestone_number }}&user={{ customer.id }}"
+                          href="https://Cal ID/milestone-gift?milestone={{ customer.milestone_number }}&user={{ customer.id }}"
                           class="btn-gold"
                           style="
                             display: inline-block;
                             padding: 20px 40px;
                             background-color: #f9a400;
-                            color: #ffffff;
+                            color: #fafafa;
                             text-decoration: none;
                             border-radius: 8px;
                             font-weight: 600;
@@ -794,7 +831,7 @@
                         </a>
                         <br />
                         <a
-                          href="https://cal.id/share-achievement?milestone={{ customer.milestone_number }}"
+                          href="https://Cal ID/share-achievement?milestone={{ customer.milestone_number }}"
                           style="
                             color: #007ee5;
                             text-decoration: none;
@@ -828,19 +865,15 @@
                           style="
                             margin: 0 0 8px 0;
                             font-weight: 600;
-                            color: #111827;
+                            color: #444444;
                           "
                         >
-                          🎯 Next milestone: {{ customer.next_milestone | default: "250" }} meetings
+                          🎯 Next milestone: {{ customer.next_milestone |
+                          default: "250" }} meetings
                         </h4>
-                        <p
-                          style="
-                            margin: 0;
-                            color: #6b7280;
-                            font-size: 14px;
-                          "
-                        >
-                          You're {{ customer.meetings_to_next | default: "150" }} meetings away from your next celebration!
+                        <p style="margin: 0; color: #6b7280; font-size: 14px">
+                          You're {{ customer.meetings_to_next | default: "150"
+                          }} meetings away from your next celebration!
                         </p>
                       </td>
                     </tr>
@@ -876,7 +909,7 @@
                           font-size: 14px;
                         "
                       >
-                        Cal.id - Celebrating your success
+                        Cal ID - Celebrating your success
                       </p>
                       <p
                         style="

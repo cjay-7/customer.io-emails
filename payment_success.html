@@ -16,7 +16,7 @@
       content="IE=edge"
     />
     <meta name="x-apple-disable-message-reformatting" />
-    <title>Payment successful - Welcome to Cal.id Pro!</title>
+    <title>Payment successful - Welcome to Cal ID Pro!</title>
     <link
       href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
       rel="stylesheet"
@@ -43,7 +43,7 @@
         display: inline-block;
         padding: 16px 32px;
         background-color: #007ee5;
-        color: #ffffff;
+        color: #fafafa;
         text-decoration: none;
         border-radius: 8px;
         font-weight: 600;
@@ -96,7 +96,7 @@
         color: #f9fafb;
       "
     >
-      Payment successful! Welcome to Cal.id Pro - here's what's next
+      Payment successful! Welcome to Cal ID Pro - here's what's next
     </div>
 
     <table
@@ -118,7 +118,7 @@
             style="
               max-width: 600px;
               margin: 0 auto;
-              background-color: #ffffff;
+              background-color: #fafafa;
               border-radius: 12px;
               box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
             "
@@ -153,7 +153,7 @@
                               style="
                                 width: 40px;
                                 height: 40px;
-                                background-color: #ffffff;
+                                background-color: #fafafa;
                                 border-radius: 8px;
                                 display: flex;
                                 align-items: center;
@@ -173,16 +173,16 @@
                           <td>
                             <span
                               style="
-                                color: #ffffff;
+                                color: #fafafa;
                                 font-weight: 600;
                                 font-size: 20px;
                               "
-                              >Cal.id Pro</span
+                              >Cal ID Pro</span
                             >
                             <div
                               style="
                                 background-color: rgba(255, 255, 255, 0.2);
-                                color: #ffffff;
+                                color: #fafafa;
                                 padding: 2px 8px;
                                 border-radius: 12px;
                                 font-size: 12px;
@@ -224,10 +224,10 @@
                             margin: 0 0 16px 0;
                             font-size: 28px;
                             font-weight: bold;
-                            color: #111827;
+                            color: #444444;
                           "
                         >
-                          🎉 Welcome to Cal.id Pro!
+                          🎉 Welcome to Cal ID Pro!
                         </h1>
                         <p
                           style="
@@ -237,7 +237,9 @@
                             line-height: 1.6;
                           "
                         >
-                          Hi {{ customer.first_name | default: "there" }}! Your payment was successful and all Pro features are now active. Here's your receipt and what's next.
+                          Hi {{ customer.first_name | default: "there" }}! Your
+                          payment was successful and all Pro features are now
+                          active. Here's your receipt and what's next.
                         </p>
                       </td>
                     </tr>
@@ -287,34 +289,58 @@
                         >
                           <tr>
                             <td style="width: 40%; padding-bottom: 8px">
-                              <span style="color: #008c44; font-weight: 500">Amount Paid:</span>
+                              <span style="color: #008c44; font-weight: 500"
+                                >Amount Paid:</span
+                              >
                             </td>
                             <td style="padding-bottom: 8px">
-                              <span style="color: #008c44; font-weight: 600; font-size: 18px">${{ payment.amount | default: "29.00" }}</span>
+                              <span
+                                style="
+                                  color: #008c44;
+                                  font-weight: 600;
+                                  font-size: 18px;
+                                "
+                                >${{ payment.amount | default: "29.00" }}</span
+                              >
                             </td>
                           </tr>
                           <tr>
                             <td style="width: 40%; padding-bottom: 8px">
-                              <span style="color: #008c44; font-weight: 500">Transaction ID:</span>
+                              <span style="color: #008c44; font-weight: 500"
+                                >Transaction ID:</span
+                              >
                             </td>
                             <td style="padding-bottom: 8px">
-                              <span style="color: #008c44; font-weight: 600">{{ payment.transaction_id | default: "txn_1234567890" }}</span>
+                              <span style="color: #008c44; font-weight: 600"
+                                >{{ payment.transaction_id | default:
+                                "txn_1234567890" }}</span
+                              >
                             </td>
                           </tr>
                           <tr>
                             <td style="width: 40%; padding-bottom: 8px">
-                              <span style="color: #008c44; font-weight: 500">Date:</span>
+                              <span style="color: #008c44; font-weight: 500"
+                                >Date:</span
+                              >
                             </td>
                             <td style="padding-bottom: 8px">
-                              <span style="color: #008c44; font-weight: 600">{{ payment.date | default: "January 15, 2025" }}</span>
+                              <span style="color: #008c44; font-weight: 600"
+                                >{{ payment.date | default: "January 15, 2025"
+                                }}</span
+                              >
                             </td>
                           </tr>
                           <tr>
                             <td style="width: 40%">
-                              <span style="color: #008c44; font-weight: 500">Next Billing:</span>
+                              <span style="color: #008c44; font-weight: 500"
+                                >Next Billing:</span
+                              >
                             </td>
                             <td>
-                              <span style="color: #008c44; font-weight: 600">{{ payment.next_billing | default: "February 15, 2025" }}</span>
+                              <span style="color: #008c44; font-weight: 600"
+                                >{{ payment.next_billing | default: "February
+                                15, 2025" }}</span
+                              >
                             </td>
                           </tr>
                         </table>
@@ -326,7 +352,7 @@
                               display: inline-block;
                               padding: 10px 20px;
                               background-color: #008c44;
-                              color: #ffffff;
+                              color: #fafafa;
                               text-decoration: none;
                               border-radius: 6px;
                               font-weight: 500;
@@ -358,7 +384,7 @@
                             margin: 0 0 20px 0;
                             font-size: 20px;
                             font-weight: 600;
-                            color: #111827;
+                        color: #444444
                             text-align: center;
                           "
                         >
@@ -393,7 +419,7 @@
                                   width: 24px;
                                   height: 24px;
                                   background-color: #007ee5;
-                                  color: #ffffff;
+                                  color: #fafafa;
                                   border-radius: 50%;
                                   display: flex;
                                   align-items: center;
@@ -410,7 +436,7 @@
                                 style="
                                   margin: 0 0 4px 0;
                                   font-weight: 600;
-                                  color: #111827;
+                                  color: #444444;
                                 "
                               >
                                 Team Scheduling
@@ -456,7 +482,7 @@
                                   width: 24px;
                                   height: 24px;
                                   background-color: #008c44;
-                                  color: #ffffff;
+                                  color: #fafafa;
                                   border-radius: 50%;
                                   display: flex;
                                   align-items: center;
@@ -473,7 +499,7 @@
                                 style="
                                   margin: 0 0 4px 0;
                                   font-weight: 600;
-                                  color: #111827;
+                                  color: #444444;
                                 "
                               >
                                 Custom Branding
@@ -518,7 +544,7 @@
                                   width: 24px;
                                   height: 24px;
                                   background-color: #f9a400;
-                                  color: #ffffff;
+                                  color: #fafafa;
                                   border-radius: 50%;
                                   display: flex;
                                   align-items: center;
@@ -535,7 +561,7 @@
                                 style="
                                   margin: 0 0 4px 0;
                                   font-weight: 600;
-                                  color: #111827;
+                                  color: #444444;
                                 "
                               >
                                 Advanced Analytics
@@ -582,11 +608,11 @@
                           style="
                             margin: 0 0 16px 0;
                             font-weight: 600;
-                            color: #111827;
+                        color: #444444
                             text-align: center;
                           "
                         >
-                          🚀 Maximize your Cal.id Pro experience:
+                          🚀 Maximize your Cal ID Pro experience:
                         </h3>
 
                         <!-- Upsell Options -->
@@ -608,19 +634,23 @@
                             >
                               <div
                                 style="
-                                  background-color: #ffffff;
+                                  background-color: #fafafa;
                                   border-radius: 8px;
                                   padding: 20px;
                                   text-align: center;
                                   margin-bottom: 16px;
                                 "
                               >
-                                <div style="font-size: 32px; margin-bottom: 12px">🎓</div>
+                                <div
+                                  style="font-size: 32px; margin-bottom: 12px"
+                                >
+                                  🎓
+                                </div>
                                 <h4
                                   style="
                                     margin: 0 0 8px 0;
                                     font-weight: 600;
-                                    color: #111827;
+                                    color: #444444;
                                   "
                                 >
                                   Pro Onboarding
@@ -636,12 +666,12 @@
                                   1-hour setup session with our experts
                                 </p>
                                 <a
-                                  href="https://cal.id/pro-onboarding"
+                                  href="https://Cal ID/pro-onboarding"
                                   style="
                                     display: inline-block;
                                     padding: 10px 16px;
                                     background-color: #f9a400;
-                                    color: #ffffff;
+                                    color: #fafafa;
                                     text-decoration: none;
                                     border-radius: 6px;
                                     font-weight: 500;
@@ -662,18 +692,22 @@
                             >
                               <div
                                 style="
-                                  background-color: #ffffff;
+                                  background-color: #fafafa;
                                   border-radius: 8px;
                                   padding: 20px;
                                   text-align: center;
                                 "
                               >
-                                <div style="font-size: 32px; margin-bottom: 12px">🏢</div>
+                                <div
+                                  style="font-size: 32px; margin-bottom: 12px"
+                                >
+                                  🏢
+                                </div>
                                 <h4
                                   style="
                                     margin: 0 0 8px 0;
                                     font-weight: 600;
-                                    color: #111827;
+                                    color: #444444;
                                   "
                                 >
                                   Enterprise
@@ -689,12 +723,12 @@
                                   SSO, custom domains, priority support
                                 </p>
                                 <a
-                                  href="https://cal.id/enterprise"
+                                  href="https://Cal ID/enterprise"
                                   style="
                                     display: inline-block;
                                     padding: 10px 16px;
                                     background-color: #007ee5;
-                                    color: #ffffff;
+                                    color: #fafafa;
                                     text-decoration: none;
                                     border-radius: 6px;
                                     font-weight: 500;
@@ -728,19 +762,19 @@
                           style="
                             margin: 0 0 16px 0;
                             font-weight: 600;
-                            color: #111827;
+                            color: #444444;
                           "
                         >
                           🎯 Recommended next steps:
                         </h3>
                         <a
-                          href="https://cal.id/pro-features"
+                          href="https://Cal ID/pro-features"
                           class="btn"
                           style="
                             display: inline-block;
                             padding: 16px 32px;
                             background-color: #007ee5;
-                            color: #ffffff;
+                            color: #fafafa;
                             text-decoration: none;
                             border-radius: 8px;
                             font-weight: 600;
@@ -754,7 +788,7 @@
                         </a>
                         <br />
                         <a
-                          href="https://cal.id/team/setup"
+                          href="https://Cal ID/team/setup"
                           style="
                             color: #007ee5;
                             text-decoration: none;
@@ -788,7 +822,7 @@
                           style="
                             margin: 0 0 8px 0;
                             font-weight: 600;
-                            color: #111827;
+                            color: #444444;
                           "
                         >
                           🤝 We're here to help!
@@ -803,7 +837,7 @@
                           Questions about Pro features or need setup help?
                         </p>
                         <a
-                          href="https://cal.id/support"
+                          href="https://Cal ID/support"
                           style="
                             color: #007ee5;
                             text-decoration: none;
@@ -846,7 +880,7 @@
                           font-size: 14px;
                         "
                       >
-                        Cal.id Pro - Premium scheduling features
+                        Cal ID Pro - Premium scheduling features
                       </p>
                       <p
                         style="

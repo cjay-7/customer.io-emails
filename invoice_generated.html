@@ -16,7 +16,9 @@
       content="IE=edge"
     />
     <meta name="x-apple-disable-message-reformatting" />
-    <title>Your Cal.id Pro invoice for {{ invoice.period | default: "January 2025" }}</title>
+    <title>
+      Your Cal ID Pro invoice for {{ invoice.period | default: "January 2025" }}
+    </title>
     <link
       href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
       rel="stylesheet"
@@ -43,7 +45,7 @@
         display: inline-block;
         padding: 16px 32px;
         background-color: #007ee5;
-        color: #ffffff;
+        color: #fafafa;
         text-decoration: none;
         border-radius: 8px;
         font-weight: 600;
@@ -85,7 +87,7 @@
         color: #f9fafb;
       "
     >
-      Your Cal.id Pro invoice is ready - download PDF attached
+      Your Cal ID Pro invoice is ready - download PDF attached
     </div>
 
     <table
@@ -107,7 +109,7 @@
             style="
               max-width: 600px;
               margin: 0 auto;
-              background-color: #ffffff;
+              background-color: #fafafa;
               border-radius: 12px;
               box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
             "
@@ -142,7 +144,7 @@
                               style="
                                 width: 40px;
                                 height: 40px;
-                                background-color: #ffffff;
+                                background-color: #fafafa;
                                 border-radius: 8px;
                                 display: flex;
                                 align-items: center;
@@ -162,16 +164,16 @@
                           <td>
                             <span
                               style="
-                                color: #ffffff;
+                                color: #fafafa;
                                 font-weight: 600;
                                 font-size: 20px;
                               "
-                              >Cal.id Pro</span
+                              >Cal ID Pro</span
                             >
                             <div
                               style="
                                 background-color: rgba(255, 255, 255, 0.2);
-                                color: #ffffff;
+                                color: #fafafa;
                                 padding: 2px 8px;
                                 border-radius: 12px;
                                 font-size: 12px;
@@ -213,7 +215,7 @@
                             margin: 0 0 16px 0;
                             font-size: 28px;
                             font-weight: bold;
-                            color: #111827;
+                            color: #444444;
                           "
                         >
                           📄 Your invoice is ready
@@ -226,7 +228,9 @@
                             line-height: 1.6;
                           "
                         >
-                          Hi {{ customer.first_name | default: "there" }}! Your Cal.id Pro invoice for {{ invoice.period | default: "January 2025" }} is attached to this email.
+                          Hi {{ customer.first_name | default: "there" }}! Your
+                          Cal ID Pro invoice for {{ invoice.period | default:
+                          "January 2025" }} is attached to this email.
                         </p>
                       </td>
                     </tr>
@@ -254,7 +258,7 @@
                           style="
                             margin: 0 0 16px 0;
                             font-weight: 600;
-                            color: #111827;
+                            color: #444444;
                           "
                         >
                           💳 Invoice Summary:
@@ -271,50 +275,81 @@
                         >
                           <tr>
                             <td style="width: 35%; padding-bottom: 8px">
-                              <span style="color: #6b7280; font-weight: 500">Invoice #:</span>
+                              <span style="color: #6b7280; font-weight: 500"
+                                >Invoice #:</span
+                              >
                             </td>
                             <td style="padding-bottom: 8px">
-                              <span style="color: #111827; font-weight: 600">{{ invoice.number | default: "INV-2025-001234" }}</span>
+                              <span style="color: #444444 font-weight: 600"
+                                >{{ invoice.number | default: "INV-2025-001234"
+                                }}</span
+                              >
                             </td>
                           </tr>
                           <tr>
                             <td style="width: 35%; padding-bottom: 8px">
-                              <span style="color: #6b7280; font-weight: 500">Date:</span>
+                              <span style="color: #6b7280; font-weight: 500"
+                                >Date:</span
+                              >
                             </td>
                             <td style="padding-bottom: 8px">
-                              <span style="color: #111827; font-weight: 600">{{ invoice.date | default: "January 15, 2025" }}</span>
+                              <span style="color: #444444 font-weight: 600"
+                                >{{ invoice.date | default: "January 15, 2025"
+                                }}</span
+                              >
                             </td>
                           </tr>
                           <tr>
                             <td style="width: 35%; padding-bottom: 8px">
-                              <span style="color: #6b7280; font-weight: 500">Billing Period:</span>
+                              <span style="color: #6b7280; font-weight: 500"
+                                >Billing Period:</span
+                              >
                             </td>
                             <td style="padding-bottom: 8px">
-                              <span style="color: #111827; font-weight: 600">{{ invoice.period | default: "January 1 - 31, 2025" }}</span>
+                              <span style="color: #444444 font-weight: 600"
+                                >{{ invoice.period | default: "January 1 - 31,
+                                2025" }}</span
+                              >
                             </td>
                           </tr>
                           <tr>
                             <td style="width: 35%; padding-bottom: 8px">
-                              <span style="color: #6b7280; font-weight: 500">Amount:</span>
+                              <span style="color: #6b7280; font-weight: 500"
+                                >Amount:</span
+                              >
                             </td>
                             <td style="padding-bottom: 8px">
-                              <span style="color: #111827; font-weight: 600; font-size: 18px">${{ invoice.amount | default: "29.00" }}</span>
+                              <span
+                                style="
+                              color: #444444
+                                  font-weight: 600;
+                                  font-size: 18px;
+                                "
+                                >${{ invoice.amount | default: "29.00" }}</span
+                              >
                             </td>
                           </tr>
                           <tr>
                             <td style="width: 35%; padding-bottom: 8px">
-                              <span style="color: #6b7280; font-weight: 500">Payment Method:</span>
+                              <span style="color: #6b7280; font-weight: 500"
+                                >Payment Method:</span
+                              >
                             </td>
                             <td style="padding-bottom: 8px">
-                              <span style="color: #111827; font-weight: 600">**** **** **** {{ customer.card_last_four | default: "1234" }}</span>
+                              <span style="color: #444444 font-weight: 600"
+                                >**** **** **** {{ customer.card_last_four |
+                                default: "1234" }}</span
+                              >
                             </td>
                           </tr>
                           <tr>
                             <td style="width: 35%">
-                              <span style="color: #6b7280; font-weight: 500">Status:</span>
+                              <span style="color: #6b7280; font-weight: 500"
+                                >Status:</span
+                              >
                             </td>
                             <td>
-                              <span 
+                              <span
                                 style="
                                   background-color: #e6f7ec;
                                   color: #008c44;
@@ -355,10 +390,10 @@
                           style="
                             margin: 0 0 16px 0;
                             font-weight: 600;
-                            color: #111827;
+                            color: #444444;
                           "
                         >
-                          🚀 What you're getting with Cal.id Pro:
+                          🚀 What you're getting with Cal ID Pro:
                         </h3>
 
                         <!-- Service Item 1 -->
@@ -383,11 +418,16 @@
                                   justify-content: center;
                                 "
                               >
-                                <span style="color: #ffffff; font-size: 10px">✓</span>
+                                <span style="color: #fafafa; font-size: 10px"
+                                  >✓</span
+                                >
                               </div>
                             </td>
                             <td>
-                              <span style="color: #374751; font-weight: 500">Unlimited team scheduling & round-robin bookings</span>
+                              <span style="color: #374751; font-weight: 500"
+                                >Unlimited team scheduling & round-robin
+                                bookings</span
+                              >
                             </td>
                           </tr>
                         </table>
@@ -414,11 +454,15 @@
                                   justify-content: center;
                                 "
                               >
-                                <span style="color: #ffffff; font-size: 10px">✓</span>
+                                <span style="color: #fafafa; font-size: 10px"
+                                  >✓</span
+                                >
                               </div>
                             </td>
                             <td>
-                              <span style="color: #374751; font-weight: 500">Custom branding & white-labeling</span>
+                              <span style="color: #374751; font-weight: 500"
+                                >Custom branding & white-labeling</span
+                              >
                             </td>
                           </tr>
                         </table>
@@ -445,11 +489,16 @@
                                   justify-content: center;
                                 "
                               >
-                                <span style="color: #ffffff; font-size: 10px">✓</span>
+                                <span style="color: #fafafa; font-size: 10px"
+                                  >✓</span
+                                >
                               </div>
                             </td>
                             <td>
-                              <span style="color: #374751; font-weight: 500">Advanced integrations (Zapier, Salesforce, HubSpot)</span>
+                              <span style="color: #374751; font-weight: 500"
+                                >Advanced integrations (Zapier, Salesforce,
+                                HubSpot)</span
+                              >
                             </td>
                           </tr>
                         </table>
@@ -475,11 +524,15 @@
                                   justify-content: center;
                                 "
                               >
-                                <span style="color: #ffffff; font-size: 10px">✓</span>
+                                <span style="color: #fafafa; font-size: 10px"
+                                  >✓</span
+                                >
                               </div>
                             </td>
                             <td>
-                              <span style="color: #374751; font-weight: 500">Detailed analytics & reporting dashboard</span>
+                              <span style="color: #374751; font-weight: 500"
+                                >Detailed analytics & reporting dashboard</span
+                              >
                             </td>
                           </tr>
                         </table>
@@ -507,7 +560,7 @@
                             display: inline-block;
                             padding: 16px 32px;
                             background-color: #007ee5;
-                            color: #ffffff;
+                            color: #fafafa;
                             text-decoration: none;
                             border-radius: 8px;
                             font-weight: 600;
@@ -544,20 +597,39 @@
                           style="
                             margin: 0 0 8px 0;
                             font-weight: 600;
-                            color: #111827;
+                            color: #444444;
                           "
                         >
                           💡 Billing Information:
                         </h4>
-                        <p style="margin: 0 0 8px 0; color: #6b7280; font-size: 14px">
-                          <strong>Next billing date:</strong> {{ invoice.next_billing_date | default: "February 15, 2025" }}
+                        <p
+                          style="
+                            margin: 0 0 8px 0;
+                            color: #6b7280;
+                            font-size: 14px;
+                          "
+                        >
+                          <strong>Next billing date:</strong> {{
+                          invoice.next_billing_date | default: "February 15,
+                          2025" }}
                         </p>
-                        <p style="margin: 0 0 8px 0; color: #6b7280; font-size: 14px">
-                          <strong>Questions about billing?</strong> Reply to this email or visit our billing support center.
+                        <p
+                          style="
+                            margin: 0 0 8px 0;
+                            color: #6b7280;
+                            font-size: 14px;
+                          "
+                        >
+                          <strong>Questions about billing?</strong> Reply to
+                          this email or visit our billing support center.
                         </p>
                         <p style="margin: 0; color: #6b7280; font-size: 14px">
-                          <strong>Need to update payment method?</strong> 
-                          <a href="https://cal.id/billing" style="color: #007ee5; text-decoration: none">Manage billing settings →</a>
+                          <strong>Need to update payment method?</strong>
+                          <a
+                            href="https://Cal ID/billing"
+                            style="color: #007ee5; text-decoration: none"
+                            >Manage billing settings →</a
+                          >
                         </p>
                       </td>
                     </tr>
@@ -584,7 +656,7 @@
                           style="
                             margin: 0 0 8px 0;
                             font-weight: 600;
-                            color: #111827;
+                            color: #444444;
                           "
                         >
                           🤝 Need help?
@@ -596,10 +668,10 @@
                             font-size: 14px;
                           "
                         >
-                          Questions about your invoice or Cal.id Pro features?
+                          Questions about your invoice or Cal ID Pro features?
                         </p>
                         <a
-                          href="https://cal.id/support"
+                          href="https://Cal ID/support"
                           style="
                             color: #007ee5;
                             text-decoration: none;
@@ -642,7 +714,7 @@
                           font-size: 14px;
                         "
                       >
-                        Cal.id Pro - Premium scheduling features
+                        Cal ID Pro - Premium scheduling features
                       </p>
                       <p
                         style="

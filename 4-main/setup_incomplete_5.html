@@ -186,29 +186,35 @@
                       <tr>
                         <td style="text-align: center; padding-bottom: 32px">
                           {% if customer.setup_items_completed == 0 %} {% assign
-                          main_heading = "You're 4 steps away from getting the
+                          main_heading = "You're 5 steps away from getting the
                           most out of Cal ID! 🚀" %} {% assign main_description
                           = "Hi " | append: customer.first_name | default:
                           "there" | append: "! Your Cal ID account is ready to
                           be optimized. Complete these basic features to unlock
                           your full scheduling potential." %} {% elsif
                           customer.setup_items_completed == 1 %} {% assign
-                          main_heading = "Great progress! 3 more steps to
+                          main_heading = "Great progress! 4 more steps to
                           optimize Cal ID 🔥" %} {% assign main_description =
                           "Nice work " | append: customer.first_name | default:
                           "there" | append: "! You've completed your first setup
-                          step. Let's finish the remaining 3 basic features to
+                          step. Let's finish the remaining 4 basic features to
                           get the most out of Cal ID." %} {% elsif
                           customer.setup_items_completed == 2 %} {% assign
-                          main_heading = "You're halfway there! 2 steps left ⚡"
-                          %} {% assign main_description = "Awesome " | append:
+                          main_heading = "Halfway there! 3 steps left ⚡" %} {%
+                          assign main_description = "Awesome " | append:
                           customer.first_name | default: "there" | append: "!
-                          You're 50% complete. Just 2 more basic features to
-                          unlock Cal ID's full potential." %} {% else %} {%
+                          You're making great progress. Just 3 more basic
+                          features to unlock Cal ID's full potential." %} {%
+                          elsif customer.setup_items_completed == 3 %} {% assign
+                          main_heading = "You're almost there! 2 steps left 🎯"
+                          %} {% assign main_description = "Excellent " | append:
+                          customer.first_name | default: "there" | append: "!
+                          You've completed 3/5 steps. Just 2 more basic features
+                          to get the most out of Cal ID." %} {% else %} {%
                           assign main_heading = "Final step! Complete your Cal
                           ID setup 🎉" %} {% assign main_description = "Amazing
                           " | append: customer.first_name | default: "there" |
-                          append: "! You've completed 3/4 steps. Just one final
+                          append: "! You've completed 4/5 steps. Just one final
                           basic feature to get the most out of Cal ID." %} {%
                           endif %}
 
@@ -269,11 +275,13 @@
                           {% if customer.setup_items_completed == 0 %} {% assign
                           progress_width = "0%" %} {% elsif
                           customer.setup_items_completed == 1 %} {% assign
-                          progress_width = "25%" %} {% elsif
+                          progress_width = "20%" %} {% elsif
                           customer.setup_items_completed == 2 %} {% assign
-                          progress_width = "50%" %} {% elsif
+                          progress_width = "40%" %} {% elsif
                           customer.setup_items_completed == 3 %} {% assign
-                          progress_width = "75%" %} {% else %} {% assign
+                          progress_width = "60%" %} {% elsif
+                          customer.setup_items_completed == 4 %} {% assign
+                          progress_width = "80%" %} {% else %} {% assign
                           progress_width = "100%" %} {% endif %}
 
                           <div
@@ -302,13 +310,16 @@
                           {% if customer.setup_items_completed == 0 %} {% assign
                           progress_text = "0% Complete - Let's get started!" %}
                           {% elsif customer.setup_items_completed == 1 %} {%
-                          assign progress_text = "25% Complete - You're doing
+                          assign progress_text = "20% Complete - You're doing
                           great!" %} {% elsif customer.setup_items_completed ==
-                          2 %} {% assign progress_text = "50% Complete - Halfway
-                          there!" %} {% elsif customer.setup_items_completed ==
-                          3 %} {% assign progress_text = "75% Complete - Almost
-                          done!" %} {% else %} {% assign progress_text = "100%
-                          Complete - All done! 🎉" %} {% endif %}
+                          2 %} {% assign progress_text = "40% Complete - Keep it
+                          up!" %} {% elsif customer.setup_items_completed == 3
+                          %} {% assign progress_text = "60% Complete - You're
+                          over halfway!" %} {% elsif
+                          customer.setup_items_completed == 4 %} {% assign
+                          progress_text = "80% Complete - Almost done!" %} {%
+                          else %} {% assign progress_text = "100% Complete - All
+                          done! 🎉" %} {% endif %}
 
                           <p
                             style="
@@ -338,16 +349,19 @@
                     <tbody>
                       <tr>
                         <td>
-                          {% if customer.setup_items_completed != 4 %} {% if
+                          {% if customer.setup_items_completed != 5 %} {% if
                           customer.setup_items_completed == 0 %} {% assign
-                          section_heading = "Complete these 4 basic features:"
+                          section_heading = "Complete these 5 basic features:"
                           %} {% elsif customer.setup_items_completed == 1 %} {%
-                          assign section_heading = "Complete these 3 remaining
+                          assign section_heading = "Complete these 4 remaining
                           basic features:" %} {% elsif
                           customer.setup_items_completed == 2 %} {% assign
-                          section_heading = "Complete these 2 final basic
-                          features:" %} {% else %} {% assign section_heading =
-                          "Complete this final basic feature:" %} {% endif %}
+                          section_heading = "Complete these 3 remaining basic
+                          features:" %} {% elsif customer.setup_items_completed
+                          == 3 %} {% assign section_heading = "Complete these 2
+                          final basic features:" %} {% else %} {% assign
+                          section_heading = "Complete this final basic feature:"
+                          %} {% endif %}
 
                           <h2
                             style="
@@ -510,10 +524,163 @@
                           </table>
                           {% endif %}
 
-                          <!-- Setup Item 2: Unlimited Integrations -->
-                          {% if customer.integrations_connected == false or
-                          customer.integrations_connected == "false" or
-                          customer.integrations_connected == nil %}
+                          <!-- Setup Item 2: Sync Calendar -->
+                          {% if customer.calendar_synced == false or
+                          customer.calendar_synced == "false" or
+                          customer.calendar_synced == nil %}
+                          <table
+                            border="0"
+                            cellpadding="0"
+                            cellspacing="0"
+                            width="100%"
+                            style="
+                              border-left: 4px solid #9333ea;
+                              background-color: #faf5ff;
+                              border-radius: 0 8px 8px 0;
+                              padding: 20px;
+                              margin-bottom: 16px;
+                            "
+                          >
+                            <tbody>
+                              <tr>
+                                <td
+                                  style="
+                                    width: 32px;
+                                    padding-right: 16px;
+                                    vertical-align: top;
+                                  "
+                                >
+                                  <div
+                                    style="
+                                      width: 24px;
+                                      height: 24px;
+                                      background-color: #9333ea;
+                                      color: #fafafa;
+                                      border-radius: 50%;
+                                      display: flex;
+                                      align-items: center;
+                                      justify-content: center;
+                                      font-weight: 600;
+                                      font-size: 14px;
+                                    "
+                                  >
+                                    2
+                                  </div>
+                                </td>
+                                <td style="vertical-align: top">
+                                  <h4
+                                    style="
+                                      margin: 0 0 8px 0;
+                                      font-weight: 600;
+                                      color: #444444;
+                                    "
+                                  >
+                                    📅 Sync Your Calendar
+                                  </h4>
+                                  <p
+                                    style="
+                                      margin: 0 0 12px 0;
+                                      color: #6b7280;
+                                      font-size: 14px;
+                                    "
+                                  >
+                                    Connect your Google Calendar, Outlook, or
+                                    other calendar apps to prevent double
+                                    bookings and sync your schedule.
+                                  </p>
+                                  <a
+                                    href="https://cal.id/calendar"
+                                    style="
+                                      display: inline-block;
+                                      padding: 10px 20px;
+                                      background-color: #9333ea;
+                                      color: #fafafa;
+                                      text-decoration: none;
+                                      border-radius: 6px;
+                                      font-weight: 500;
+                                      font-size: 14px;
+                                    "
+                                  >
+                                    Connect →
+                                  </a>
+                                </td>
+                              </tr>
+                            </tbody>
+                          </table>
+                          {% else %}
+                          <!-- Completed Calendar Sync -->
+                          <table
+                            border="0"
+                            cellpadding="0"
+                            cellspacing="0"
+                            width="100%"
+                            style="
+                              border-left: 4px solid #9333ea;
+                              background-color: #faf5ff;
+                              border-radius: 0 8px 8px 0;
+                              padding: 20px;
+                              margin-bottom: 16px;
+                              opacity: 0.7;
+                            "
+                          >
+                            <tbody>
+                              <tr>
+                                <td
+                                  style="
+                                    width: 32px;
+                                    padding-right: 16px;
+                                    vertical-align: top;
+                                  "
+                                >
+                                  <div
+                                    style="
+                                      width: 24px;
+                                      height: 24px;
+                                      background-color: #9333ea;
+                                      color: #fafafa;
+                                      border-radius: 50%;
+                                      display: flex;
+                                      align-items: center;
+                                      justify-content: center;
+                                      font-weight: 600;
+                                      font-size: 14px;
+                                    "
+                                  >
+                                    ✓
+                                  </div>
+                                </td>
+                                <td style="vertical-align: top">
+                                  <h4
+                                    style="
+                                      margin: 0 0 8px 0;
+                                      font-weight: 600;
+                                      color: #9333ea;
+                                      text-decoration: line-through;
+                                    "
+                                  >
+                                    📅 Sync Your Calendar
+                                  </h4>
+                                  <p
+                                    style="
+                                      margin: 0;
+                                      color: #6b7280;
+                                      font-size: 14px;
+                                    "
+                                  >
+                                    Perfect! Your calendar is synced and
+                                    protected from conflicts.
+                                  </p>
+                                </td>
+                              </tr>
+                            </tbody>
+                          </table>
+                          {% endif %}
+
+                          <!-- Setup Item 3: Integrate Apps -->
+                          {% if customer.integrations_connected.zoom_video ==
+                          false and
+                          customer.integrations_connected.razorpay_payment ==
+                          false %}
                           <table
                             border="0"
                             cellpadding="0"
@@ -550,7 +717,7 @@
                                       font-size: 14px;
                                     "
                                   >
-                                    2
+                                    3
                                   </div>
                                 </td>
                                 <td style="vertical-align: top">
@@ -561,7 +728,7 @@
                                       color: #444444;
                                     "
                                   >
-                                    🔗 Unlimited Integrations
+                                    🔗 Integrate Your Favourite Apps
                                   </h4>
                                   <p
                                     style="
@@ -570,8 +737,9 @@
                                       font-size: 14px;
                                     "
                                   >
-                                    Connect Zoom, Google Meet, Teams, Calendar
-                                    &amp; Razorpay for seamless automation.
+                                    Connect Zoom, Google Meet, Teams, and
+                                    Razorpay for seamless video calls and
+                                    payments.
                                   </p>
                                   <div style="margin-bottom: 12px">
                                     <span
@@ -599,19 +767,6 @@
                                         margin-right: 6px;
                                         margin-bottom: 4px;
                                       "
-                                      >📅 Calendar</span
-                                    >
-                                    <span
-                                      style="
-                                        display: inline-block;
-                                        background-color: #dbeafe;
-                                        color: #1e40af;
-                                        padding: 4px 8px;
-                                        border-radius: 4px;
-                                        font-size: 12px;
-                                        margin-right: 6px;
-                                        margin-bottom: 4px;
-                                      "
                                       ><i class="fa-brands fa-microsoft"></i>
                                       Teams</span
                                     >
@@ -626,7 +781,7 @@
                                         margin-bottom: 4px;
                                       "
                                       ><img
-                                        src="./razorpay-logo.png"
+                                        src="https://iili.io/F54nTvf.png"
                                         alt="Razorpay"
                                         width="16"
                                       />
@@ -646,7 +801,7 @@
                                       font-size: 14px;
                                     "
                                   >
-                                    Connect Apps →
+                                    Link →
                                   </a>
                                 </td>
                               </tr>
@@ -703,7 +858,7 @@
                                       text-decoration: line-through;
                                     "
                                   >
-                                    🔗 Unlimited Integrations
+                                    🔗 Integrate Your Favourite Apps
                                   </h4>
                                   <p
                                     style="
@@ -721,7 +876,7 @@
                           </table>
                           {% endif %}
 
-                          <!-- Setup Item 3: Custom Branding -->
+                          <!-- Setup Item 4: Custom Branding -->
                           {% if customer.branding_configured == false or
                           customer.branding_configured == "false" or
                           customer.branding_configured == nil %}
@@ -761,7 +916,7 @@
                                       font-size: 14px;
                                     "
                                   >
-                                    3
+                                    4
                                   </div>
                                 </td>
                                 <td style="vertical-align: top">
@@ -772,7 +927,7 @@
                                       color: #444444;
                                     "
                                   >
-                                    🎨 Custom Branding
+                                    🎨 Add Your Branding
                                   </h4>
                                   <p
                                     style="
@@ -797,7 +952,7 @@
                                       font-size: 14px;
                                     "
                                   >
-                                    Customize Branding →
+                                    Customize →
                                   </a>
                                 </td>
                               </tr>
@@ -854,7 +1009,7 @@
                                       text-decoration: line-through;
                                     "
                                   >
-                                    🎨 Custom Branding
+                                    🎨 Add Your Branding
                                   </h4>
                                   <p
                                     style="
@@ -871,7 +1026,7 @@
                           </table>
                           {% endif %}
 
-                          <!-- Setup Item 4: Workflows (Most Important) -->
+                          <!-- Setup Item 5: Workflows (Most Important) -->
                           {% if customer.workflows_configured == false or
                           customer.workflows_configured == "false" or
                           customer.workflows_configured == nil %}
@@ -930,7 +1085,7 @@
                                       font-size: 14px;
                                     "
                                   >
-                                    4
+                                    5
                                   </div>
                                 </td>
                                 <td style="vertical-align: top">
@@ -941,7 +1096,7 @@
                                       color: #444444;
                                     "
                                   >
-                                    ⚡ Automated Workflows
+                                    ⚡ Automate Your Workflow
                                   </h4>
                                   <p
                                     style="
@@ -1005,7 +1160,7 @@
                                         rgba(241, 53, 44, 0.3);
                                     "
                                   >
-                                    🚀 Setup Workflows →
+                                    Setup Workflows →
                                   </a>
                                 </td>
                               </tr>
@@ -1061,7 +1216,7 @@
                                       text-decoration: line-through;
                                     "
                                   >
-                                    ⚡ Automated Workflows
+                                    ⚡ Automate Your Workflow
                                   </h4>
                                   <p
                                     style="
@@ -1112,7 +1267,7 @@
                               color: #444444;
                             "
                           >
-                            Users who complete all 4 basic features get:
+                            Users who complete all 5 basic features get:
                           </h3>
                           <table
                             border="0"
@@ -1228,10 +1383,12 @@
                       <tr>
                         <td style="text-align: center">
                           {% if customer.setup_items_completed == 0 %} {% assign
-                          cta_text = "🚀 Complete All 4 Steps (5 mins) →" %} {%
+                          cta_text = "🚀 Complete All 5 Steps (5 mins) →" %} {%
                           elsif customer.setup_items_completed == 1 %} {% assign
-                          cta_text = "🚀 Complete Remaining 3 Steps →" %} {%
+                          cta_text = "🚀 Complete Remaining 4 Steps →" %} {%
                           elsif customer.setup_items_completed == 2 %} {% assign
+                          cta_text = "🚀 Complete Remaining 3 Steps →" %} {%
+                          elsif customer.setup_items_completed == 3 %} {% assign
                           cta_text = "🚀 Complete Final 2 Steps →" %} {% else %}
                           {% assign cta_text = "🚀 Complete Final Step →" %} {%
                           endif %}
@@ -1323,22 +1480,27 @@
                                 </td>
                                 <td style="vertical-align: top">
                                   {% if customer.setup_items_completed == 0 %}
-                                  {% assign founder_message = "These basic
+                                  {% assign founder_message = "These 5 basic
                                   features are what make Cal ID truly powerful.
                                   I personally use them for my own business
                                   meetings and they've increased my booking
                                   efficiency by 500%. Don't skip any step!" %}
                                   {% elsif customer.setup_items_completed == 1
                                   %} {% assign founder_message = "You're off to
-                                  a great start! The next 3 basic features will
+                                  a great start! The next 4 basic features will
                                   unlock the real power of automated scheduling.
                                   Keep going!" %} {% elsif
                                   customer.setup_items_completed == 2 %} {%
-                                  assign founder_message = "Halfway there! The
-                                  final 2 basic features (especially workflows)
-                                  are game-changers. You're so close to maximum
-                                  efficiency!" %} {% else %} {% assign
-                                  founder_message = "Just one more step!
+                                  assign founder_message = "Great progress! The
+                                  remaining 3 basic features (especially
+                                  workflows) are game-changers. You're building
+                                  something amazing!" %} {% elsif
+                                  customer.setup_items_completed == 3 %} {%
+                                  assign founder_message = "You're so close! The
+                                  final 2 basic features will complete your
+                                  scheduling automation. Workflows especially
+                                  will transform everything!" %} {% else %} {%
+                                  assign founder_message = "Just one more step!
                                   Workflows are the secret sauce that separates
                                   Cal ID from every other scheduling tool. This
                                   final feature will transform your scheduling!"

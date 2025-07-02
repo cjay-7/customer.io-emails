@@ -391,7 +391,7 @@
                           Share this link and both of you get rewards when they sign up!
                         </p>
                         <a
-                          href="#"
+                          href="https://cal.id/settings/my-account/general"
                           onclick="navigator.clipboard.writeText('https://cal.id/signup?ref={{ customer.referral_code | default: customer.first_name | default: "yourcode" }}'); this.innerHTML = '✅ Copied!'; return false;"
                           style="
                             display: inline-block;
@@ -411,7 +411,8 @@
                   </table>
                 </div>
 
-                <!-- Easy Sharing Options -->
+
+<!-- Easy Sharing Options -->
                 <div class="content-section">
                   <table
                     role="presentation"
@@ -447,7 +448,7 @@
                             <td>
                               <!-- LinkedIn Share -->
                               <a
-                                href="https://www.linkedin.com/sharing/share-offsite/?url=https%3A//cal.id/signup%3Fref%3D{{ customer.referral_code | default: customer.first_name | default: "yourcode" | url_encode }}&text=Just%20discovered%20Cal.id%20-%20the%20best%20free%20scheduling%20tool!%20It%27s%20saving%20me%205%2B%20hours%20per%20week.%20Try%20it%20with%20my%20link%20and%20we%20both%20get%20premium%20features%21"
+                                href="https://www.linkedin.com/sharing/share-offsite/?url=https%3A//cal.id/signup%3Fref%3D{{ customer.referral_code | default: customer.first_name | default: "yourcode" | url_encode }}&text=Just%20discovered%20Cal%20ID%20-%20the%20best%20free%20scheduling%20tool!%20It%27s%20saving%20me%205%2B%20hours%20per%20week.%20Try%20it%20with%20my%20link%20and%20we%20both%20get%20premium%20features%21"
                                 target="_blank"
                                 class="share-button"
                                 style="background-color: #0077b5;"
@@ -457,7 +458,7 @@
 
                               <!-- Twitter Share -->
                               <a
-                                href="https://twitter.com/intent/tweet?text=Just%20discovered%20Cal.id%20-%20the%20best%20free%20scheduling%20tool!%20It%27s%20saving%20me%205%2B%20hours%20per%20week.%20Try%20it%20with%20my%20link%20and%20we%20both%20get%20premium%20features%21&url=https%3A//cal.id/signup%3Fref%3D{{ customer.referral_code | default: customer.first_name | default: "yourcode" | url_encode }}"
+                                href="https://twitter.com/intent/tweet?text=Just%20discovered%20Cal%20ID%20-%20the%20best%20free%20scheduling%20tool!%20It%27s%20saving%20me%205%2B%20hours%20per%20week.%20Try%20it%20with%20my%20link%20and%20we%20both%20get%20premium%20features%21&url=https%3A//cal.id/signup%3Fref%3D{{ customer.referral_code | default: customer.first_name | default: "yourcode" | url_encode }}"
                                 target="_blank"
                                 class="share-button"
                                 style="background-color: #1da1f2;"
@@ -467,7 +468,7 @@
 
                               <!-- WhatsApp Share -->
                               <a
-                                href="https://wa.me/?text=Hey!%20I%27ve%20been%20using%20Cal.id%20for%20scheduling%20and%20it%27s%20amazing%20-%20saving%20me%205%2B%20hours%20per%20week!%20It%27s%20completely%20free%20with%20unlimited%20meetings.%20Try%20it%20with%20my%20link%20and%20we%20both%20get%20premium%20features%3A%20https%3A//cal.id/signup%3Fref%3D{{ customer.referral_code | default: customer.first_name | default: "yourcode" | url_encode }}"
+                                href="https://wa.me/?text=Hey!%20I%27ve%20been%20using%20Cal%20ID%20for%20scheduling%20and%20it%27s%20amazing%20-%20saving%20me%205%2B%20hours%20per%20week!%20It%27s%20completely%20free%20with%20unlimited%20meetings.%20Try%20it%20with%20my%20link%20and%20we%20both%20get%20premium%20features%3A%20https%3A//cal.id/signup%3Fref%3D{{ customer.referral_code | default: customer.first_name | default: "yourcode" | url_encode }}"
                                 target="_blank"
                                 class="share-button"
                                 style="background-color: #25d366;"
@@ -477,7 +478,7 @@
 
                               <!-- Email Share -->
                               <a
-                                href="mailto:?subject=You%20need%20to%20try%20Cal.id%20-%20it%27s%20a%20game%20changer!&body=Hey!%0A%0AI%27ve%20been%20using%20Cal.id%20for%20scheduling%20and%20it%27s%20absolutely%20amazing.%20It%27s%20saving%20me%205%2B%20hours%20per%20week%20by%20eliminating%20all%20the%20back-and-forth%20email%20scheduling.%0A%0AWhat%20makes%20it%20special%3A%0A%E2%9C%85%20Completely%20free%20with%20unlimited%20meetings%0A%E2%9C%85%20Connects%20with%20all%20major%20calendars%0A%E2%9C%85%20Automatic%20Zoom/Google%20Meet%20links%0A%E2%9C%85%20Custom%20branding%20and%20workflows%0A%0AIf%20you%20sign%20up%20with%20my%20referral%20link%2C%20we%20both%20get%20premium%20features%21%0A%0ACheck%20it%20out%3A%20https%3A//cal.id/signup%3Fref%3D{{ customer.referral_code | default: customer.first_name | default: "yourcode" | url_encode }}%0A%0ATrust%20me%2C%20you%27ll%20love%20it!%0A%0ACheers%2C%0A{{ customer.first_name | default: "Your friend" }}"
+                                href="mailto:?subject=You%20need%20to%20try%20Cal%20ID%20-%20it%27s%20a%20game%20changer!&body=Hey!%0A%0AI%27ve%20been%20using%20Cal%20ID%20for%20scheduling%20and%20it%27s%20absolutely%20amazing.%20It%27s%20saving%20me%205%2B%20hours%20per%20week%20by%20eliminating%20all%20the%20back-and-forth%20email%20scheduling.%0A%0AWhat%20makes%20it%20special%3A%0A%E2%9C%85%20Completely%20free%20with%20unlimited%20meetings%0A%E2%9C%85%20Connects%20with%20all%20major%20calendars%0A%E2%9C%85%20Automatic%20Zoom/Google%20Meet%20links%0A%E2%9C%85%20Custom%20branding%20and%20workflows%0A%0AIf%20you%20sign%20up%20with%20my%20referral%20link%2C%20we%20both%20get%20premium%20features%21%0A%0ACheck%20it%20out%3A%20https%3A//cal.id/signup%3Fref%3D{{ customer.referral_code | default: customer.first_name | default: "yourcode" | url_encode }}%0A%0ATrust%20me%2C%20you%27ll%20love%20it!%0A%0ACheers%2C%0A{{ customer.first_name | default: "Your friend" }}"
                                 class="share-button"
                                 style="background-color: #ea4335;"
                               >
@@ -627,30 +628,9 @@
                             <td
                               style="padding-right: 16px; vertical-align: top"
                             >
-                              <div
-                                style="
-                                  width: 48px;
-                                  height: 48px;
-                                  background: linear-gradient(
-                                    135deg,
-                                    #007ee5 0%,
-                                    #006bb8 100%
-                                  );
-                                  border-radius: 50%;
-                                  display: flex;
-                                  align-items: center;
-                                  justify-content: center;
-                                "
-                              >
-                                <span
-                                  style="
-                                    color: #fafafa;
-                                    font-weight: 600;
-                                    font-size: 16px;
-                                  "
-                                  >RG</span
-                                >
-                              </div>
+<img src="https://cal.id/api/avatar/afaceca8-df0d-407a-a8d4-641c1266076e" 
+     alt="Rohit Gadia" 
+     style="width: 48px; height: 48px; border-radius: 50%; object-fit: cover;">
                             </td>
                             <td style="vertical-align: top">
                               <p
@@ -773,8 +753,8 @@
                       >
                         <tr>
                           <td style="padding: 0 8px">
-                            <a
-                              href="#"
+                             <a
+                              href="https://chat.onehash.ai/hc/onehash-help-center/en"
                               style="
                                 color: #007ee5;
                                 text-decoration: none;

@@ -16,7 +16,7 @@
       content="IE=edge"
     />
     <meta name="x-apple-disable-message-reformatting" />
-    <title>Get your first booking in 5 minutes</title>
+    <title>Final notice: Your Cal ID account expires today</title>
     <link
       href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
       rel="stylesheet"
@@ -52,12 +52,6 @@
       .btn:hover {
         background-color: #006bb8;
       }
-      .btn-success {
-        background-color: #008c44;
-      }
-      .btn-success:hover {
-        background-color: #007038;
-      }
       .content-section {
         padding: 8px;
       }
@@ -91,7 +85,7 @@
         color: #f9fafb;
       "
     >
-      Your first booking is just 5 minutes away
+      Final notice: Cal ID account expires today - don't lose everything you've set up!
     </div>
 
     <table
@@ -122,64 +116,46 @@
             <tr>
               <td
                 style="
-                  background: linear-gradient(90deg, #007ee5 0%, #006bb8 100%);
+                  background: linear-gradient(90deg, #dc2626 0%, #b91c1c 100%);
                   padding: 24px 32px;
                   border-radius: 12px 12px 0 0;
+                  text-align: center;
                 "
               >
-                <table
-                  role="presentation"
-                  cellspacing="0"
-                  cellpadding="0"
-                  border="0"
-                  width="100%"
+                <div
+                  style="
+                    display: inline-flex;
+                    align-items: center;
+                    justify-content: center;
+                  "
                 >
-                  <tr>
-                    <td>
-                      <table
-                        role="presentation"
-                        cellspacing="0"
-                        cellpadding="0"
-                        border="0"
-                      >
-                        <tr>
-                          <td style="padding-right: 16px">
-                            <div
-                              style="
-                                width: 40px;
-                                height: 40px;
-                                background-color: #fafafa;
-                                border-radius: 8px;
-                                display: flex;
-                                align-items: center;
-                                justify-content: center;
-                              "
-                            >
-                              <span
-                                style="
-                                  color: #007ee5;
-                                  font-weight: bold;
-                                  font-size: 18px;
-                                "
-                                >C</span
-                              >
-                            </div>
-                          </td>
-                          <td>
-                            <span
-                              style="
-                                color: #fafafa;
-                                font-weight: 600;
-                                font-size: 20px;
-                              "
-                              >Cal ID</span
-                            >
-                          </td>
-                        </tr>
-                      </table>
-                    </td>
-                  </tr>
-                </table>
+                  <div
+                    style="
+                      width: 40px;
+                      height: 40px;
+                      background-color: #fafafa;
+                      border-radius: 8px;
+                      display: flex;
+                      align-items: center;
+                      justify-content: center;
+                      margin-right: 16px;
+                    "
+                  >
+                    <img
+                      src="https://images.remotehub.com/c3ad06466a1b11edbf0d069a40d7f0fc/180x180/74a7cd9f.png?version=1669090303"
+                      width="30"
+                    />
+                  </div>
+                  <span
+                    style="
+                      color: #fafafa;
+                      font-weight: 600;
+                      font-size: 27px;
+                    "
+                  >
+                    Cal ID
+                  </span>
+                </div>
               </td>
             </tr>
 
@@ -189,7 +165,7 @@
                 style="padding: 32px"
                 class="mobile-padding"
               >
-                <!-- Title -->
+                <!-- Welcome Hero -->
                 <div class="content-section">
                   <table
                     role="presentation"
@@ -200,6 +176,7 @@
                   >
                     <tr>
                       <td style="text-align: center; padding-bottom: 32px">
+                        <div style="font-size: 48px; margin-bottom: 16px;">⏰</div>
                         <h1
                           style="
                             margin: 0 0 16px 0;
@@ -208,7 +185,7 @@
                             color: #444444;
                           "
                         >
-                          Your first booking is waiting! 📅
+                          Account expires tomorrow!
                         </h1>
                         <p
                           style="
@@ -218,16 +195,14 @@
                             line-height: 1.6;
                           "
                         >
-                          Hi {{ customer.first_name | default: "there" }}! We
-                          noticed you haven't received your first booking yet.
-                          Let's fix that in the next 5 minutes.
+                          Hi <strong>{{ customer.first_name | default: "there" }}</strong>, this is our final reminder. Your Cal ID account will be permanently deleted tomorrow if not verified today.
                         </p>
                       </td>
                     </tr>
                   </table>
                 </div>
 
-                <!-- Quick Wins -->
+                <!-- Urgency Notice -->
                 <div class="content-section">
                   <table
                     role="presentation"
@@ -236,7 +211,258 @@
                     border="0"
                     width="100%"
                     style="
-                      background-color: #fef9e7;
+                      background: linear-gradient(135deg, #fef2f2 0%, #fecaca 100%);
+                      border-radius: 12px;
+                      padding: 24px;
+                      margin-bottom: 32px;
+                      border: 2px solid #dc2626;
+                    "
+                  >
+                    <tr>
+                      <td style="text-align: center">
+                        <h3
+                          style="
+                            margin: 0 0 12px 0;
+                            font-weight: 600;
+                            color: #dc2626;
+                            font-size: 18px;
+                          "
+                        >
+                          ⚠️ Account expires in 24 hours
+                        </h3>
+                        <p
+                          style="
+                            margin: 0 0 16px 0;
+                            color: #991b1b;
+                            font-size: 14px;
+                          "
+                        >
+                          To protect your privacy, unverified accounts are automatically deleted after 3 days. Tomorrow is your final day!
+                        </p>
+                        <a
+                          href="https://cal.id/verify-email?token={{ customer.verification_token }}&email={{ customer.email }}&urgent=1"
+                          style="
+                            display: inline-block;
+                            padding: 18px 36px;
+                            background: linear-gradient(90deg, #dc2626 0%, #b91c1c 100%);
+                            color: #fafafa;
+                            text-decoration: none;
+                            border-radius: 8px;
+                            font-weight: 600;
+                            font-size: 16px;
+                            box-shadow: 0 4px 6px rgba(220, 38, 38, 0.3);
+                          "
+                        >
+                          🚨 VERIFY NOW - FINAL NOTICE
+                        </a>
+                      </td>
+                    </tr>
+                  </table>
+                </div>
+
+                <!-- What You're Missing -->
+                <div class="content-section">
+                  <table
+                    role="presentation"
+                    cellspacing="0"
+                    cellpadding="0"
+                    border="0"
+                    width="100%"
+                    style="margin-bottom: 32px"
+                  >
+                    <tr>
+                      <td>
+                        <h2
+                          style="
+                            margin: 0 0 24px 0;
+                            font-size: 20px;
+                            font-weight: 600;
+                            color: #444444;
+                            text-align: center;
+                          "
+                        >
+                          Here's what you'll lose if your account expires:
+                        </h2>
+
+                        <!-- Feature 1 -->
+                        <table
+                          role="presentation"
+                          cellspacing="0"
+                          cellpadding="0"
+                          border="0"
+                          width="100%"
+                          style="
+                            border-left: 4px solid #dc2626;
+                            background-color: #fef2f2;
+                            border-radius: 0 8px 8px 0;
+                            padding: 20px;
+                            margin-bottom: 16px;
+                          "
+                        >
+                          <tr>
+                            <td
+                              style="
+                                width: 32px;
+                                padding-right: 16px;
+                                vertical-align: top;
+                              "
+                            >
+                              <div
+                                style="
+                                  font-size: 24px;
+                                  color: #dc2626;
+                                "
+                              >
+                                😢
+                              </div>
+                            </td>
+                            <td style="vertical-align: top">
+                              <h4
+                                style="
+                                  margin: 0 0 8px 0;
+                                  font-weight: 600;
+                                  color: #444444;
+                                "
+                              >
+                                Your personalized cal.id/{{ customer.first_name | default: "yourname" }} link
+                              </h4>
+                              <p
+                                style="
+                                  margin: 0;
+                                  color: #6b7280;
+                                  font-size: 14px;
+                                "
+                              >
+                                Someone else might claim your custom URL forever
+                              </p>
+                            </td>
+                          </tr>
+                        </table>
+
+                        <!-- Feature 2 -->
+                        <table
+                          role="presentation"
+                          cellspacing="0"
+                          cellpadding="0"
+                          border="0"
+                          width="100%"
+                          style="
+                            border-left: 4px solid #dc2626;
+                            background-color: #fef2f2;
+                            border-radius: 0 8px 8px 0;
+                            padding: 20px;
+                            margin-bottom: 16px;
+                          "
+                        >
+                          <tr>
+                            <td
+                              style="
+                                width: 32px;
+                                padding-right: 16px;
+                                vertical-align: top;
+                              "
+                            >
+                              <div
+                                style="
+                                  font-size: 24px;
+                                  color: #dc2626;
+                                "
+                              >
+                                💸
+                              </div>
+                            </td>
+                            <td style="vertical-align: top">
+                              <h4
+                                style="
+                                  margin: 0 0 8px 0;
+                                  font-weight: 600;
+                                  color: #444444;
+                                "
+                              >
+                                Free premium features worth ₹3,000/month
+                              </h4>
+                              <p
+                                style="
+                                  margin: 0;
+                                  color: #6b7280;
+                                  font-size: 14px;
+                                "
+                              >
+                                Unlimited meetings, calendar sync, custom branding
+                              </p>
+                            </td>
+                          </tr>
+                        </table>
+
+                        <!-- Feature 3 -->
+                        <table
+                          role="presentation"
+                          cellspacing="0"
+                          cellpadding="0"
+                          border="0"
+                          width="100%"
+                          style="
+                            border-left: 4px solid #dc2626;
+                            background-color: #fef2f2;
+                            border-radius: 0 8px 8px 0;
+                            padding: 20px;
+                            margin-bottom: 24px;
+                          "
+                        >
+                          <tr>
+                            <td
+                              style="
+                                width: 32px;
+                                padding-right: 16px;
+                                vertical-align: top;
+                              "
+                            >
+                              <div
+                                style="
+                                  font-size: 24px;
+                                  color: #dc2626;
+                                "
+                              >
+                                ⏰
+                              </div>
+                            </td>
+                            <td style="vertical-align: top">
+                              <h4
+                                style="
+                                  margin: 0 0 8px 0;
+                                  font-weight: 600;
+                                  color: #444444;
+                                "
+                              >
+                                Hours of your time every week
+                              </h4>
+                              <p
+                                style="
+                                  margin: 0;
+                                  color: #6b7280;
+                                  font-size: 14px;
+                                "
+                              >
+                                Back to endless email chains for scheduling
+                              </p>
+                            </td>
+                          </tr>
+                        </table>
+                      </td>
+                    </tr>
+                  </table>
+                </div>
+
+                <!-- Easy Alternative Methods -->
+                <div class="content-section">
+                  <table
+                    role="presentation"
+                    cellspacing="0"
+                    cellpadding="0"
+                    border="0"
+                    width="100%"
+                    style="
+                      background-color: #f0f9ff;
                       border-radius: 8px;
                       padding: 24px;
                       margin-bottom: 32px;
@@ -244,194 +470,68 @@
                   >
                     <tr>
                       <td>
-                        <h2
+                        <h3
                           style="
                             margin: 0 0 16px 0;
-                            font-size: 20px;
                             font-weight: 600;
                             color: #444444;
+                            text-align: center;
                           "
                         >
-                          🚀 3 quick wins to get your first booking today:
-                        </h2>
+                          🔧 Having technical issues? Try these:
+                        </h3>
 
-                        <!-- Quick Win 1 -->
-                        <table
-                          role="presentation"
-                          cellspacing="0"
-                          cellpadding="0"
-                          border="0"
-                          width="100%"
-                          style="margin-bottom: 16px"
-                        >
-                          <tr>
-                            <td
-                              style="
-                                width: 32px;
-                                padding-right: 16px;
-                                vertical-align: top;
-                              "
-                            >
-                              <div
-                                style="
-                                  width: 24px;
-                                  height: 24px;
-                                  background-color: #f9a400;
-                                  color: #fafafa;
-                                  border-radius: 50%;
-                                  display: flex;
-                                  align-items: center;
-                                  justify-content: center;
-                                  font-weight: 600;
-                                  font-size: 14px;
-                                "
-                              >
-                                1
-                              </div>
-                            </td>
-                            <td style="vertical-align: top">
-                              <h4
-                                style="
-                                  margin: 0 0 4px 0;
-                                  font-weight: 600;
-                                  color: #444444;
-                                "
-                              >
-                                Add a professional photo
-                              </h4>
-                              <p
-                                style="
-                                  margin: 0;
-                                  color: #6b7280;
-                                  font-size: 14px;
-                                "
-                              >
-                                People book 67% more often when they see a
-                                friendly face
-                              </p>
-                            </td>
-                          </tr>
-                        </table>
+                        <div style="margin-bottom: 16px; text-align: center;">
+                          <a
+                            href="https://cal.id/verify-email?token={{ customer.verification_token }}&email={{ customer.email }}&method=mobile"
+                            style="
+                              display: inline-block;
+                              padding: 12px 24px;
+                              background-color: #007ee5;
+                              color: #fafafa;
+                              text-decoration: none;
+                              border-radius: 6px;
+                              font-weight: 600;
+                              font-size: 14px;
+                              margin: 0 8px 8px 0;
+                            "
+                          >
+                            📱 Try on Mobile
+                          </a>
+                          <a
+                            href="https://cal.id/verify-email?token={{ customer.verification_token }}&email={{ customer.email }}&method=incognito"
+                            style="
+                              display: inline-block;
+                              padding: 12px 24px;
+                              background-color: #10b981;
+                              color: #fafafa;
+                              text-decoration: none;
+                              border-radius: 6px;
+                              font-weight: 600;
+                              font-size: 14px;
+                              margin: 0 8px 8px 0;
+                            "
+                          >
+                            🕶️ Incognito Mode
+                          </a>
+                        </div>
 
-                        <!-- Quick Win 2 -->
-                        <table
-                          role="presentation"
-                          cellspacing="0"
-                          cellpadding="0"
-                          border="0"
-                          width="100%"
-                          style="margin-bottom: 16px"
+                        <p
+                          style="
+                            margin: 16px 0 0 0;
+                            color: #6b7280;
+                            font-size: 14px;
+                            text-align: center;
+                          "
                         >
-                          <tr>
-                            <td
-                              style="
-                                width: 32px;
-                                padding-right: 16px;
-                                vertical-align: top;
-                              "
-                            >
-                              <div
-                                style="
-                                  width: 24px;
-                                  height: 24px;
-                                  background-color: #f9a400;
-                                  color: #fafafa;
-                                  border-radius: 50%;
-                                  display: flex;
-                                  align-items: center;
-                                  justify-content: center;
-                                  font-weight: 600;
-                                  font-size: 14px;
-                                "
-                              >
-                                2
-                              </div>
-                            </td>
-                            <td style="vertical-align: top">
-                              <h4
-                                style="
-                                  margin: 0 0 4px 0;
-                                  font-weight: 600;
-                                  color: #444444;
-                                "
-                              >
-                                Share your Cal ID link
-                              </h4>
-                              <p
-                                style="
-                                  margin: 0;
-                                  color: #6b7280;
-                                  font-size: 14px;
-                                "
-                              >
-                                Add it to your email signature, LinkedIn, or
-                                send to a colleague
-                              </p>
-                            </td>
-                          </tr>
-                        </table>
-
-                        <!-- Quick Win 3 -->
-                        <table
-                          role="presentation"
-                          cellspacing="0"
-                          cellpadding="0"
-                          border="0"
-                          width="100%"
-                        >
-                          <tr>
-                            <td
-                              style="
-                                width: 32px;
-                                padding-right: 16px;
-                                vertical-align: top;
-                              "
-                            >
-                              <div
-                                style="
-                                  width: 24px;
-                                  height: 24px;
-                                  background-color: #f9a400;
-                                  color: #fafafa;
-                                  border-radius: 50%;
-                                  display: flex;
-                                  align-items: center;
-                                  justify-content: center;
-                                  font-weight: 600;
-                                  font-size: 14px;
-                                "
-                              >
-                                3
-                              </div>
-                            </td>
-                            <td style="vertical-align: top">
-                              <h4
-                                style="
-                                  margin: 0 0 4px 0;
-                                  font-weight: 600;
-                                  color: #444444;
-                                "
-                              >
-                                Test book yourself
-                              </h4>
-                              <p
-                                style="
-                                  margin: 0;
-                                  color: #6b7280;
-                                  font-size: 14px;
-                                "
-                              >
-                                See exactly what your clients will experience
-                              </p>
-                            </td>
-                          </tr>
-                        </table>
+                          Or simply reply "ACTIVATE" to this email and we'll do it manually!
+                        </p>
                       </td>
                     </tr>
                   </table>
                 </div>
 
-                <!-- Success Story -->
+                <!-- Customer Success Story -->
                 <div class="content-section">
                   <table
                     role="presentation"
@@ -440,7 +540,7 @@
                     border="0"
                     width="100%"
                     style="
-                      background-color: #e6f7ec;
+                      background-color: #f0fdf4;
                       border: 1px solid #a3e6b8;
                       border-radius: 8px;
                       padding: 24px;
@@ -453,31 +553,39 @@
                           style="
                             margin: 0 0 8px 0;
                             font-weight: 600;
-                            color: #008c44;
+                            color: #059669;
+                            text-align: center;
                           "
                         >
-                          Real Success Story 🎉
+                          💬 What users say about Cal ID:
                         </h4>
                         <p
                           style="
                             margin: 0 0 12px 0;
-                            color: #008c44;
+                            color: #059669;
                             font-style: italic;
                             line-height: 1.6;
+                            text-align: center;
                           "
                         >
-                          "I added my Cal ID link to my email signature and got
-                          4 bookings in the first day. Game changer!"
+                          "I almost let my account expire thinking it was just another tool. Now I use Cal ID every day and it's saved me 5+ hours per week. Best decision ever!"
                         </p>
-                        <p style="margin: 0; font-size: 14px; color: #008c44">
-                          — Alex P., Marketing Consultant
+                        <p
+                          style="
+                            margin: 0;
+                            font-size: 14px;
+                            color: #059669;
+                            text-align: center;
+                          "
+                        >
+                          — Arun M., Startup Founder
                         </p>
                       </td>
                     </tr>
                   </table>
                 </div>
 
-                <!-- CTA Buttons -->
+                <!-- Final CTA -->
                 <div class="content-section">
                   <table
                     role="presentation"
@@ -485,84 +593,59 @@
                     cellpadding="0"
                     border="0"
                     width="100%"
-                    style="margin-bottom: 24px"
-                  >
-                    <tr>
-                      <td style="text-align: center">
-                        <a
-                          href="https://Cal ID/customize"
-                          class="btn"
-                          style="
-                            display: inline-block;
-                            padding: 16px 32px;
-                            background-color: #007ee5;
-                            color: #fafafa;
-                            text-decoration: none;
-                            border-radius: 8px;
-                            font-weight: 600;
-                            margin-bottom: 12px;
-                            width: 100%;
-                            max-width: 300px;
-                            box-sizing: border-box;
-                          "
-                        >
-                          Customize My Page →
-                        </a>
-                        <br />
-                        <a
-                          href="https://Cal ID/share"
-                          class="btn-success"
-                          style="
-                            display: inline-block;
-                            padding: 16px 32px;
-                            background-color: #008c44;
-                            color: #fafafa;
-                            text-decoration: none;
-                            border-radius: 8px;
-                            font-weight: 600;
-                            width: 100%;
-                            max-width: 300px;
-                            box-sizing: border-box;
-                          "
-                        >
-                          Get My Shareable Link →
-                        </a>
-                      </td>
-                    </tr>
-                  </table>
-                </div>
-
-                <!-- Help Section -->
-                <div class="content-section">
-                  <table
-                    role="presentation"
-                    cellspacing="0"
-                    cellpadding="0"
-                    border="0"
-                    width="100%"
-                    style="text-align: center; margin-bottom: 24px"
+                    style="
+                      background: linear-gradient(135deg, #fef3c7 0%, #fde68a 100%);
+                      border-radius: 12px;
+                      padding: 24px;
+                      margin-bottom: 32px;
+                      border: 2px solid #f59e0b;
+                      text-align: center;
+                    "
                   >
                     <tr>
                       <td>
-                        <p style="margin: 0 0 8px 0; color: #6b7280">
-                          Need help getting started?
-                        </p>
-                        <a
-                          href="https://Cal ID/help"
+                        <h3
                           style="
-                            color: #007ee5;
-                            text-decoration: none;
-                            font-weight: 500;
+                            margin: 0 0 16px 0;
+                            font-weight: 600;
+                            color: #444444;
+                            font-size: 20px;
                           "
                         >
-                          Book a free setup call with our team →
+                          🎯 Don't start over. Verify now!
+                        </h3>
+                        <a
+                          href="https://cal.id/verify-email?token={{ customer.verification_token }}&email={{ customer.email }}&final=1"
+                          style="
+                            display: inline-block;
+                            padding: 20px 40px;
+                            background: linear-gradient(90deg, #f59e0b 0%, #d97706 100%);
+                            color: #fafafa;
+                            text-decoration: none;
+                            border-radius: 8px;
+                            font-weight: 600;
+                            font-size: 18px;
+                            box-shadow: 0 4px 6px rgba(245, 158, 11, 0.4);
+                          "
+                        >
+                          ⚡ Verify & Save My Account
                         </a>
+                        <p
+                          style="
+                            margin: 16px 0 0 0;
+                            color: #92400e;
+                            font-size: 12px;
+                            font-weight: 600;
+                          "
+                        >
+                          This is your final verification email
+                        </p>
                       </td>
                     </tr>
                   </table>
                 </div>
 
-                <!-- Your Link Section -->
+                <!-- Founder Message -->
                 <div class="content-section">
                   <table
                     role="presentation"
@@ -573,39 +656,64 @@
                     style="
                       background-color: #f9fafb;
                       border-radius: 8px;
-                      padding: 24px;
+                      padding: 20px;
+                      margin-bottom: 16px;
                     "
                   >
                     <tr>
-                      <td style="text-align: center">
-                        <h4
-                          style="
-                            margin: 0 0 8px 0;
-                            font-weight: 600;
-                            color: #444444;
-                          "
+                      <td>
+                        <table
+                          role="presentation"
+                          cellspacing="0"
+                          cellpadding="0"
+                          border="0"
                         >
-                          Your unique Cal ID link:
-                        </h4>
-                        <p
-                          style="
-                            margin: 0;
-                            font-size: 18px;
-                            color: #007ee5;
-                            font-weight: 600;
-                          "
-                        >
-                          Cal ID/{{ customer.username | default: "yourname" }}
-                        </p>
-                        <p
-                          style="
-                            margin: 8px 0 0 0;
-                            font-size: 14px;
-                            color: #6b7280;
-                          "
-                        >
-                          Share this anywhere to start receiving bookings
-                        </p>
+                          <tr>
+                            <td
+                              style="
+                                padding-right: 16px;
+                                vertical-align: top;
+                              "
+                            >
+<img src="https://cal.id/api/avatar/afaceca8-df0d-407a-a8d4-641c1266076e" 
+     alt="Rohit Gadia" 
+     style="width: 48px; height: 48px; border-radius: 50%; object-fit: cover;">
+                            </td>
+                            <td style="vertical-align: top">
+                              <p
+                                style="
+                                  margin: 0 0 8px 0;
+                                  color: #374751;
+                                  font-style: italic;
+                                  line-height: 1.5;
+                                "
+                              >
+                                "I hate to see people lose their accounts! If you're still having trouble, just reply to this email. I'll personally make sure you get verified - no exceptions."
+                              </p>
+                              <div>
+                                <p
+                                  style="
+                                    margin: 0;
+                                    font-weight: 600;
+                                    color: #444444;
+                                  "
+                                >
+                                  Don't give up,<br>
+                                  Rohit Gadia
+                                </p>
+                                <p
+                                  style="
+                                    margin: 0;
+                                    font-size: 14px;
+                                    color: #6b7280;
+                                  "
+                                >
+                                  Founder, Cal ID
+                                </p>
+                              </div>
+                            </td>
+                          </tr>
+                        </table>
                       </td>
                     </tr>
                   </table>
@@ -649,7 +757,7 @@
                           font-size: 14px;
                         "
                       >
-                        Questions? Reply to this email
+                                                  This is your final verification email - account deletion tomorrow
                       </p>
                       <table
                         role="presentation"
@@ -673,7 +781,7 @@
                           <td style="color: #9ca3af; font-size: 12px">|</td>
                           <td style="padding: 0 8px">
                             <a
-                              href="{{customer.unsubscribe_url}}"
+                              href="{%unsubscribe_url%}"
                               style="
                                 color: #007ee5;
                                 text-decoration: none;
@@ -682,10 +790,6 @@
                               >Unsubscribe</a
                             >
                           </td>
-                          <tr><img
-                      src="https://cdn.prod.website-files.com/5e53d34464688e6f5960a338/610a36c2792530d601aaf35f_OneHash_Logo.svg"
-                      width="96"
-                    />  </tr>
                         </tr>
                       </table>
                     </td>

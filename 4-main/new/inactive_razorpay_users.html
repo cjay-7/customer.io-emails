@@ -16,7 +16,7 @@
       content="IE=edge"
     />
     <meta name="x-apple-disable-message-reformatting" />
-    <title>Payment successful - Welcome to Cal ID Pro!</title>
+    <title>Your payment setup is ready - time to start earning!</title>
     <link
       href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
       rel="stylesheet"
@@ -53,10 +53,10 @@
         background-color: #006bb8;
       }
       .btn-success {
-        background-color: #008c44;
+        background-color: #10b981;
       }
       .btn-success:hover {
-        background-color: #007038;
+        background-color: #059669;
       }
       .content-section {
         padding: 8px;
@@ -69,11 +69,6 @@
         .mobile-padding {
           padding-left: 16px !important;
           padding-right: 16px !important;
-        }
-        .mobile-stack {
-          display: block !important;
-          width: 100% !important;
-          margin-bottom: 16px !important;
         }
       }
     </style>
@@ -96,7 +91,8 @@
         color: #f9fafb;
       "
     >
-      Payment successful! Welcome to Cal ID Pro - here's what's next
+      Your Razorpay is set up and ready - start earning from your expertise
+      today!
     </div>
 
     <table
@@ -127,7 +123,7 @@
             <tr>
               <td
                 style="
-                  background: linear-gradient(90deg, #008c44 0%, #007038 100%);
+                  background: linear-gradient(90deg, #10b981 0%, #059669 100%);
                   padding: 24px 32px;
                   border-radius: 12px 12px 0 0;
                 "
@@ -160,14 +156,10 @@
                                 justify-content: center;
                               "
                             >
-                              <span
-                                style="
-                                  color: #008c44;
-                                  font-weight: bold;
-                                  font-size: 18px;
-                                "
-                                >C</span
-                              >
+                              <img
+                                src="https://images.remotehub.com/c3ad06466a1b11edbf0d069a40d7f0fc/180x180/74a7cd9f.png?version=1669090303"
+                                width="30"
+                              />
                             </div>
                           </td>
                           <td>
@@ -175,24 +167,10 @@
                               style="
                                 color: #fafafa;
                                 font-weight: 600;
-                                font-size: 20px;
+                                font-size: 27px;
                               "
-                              >Cal ID Pro</span
+                              >Cal ID</span
                             >
-                            <div
-                              style="
-                                background-color: rgba(255, 255, 255, 0.2);
-                                color: #fafafa;
-                                padding: 2px 8px;
-                                border-radius: 12px;
-                                font-size: 12px;
-                                font-weight: 500;
-                                margin-top: 4px;
-                                display: inline-block;
-                              "
-                            >
-                              ✓ PAID
-                            </div>
                           </td>
                         </tr>
                       </table>
@@ -219,6 +197,9 @@
                   >
                     <tr>
                       <td style="text-align: center; padding-bottom: 32px">
+                        <div style="font-size: 48px; margin-bottom: 16px">
+                          💸
+                        </div>
                         <h1
                           style="
                             margin: 0 0 16px 0;
@@ -227,7 +208,8 @@
                             color: #444444;
                           "
                         >
-                          🎉 Welcome to Cal ID Pro!
+                          We miss you, {{ customer.first_name | default: "there"
+                          }}! 💰
                         </h1>
                         <p
                           style="
@@ -237,16 +219,16 @@
                             line-height: 1.6;
                           "
                         >
-                          Hi {{ customer.first_name | default: "there" }}! Your
-                          payment was successful and all Pro features are now
-                          active. Here's your receipt and what's next.
+                          Your Razorpay integration is set up and ready. While
+                          you've been away, other users have been earning
+                          thousands. Time to join them!
                         </p>
                       </td>
                     </tr>
                   </table>
                 </div>
 
-                <!-- Payment Confirmation -->
+                <!-- Payment Status -->
                 <div class="content-section">
                   <table
                     role="presentation"
@@ -257,9 +239,198 @@
                     style="
                       background: linear-gradient(
                         90deg,
-                        #e6f7ec 0%,
+                        #f0fdf4 0%,
                         #dcfce7 100%
                       );
+                      border-radius: 8px;
+                      padding: 24px;
+                      margin-bottom: 32px;
+                      border: 2px solid #10b981;
+                    "
+                  >
+                    <tr>
+                      <td>
+                        <h3
+                          style="
+                            margin: 0 0 20px 0;
+                            font-weight: 600;
+                            color: #444444;
+                            text-align: center;
+                          "
+                        >
+                          💳 Your Payment Setup Status:
+                        </h3>
+
+                        <div style="text-align: center; margin-bottom: 16px">
+                          <div
+                            style="
+                              background-color: #10b981;
+                              color: white;
+                              border-radius: 8px;
+                              padding: 12px 24px;
+                              display: inline-block;
+                              font-weight: bold;
+                              font-size: 16px;
+                            "
+                          >
+                            ✅ RAZORPAY CONNECTED & READY
+                          </div>
+                        </div>
+
+                        <p
+                          style="
+                            margin: 0;
+                            color: #065f46;
+                            font-size: 14px;
+                            text-align: center;
+                            font-style: italic;
+                          "
+                        >
+                          You can start collecting payments immediately!
+                        </p>
+                      </td>
+                    </tr>
+                  </table>
+                </div>
+
+                <!-- Earnings Stats -->
+                <div class="content-section">
+                  <table
+                    role="presentation"
+                    cellspacing="0"
+                    cellpadding="0"
+                    border="0"
+                    width="100%"
+                    style="
+                      background: linear-gradient(
+                        90deg,
+                        #e6f4ff 0%,
+                        #e0f2fe 100%
+                      );
+                      border-radius: 8px;
+                      padding: 24px;
+                      margin-bottom: 32px;
+                    "
+                  >
+                    <tr>
+                      <td>
+                        <h3
+                          style="
+                            margin: 0 0 20px 0;
+                            font-weight: 600;
+                            color: #444444;
+                            text-align: center;
+                          "
+                        >
+                          💰 This month, Cal ID users with payments earned:
+                        </h3>
+
+                        <table
+                          role="presentation"
+                          cellspacing="0"
+                          cellpadding="0"
+                          border="0"
+                          width="100%"
+                        >
+                          <tr>
+                            <td
+                              style="
+                                text-align: center;
+                                width: 33.33%;
+                                vertical-align: top;
+                              "
+                            >
+                              <div
+                                style="
+                                  font-size: 48px;
+                                  font-weight: bold;
+                                  color: #10b981;
+                                  margin-bottom: 8px;
+                                "
+                              >
+                                ₹24L+
+                              </div>
+                              <div
+                                style="
+                                  font-size: 14px;
+                                  color: #6b7280;
+                                  font-weight: 500;
+                                "
+                              >
+                                Total earnings
+                              </div>
+                            </td>
+                            <td
+                              style="
+                                text-align: center;
+                                width: 33.33%;
+                                vertical-align: top;
+                              "
+                            >
+                              <div
+                                style="
+                                  font-size: 48px;
+                                  font-weight: bold;
+                                  color: #f9a400;
+                                  margin-bottom: 8px;
+                                "
+                              >
+                                ₹1,847
+                              </div>
+                              <div
+                                style="
+                                  font-size: 14px;
+                                  color: #6b7280;
+                                  font-weight: 500;
+                                "
+                              >
+                                Average per user
+                              </div>
+                            </td>
+                            <td
+                              style="
+                                text-align: center;
+                                width: 33.33%;
+                                vertical-align: top;
+                              "
+                            >
+                              <div
+                                style="
+                                  font-size: 48px;
+                                  font-weight: bold;
+                                  color: #007ee5;
+                                  margin-bottom: 8px;
+                                "
+                              >
+                                96%
+                              </div>
+                              <div
+                                style="
+                                  font-size: 14px;
+                                  color: #6b7280;
+                                  font-weight: 500;
+                                "
+                              >
+                                Payment success rate
+                              </div>
+                            </td>
+                          </tr>
+                        </table>
+                      </td>
+                    </tr>
+                  </table>
+                </div>
+
+                <!-- Your Previous Stats -->
+                <div class="content-section">
+                  <table
+                    role="presentation"
+                    cellspacing="0"
+                    cellpadding="0"
+                    border="0"
+                    width="100%"
+                    style="
+                      background-color: #fef9e7;
                       border-radius: 8px;
                       padding: 24px;
                       margin-bottom: 32px;
@@ -271,103 +442,184 @@
                           style="
                             margin: 0 0 16px 0;
                             font-weight: 600;
-                            color: #008c44;
+                            color: #444444;
                             text-align: center;
                           "
                         >
-                          ✅ Payment Receipt
+                          📊 Your previous Cal ID activity:
                         </h3>
 
-                        <!-- Payment Details -->
                         <table
                           role="presentation"
                           cellspacing="0"
                           cellpadding="0"
                           border="0"
                           width="100%"
-                          style="margin-bottom: 16px"
                         >
                           <tr>
-                            <td style="width: 40%; padding-bottom: 8px">
-                              <span style="color: #008c44; font-weight: 500"
-                                >Amount Paid:</span
-                              >
-                            </td>
-                            <td style="padding-bottom: 8px">
-                              <span
+                            <td
+                              style="
+                                text-align: center;
+                                width: 25%;
+                                vertical-align: top;
+                              "
+                            >
+                              <div
                                 style="
-                                  color: #008c44;
-                                  font-weight: 600;
-                                  font-size: 18px;
+                                  font-size: 32px;
+                                  font-weight: bold;
+                                  color: #f9a400;
+                                  margin-bottom: 4px;
                                 "
-                                >${{ payment.amount | default: "29.00" }}</span
                               >
+                                {{ customer.total_meetings | default: "12" }}
+                              </div>
+                              <div style="font-size: 12px; color: #6b7280">
+                                Meetings hosted
+                              </div>
                             </td>
-                          </tr>
-                          <tr>
-                            <td style="width: 40%; padding-bottom: 8px">
-                              <span style="color: #008c44; font-weight: 500"
-                                >Transaction ID:</span
+                            <td
+                              style="
+                                text-align: center;
+                                width: 25%;
+                                vertical-align: top;
+                              "
+                            >
+                              <div
+                                style="
+                                  font-size: 32px;
+                                  font-weight: bold;
+                                  color: #f9a400;
+                                  margin-bottom: 4px;
+                                "
                               >
+                                {{ customer.razorpay_setup_date | date: "%b %Y"
+                                | default: "Jan 2025" }}
+                              </div>
+                              <div style="font-size: 12px; color: #6b7280">
+                                Razorpay connected
+                              </div>
                             </td>
-                            <td style="padding-bottom: 8px">
-                              <span style="color: #008c44; font-weight: 600"
-                                >{{ payment.transaction_id | default:
-                                "txn_1234567890" }}</span
+                            <td
+                              style="
+                                text-align: center;
+                                width: 25%;
+                                vertical-align: top;
+                              "
+                            >
+                              <div
+                                style="
+                                  font-size: 32px;
+                                  font-weight: bold;
+                                  color: #f9a400;
+                                  margin-bottom: 4px;
+                                "
                               >
+                                ₹0
+                              </div>
+                              <div style="font-size: 12px; color: #6b7280">
+                                Earned so far
+                              </div>
                             </td>
-                          </tr>
-                          <tr>
-                            <td style="width: 40%; padding-bottom: 8px">
-                              <span style="color: #008c44; font-weight: 500"
-                                >Date:</span
+                            <td
+                              style="
+                                text-align: center;
+                                width: 25%;
+                                vertical-align: top;
+                              "
+                            >
+                              <div
+                                style="
+                                  font-size: 32px;
+                                  font-weight: bold;
+                                  color: #ef4444;
+                                  margin-bottom: 4px;
+                                "
                               >
-                            </td>
-                            <td style="padding-bottom: 8px">
-                              <span style="color: #008c44; font-weight: 600"
-                                >{{ payment.date | default: "January 15, 2025"
-                                }}</span
-                              >
-                            </td>
-                          </tr>
-                          <tr>
-                            <td style="width: 40%">
-                              <span style="color: #008c44; font-weight: 500"
-                                >Next Billing:</span
-                              >
-                            </td>
-                            <td>
-                              <span style="color: #008c44; font-weight: 600"
-                                >{{ payment.next_billing | default: "February
-                                15, 2025" }}</span
-                              >
+                                {{ customer.days_inactive | default: "47" }}
+                              </div>
+                              <div style="font-size: 12px; color: #6b7280">
+                                Days inactive
+                              </div>
                             </td>
                           </tr>
                         </table>
 
-                        <div style="text-align: center">
-                          <a
-                            href="{{ payment.receipt_url }}"
+                        <div style="text-align: center; margin-top: 16px">
+                          <p
                             style="
-                              display: inline-block;
-                              padding: 10px 20px;
-                              background-color: #008c44;
-                              color: #fafafa;
-                              text-decoration: none;
-                              border-radius: 6px;
-                              font-weight: 500;
+                              margin: 0;
+                              color: #b8860b;
+                              font-weight: 600;
                               font-size: 14px;
                             "
                           >
-                            📄 Download Receipt PDF
-                          </a>
+                            Your payment setup is complete - time to put it to
+                            work!
+                          </p>
                         </div>
                       </td>
                     </tr>
                   </table>
                 </div>
 
-                <!-- Features Unlocked -->
+                <!-- Success Stories -->
+                <div class="content-section">
+                  <table
+                    role="presentation"
+                    cellspacing="0"
+                    cellpadding="0"
+                    border="0"
+                    width="100%"
+                    style="
+                      background-color: #f0fdf4;
+                      border: 1px solid #a3e6b8;
+                      border-radius: 8px;
+                      padding: 24px;
+                      margin-bottom: 32px;
+                    "
+                  >
+                    <tr>
+                      <td>
+                        <h4
+                          style="
+                            margin: 0 0 8px 0;
+                            font-weight: 600;
+                            color: #059669;
+                            text-align: center;
+                          "
+                        >
+                          💪 Success story from someone like you:
+                        </h4>
+                        <p
+                          style="
+                            margin: 0 0 12px 0;
+                            color: #059669;
+                            font-style: italic;
+                            line-height: 1.6;
+                            text-align: center;
+                          "
+                        >
+                          "I had Razorpay set up but never used it. When I came
+                          back and activated paid bookings, I earned ₹15,000 in
+                          my first month. Best decision ever!"
+                        </p>
+                        <p
+                          style="
+                            margin: 0;
+                            font-size: 14px;
+                            color: #059669;
+                            text-align: center;
+                          "
+                        >
+                          — Priya S., Business Consultant
+                        </p>
+                      </td>
+                    </tr>
+                  </table>
+                </div>
+
+                <!-- Quick Setup Steps -->
                 <div class="content-section">
                   <table
                     role="presentation"
@@ -384,14 +636,78 @@
                             margin: 0 0 20px 0;
                             font-size: 20px;
                             font-weight: 600;
-                        color: #444444
+                            color: #444444;
                             text-align: center;
                           "
                         >
-                          🚀 Your Pro features are now active:
+                          Start earning in 3 simple steps:
                         </h2>
 
-                        <!-- Feature 1 -->
+                        <!-- Step 1 -->
+                        <table
+                          role="presentation"
+                          cellspacing="0"
+                          cellpadding="0"
+                          border="0"
+                          width="100%"
+                          style="
+                            border-left: 4px solid #10b981;
+                            background-color: #f0fdf4;
+                            border-radius: 0 8px 8px 0;
+                            padding: 16px;
+                            margin-bottom: 12px;
+                          "
+                        >
+                          <tr>
+                            <td
+                              style="
+                                width: 32px;
+                                padding-right: 12px;
+                                vertical-align: top;
+                              "
+                            >
+                              <div
+                                style="
+                                  width: 24px;
+                                  height: 24px;
+                                  background-color: #10b981;
+                                  color: #fafafa;
+                                  border-radius: 50%;
+                                  display: flex;
+                                  align-items: center;
+                                  justify-content: center;
+                                  font-weight: 600;
+                                  font-size: 12px;
+                                "
+                              >
+                                1
+                              </div>
+                            </td>
+                            <td>
+                              <h4
+                                style="
+                                  margin: 0 0 4px 0;
+                                  font-weight: 600;
+                                  color: #444444;
+                                "
+                              >
+                                💳 Set Your Consultation Rates
+                              </h4>
+                              <p
+                                style="
+                                  margin: 0;
+                                  color: #6b7280;
+                                  font-size: 14px;
+                                "
+                              >
+                                Add pricing to your meeting types (₹500, ₹1000,
+                                ₹2000/hour)
+                              </p>
+                            </td>
+                          </tr>
+                        </table>
+
+                        <!-- Step 2 -->
                         <table
                           role="presentation"
                           cellspacing="0"
@@ -400,7 +716,7 @@
                           width="100%"
                           style="
                             border-left: 4px solid #007ee5;
-                            background-color: #e6f4ff;
+                            background-color: #eff6ff;
                             border-radius: 0 8px 8px 0;
                             padding: 16px;
                             margin-bottom: 12px;
@@ -428,7 +744,7 @@
                                   font-size: 12px;
                                 "
                               >
-                                👥
+                                2
                               </div>
                             </td>
                             <td>
@@ -439,7 +755,7 @@
                                   color: #444444;
                                 "
                               >
-                                Team Scheduling
+                                🔗 Share Your Paid Booking Link
                               </h4>
                               <p
                                 style="
@@ -448,76 +764,14 @@
                                   font-size: 14px;
                                 "
                               >
-                                Add team members and set up round-robin bookings
+                                Add it to your email signature, LinkedIn, or
+                                share directly
                               </p>
                             </td>
                           </tr>
                         </table>
 
-                        <!-- Feature 2 -->
-                        <table
-                          role="presentation"
-                          cellspacing="0"
-                          cellpadding="0"
-                          border="0"
-                          width="100%"
-                          style="
-                            border-left: 4px solid #008c44;
-                            background-color: #e6f7ec;
-                            border-radius: 0 8px 8px 0;
-                            padding: 16px;
-                            margin-bottom: 12px;
-                          "
-                        >
-                          <tr>
-                            <td
-                              style="
-                                width: 32px;
-                                padding-right: 12px;
-                                vertical-align: top;
-                              "
-                            >
-                              <div
-                                style="
-                                  width: 24px;
-                                  height: 24px;
-                                  background-color: #008c44;
-                                  color: #fafafa;
-                                  border-radius: 50%;
-                                  display: flex;
-                                  align-items: center;
-                                  justify-content: center;
-                                  font-weight: 600;
-                                  font-size: 12px;
-                                "
-                              >
-                                🎨
-                              </div>
-                            </td>
-                            <td>
-                              <h4
-                                style="
-                                  margin: 0 0 4px 0;
-                                  font-weight: 600;
-                                  color: #444444;
-                                "
-                              >
-                                Custom Branding
-                              </h4>
-                              <p
-                                style="
-                                  margin: 0;
-                                  color: #6b7280;
-                                  font-size: 14px;
-                                "
-                              >
-                                Upload your logo and customize colors
-                              </p>
-                            </td>
-                          </tr>
-                        </table>
-
-                        <!-- Feature 3 -->
+                        <!-- Step 3 -->
                         <table
                           role="presentation"
                           cellspacing="0"
@@ -553,7 +807,7 @@
                                   font-size: 12px;
                                 "
                               >
-                                📊
+                                3
                               </div>
                             </td>
                             <td>
@@ -564,7 +818,7 @@
                                   color: #444444;
                                 "
                               >
-                                Advanced Analytics
+                                💰 Watch Payments Roll In
                               </h4>
                               <p
                                 style="
@@ -573,7 +827,8 @@
                                   font-size: 14px;
                                 "
                               >
-                                Detailed reports and booking insights
+                                Automatic payment collection + instant calendar
+                                booking
                               </p>
                             </td>
                           </tr>
@@ -583,7 +838,7 @@
                   </table>
                 </div>
 
-                <!-- Upsell Section -->
+                <!-- CTA Buttons -->
                 <div class="content-section">
                   <table
                     role="presentation"
@@ -591,218 +846,47 @@
                     cellpadding="0"
                     border="0"
                     width="100%"
-                    style="
-                      background: linear-gradient(
-                        90deg,
-                        #fef9e7 0%,
-                        #fef3cd 100%
-                      );
-                      border-radius: 8px;
-                      padding: 24px;
-                      margin-bottom: 32px;
-                    "
-                  >
-                    <tr>
-                      <td>
-                        <h3
-                          style="
-                            margin: 0 0 16px 0;
-                            font-weight: 600;
-                        color: #444444
-                            text-align: center;
-                          "
-                        >
-                          🚀 Maximize your Cal ID Pro experience:
-                        </h3>
-
-                        <!-- Upsell Options -->
-                        <table
-                          role="presentation"
-                          cellspacing="0"
-                          cellpadding="0"
-                          border="0"
-                          width="100%"
-                        >
-                          <tr>
-                            <td
-                              class="mobile-stack"
-                              style="
-                                width: 48%;
-                                padding-right: 2%;
-                                vertical-align: top;
-                              "
-                            >
-                              <div
-                                style="
-                                  background-color: #fafafa;
-                                  border-radius: 8px;
-                                  padding: 20px;
-                                  text-align: center;
-                                  margin-bottom: 16px;
-                                "
-                              >
-                                <div
-                                  style="font-size: 32px; margin-bottom: 12px"
-                                >
-                                  🎓
-                                </div>
-                                <h4
-                                  style="
-                                    margin: 0 0 8px 0;
-                                    font-weight: 600;
-                                    color: #444444;
-                                  "
-                                >
-                                  Pro Onboarding
-                                </h4>
-                                <p
-                                  style="
-                                    margin: 0 0 12px 0;
-                                    color: #6b7280;
-                                    font-size: 14px;
-                                    line-height: 1.5;
-                                  "
-                                >
-                                  1-hour setup session with our experts
-                                </p>
-                                <a
-                                  href="https://Cal ID/pro-onboarding"
-                                  style="
-                                    display: inline-block;
-                                    padding: 10px 16px;
-                                    background-color: #f9a400;
-                                    color: #fafafa;
-                                    text-decoration: none;
-                                    border-radius: 6px;
-                                    font-weight: 500;
-                                    font-size: 14px;
-                                  "
-                                >
-                                  Book Session
-                                </a>
-                              </div>
-                            </td>
-                            <td
-                              class="mobile-stack"
-                              style="
-                                width: 48%;
-                                padding-left: 2%;
-                                vertical-align: top;
-                              "
-                            >
-                              <div
-                                style="
-                                  background-color: #fafafa;
-                                  border-radius: 8px;
-                                  padding: 20px;
-                                  text-align: center;
-                                "
-                              >
-                                <div
-                                  style="font-size: 32px; margin-bottom: 12px"
-                                >
-                                  🏢
-                                </div>
-                                <h4
-                                  style="
-                                    margin: 0 0 8px 0;
-                                    font-weight: 600;
-                                    color: #444444;
-                                  "
-                                >
-                                  Enterprise
-                                </h4>
-                                <p
-                                  style="
-                                    margin: 0 0 12px 0;
-                                    color: #6b7280;
-                                    font-size: 14px;
-                                    line-height: 1.5;
-                                  "
-                                >
-                                  SSO, custom domains, priority support
-                                </p>
-                                <a
-                                  href="https://Cal ID/enterprise"
-                                  style="
-                                    display: inline-block;
-                                    padding: 10px 16px;
-                                    background-color: #007ee5;
-                                    color: #fafafa;
-                                    text-decoration: none;
-                                    border-radius: 6px;
-                                    font-weight: 500;
-                                    font-size: 14px;
-                                  "
-                                >
-                                  Learn More
-                                </a>
-                              </div>
-                            </td>
-                          </tr>
-                        </table>
-                      </td>
-                    </tr>
-                  </table>
-                </div>
-
-                <!-- Next Steps -->
-                <div class="content-section">
-                  <table
-                    role="presentation"
-                    cellspacing="0"
-                    cellpadding="0"
-                    border="0"
-                    width="100%"
-                    style="margin-bottom: 24px"
+                    style="margin-bottom: 32px"
                   >
                     <tr>
                       <td style="text-align: center">
-                        <h3
-                          style="
-                            margin: 0 0 16px 0;
-                            font-weight: 600;
-                            color: #444444;
-                          "
-                        >
-                          🎯 Recommended next steps:
-                        </h3>
                         <a
-                          href="https://Cal ID/pro-features"
-                          class="btn"
+                          href="https://cal.id/event-types"
+                          class="btn-success"
                           style="
                             display: inline-block;
-                            padding: 16px 32px;
-                            background-color: #007ee5;
+                            padding: 20px 40px;
+                            background-color: #10b981;
                             color: #fafafa;
                             text-decoration: none;
                             border-radius: 8px;
                             font-weight: 600;
-                            margin-bottom: 12px;
+                            margin-bottom: 16px;
                             width: 100%;
-                            max-width: 280px;
+                            max-width: 300px;
                             box-sizing: border-box;
+                            font-size: 18px;
                           "
                         >
-                          Explore Pro Features →
+                          💸 Start Earning Today
                         </a>
                         <br />
                         <a
-                          href="https://Cal ID/team/setup"
+                          href="https://cal.id/bookings/upcoming"
                           style="
                             color: #007ee5;
                             text-decoration: none;
                             font-weight: 500;
                           "
                         >
-                          Set up your team →
+                          Just take me to my dashboard →
                         </a>
                       </td>
                     </tr>
                   </table>
                 </div>
 
-                <!-- Support Section -->
+                <!-- Founder Message -->
                 <div class="content-section">
                   <table
                     role="presentation"
@@ -814,38 +898,71 @@
                       background-color: #f9fafb;
                       border-radius: 8px;
                       padding: 20px;
+                      margin-bottom: 16px;
                     "
                   >
                     <tr>
-                      <td style="text-align: center">
-                        <h4
-                          style="
-                            margin: 0 0 8px 0;
-                            font-weight: 600;
-                            color: #444444;
-                          "
+                      <td>
+                        <table
+                          role="presentation"
+                          cellspacing="0"
+                          cellpadding="0"
+                          border="0"
                         >
-                          🤝 We're here to help!
-                        </h4>
-                        <p
-                          style="
-                            margin: 0 0 12px 0;
-                            color: #6b7280;
-                            font-size: 14px;
-                          "
-                        >
-                          Questions about Pro features or need setup help?
-                        </p>
-                        <a
-                          href="https://Cal ID/support"
-                          style="
-                            color: #007ee5;
-                            text-decoration: none;
-                            font-weight: 500;
-                          "
-                        >
-                          Contact our Pro support team →
-                        </a>
+                          <tr>
+                            <td
+                              style="padding-right: 16px; vertical-align: top"
+                            >
+                              <img
+                                src="https://cal.id/api/avatar/afaceca8-df0d-407a-a8d4-641c1266076e"
+                                alt="Rohit Gadia"
+                                style="
+                                  width: 48px;
+                                  height: 48px;
+                                  border-radius: 50%;
+                                  object-fit: cover;
+                                "
+                              />
+                            </td>
+                            <td style="vertical-align: top">
+                              <p
+                                style="
+                                  margin: 0 0 8px 0;
+                                  color: #374751;
+                                  font-style: italic;
+                                  line-height: 1.5;
+                                "
+                              >
+                                "Hey! I noticed you set up Razorpay but haven't
+                                used it yet. You're literally sitting on a
+                                goldmine! Many users earn their first ₹5,000+
+                                within weeks of activating payments. Ready to
+                                join them?"
+                              </p>
+                              <div>
+                                <p
+                                  style="
+                                    margin: 0;
+                                    font-weight: 600;
+                                    color: #444444;
+                                  "
+                                >
+                                  Time to earn,<br />
+                                  Rohit Gadia
+                                </p>
+                                <p
+                                  style="
+                                    margin: 0;
+                                    font-size: 14px;
+                                    color: #6b7280;
+                                  "
+                                >
+                                  Founder, OneHash
+                                </p>
+                              </div>
+                            </td>
+                          </tr>
+                        </table>
                       </td>
                     </tr>
                   </table>
@@ -880,7 +997,7 @@
                           font-size: 14px;
                         "
                       >
-                        Cal ID Pro - Premium scheduling features
+                        Cal ID - Scheduling made simple
                       </p>
                       <p
                         style="
@@ -889,7 +1006,7 @@
                           font-size: 14px;
                         "
                       >
-                        Thank you for upgrading!
+                        Your earning potential is waiting!
                       </p>
                       <table
                         role="presentation"
@@ -901,31 +1018,19 @@
                         <tr>
                           <td style="padding: 0 8px">
                             <a
-                              href="https://cal.id/settings/my-account/general"
+                              href="https://chat.onehash.ai/hc/onehash-help-center/en"
                               style="
                                 color: #007ee5;
                                 text-decoration: none;
                                 font-size: 12px;
                               "
-                              >Pro Support</a
+                              >Help Center</a
                             >
                           </td>
                           <td style="color: #9ca3af; font-size: 12px">|</td>
                           <td style="padding: 0 8px">
                             <a
-                              href="https://cal.id/settings/my-account/general"
-                              style="
-                                color: #007ee5;
-                                text-decoration: none;
-                                font-size: 12px;
-                              "
-                              >Account Settings</a
-                            >
-                          </td>
-                          <td style="color: #9ca3af; font-size: 12px">|</td>
-                          <td style="padding: 0 8px">
-                            <a
-                              href="{{customer.unsubscribe_url}}"
+                              href="{%unsubscribe_url%}"
                               style="
                                 color: #007ee5;
                                 text-decoration: none;
